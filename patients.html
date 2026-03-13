@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Patients | SOMAVAC&reg; Medical Solutions</title>
+  <meta name="description" content="Recover faster, more comfortably after surgery with SOMAVAC&reg; SVS. Discreet, easy-to-use smart drain pump. Find a SOMAVAC provider near you.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { 50:'#e8e8f4',100:'#c5c6e3',200:'#9a9bcf',300:'#6e70bb',400:'#4345a7',500:'#04078e',600:'#030676',700:'#02055e',800:'#020347',900:'#01022f' },
+            coral: { 50:'#fef0ec',100:'#fcd9d0',200:'#f9b3a1',300:'#f58d72',400:'#f26743',500:'#ea5329',600:'#c44422',700:'#9e361b',800:'#782814',900:'#521b0d' },
+          },
+          fontFamily: {
+            display: ['"Playfair Display"', 'Georgia', 'serif'],
+            body: ['"DM Sans"', 'Verdana', 'Geneva', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #f1f1f1; }
+    ::-webkit-scrollbar-thumb { background: #04078e; border-radius: 4px; }
+    .grain::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 1;
+    }
+    html { scroll-behavior: smooth; }
+    .heading-tight { letter-spacing: -0.03em; }
+    .body-relaxed { line-height: 1.7; }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+    .animate-fade-up { animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; opacity: 0; }
+    .delay-100 { animation-delay: 0.1s; } .delay-200 { animation-delay: 0.2s; } .delay-300 { animation-delay: 0.3s; } .delay-400 { animation-delay: 0.4s; }
+    .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .btn-primary { transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease; }
+    .btn-primary:hover { transform: scale(1.04); box-shadow: 0 8px 30px -8px rgba(234, 83, 41, 0.5); }
+    .btn-primary:active { transform: scale(0.98); }
+    .btn-primary:focus-visible { outline: 3px solid #f58d72; outline-offset: 3px; }
+    .btn-secondary { transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease, background-color 0.3s ease; }
+    .btn-secondary:hover { transform: scale(1.04); background-color: rgba(255,255,255,0.15); }
+    .btn-secondary:active { transform: scale(0.98); }
+    .btn-secondary:focus-visible { outline: 3px solid rgba(255,255,255,0.6); outline-offset: 3px; }
+    .card-hover { transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease; }
+    .card-hover:hover { transform: translateY(-6px); box-shadow: 0 20px 60px -15px rgba(4, 7, 142, 0.15), 0 8px 20px -8px rgba(4, 7, 142, 0.1); }
+    .nav-link { position: relative; transition: color 0.3s ease; }
+    .nav-link::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: #ea5329; transition: width 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); }
+    .nav-link:hover::after { width: 100%; }
+    .nav-link:hover { color: #ea5329; }
+    .stat-card { position: relative; overflow: hidden; }
+    .stat-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, #04078e, #ea5329); transform: scaleX(0); transform-origin: left; transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
+    .stat-card:hover::before { transform: scaleX(1); }
+    .mesh-bg { background: radial-gradient(ellipse at 20% 50%, rgba(4,7,142,0.08) 0%, transparent 50%), radial-gradient(ellipse at 80% 20%, rgba(234,83,41,0.06) 0%, transparent 50%), radial-gradient(ellipse at 50% 80%, rgba(4,7,142,0.04) 0%, transparent 50%); }
+    .shadow-elevated { box-shadow: 0 1px 2px rgba(4,7,142,0.04), 0 4px 12px rgba(4,7,142,0.06), 0 12px 36px rgba(4,7,142,0.08); }
+    .shadow-floating { box-shadow: 0 2px 4px rgba(4,7,142,0.04), 0 8px 24px rgba(4,7,142,0.08), 0 24px 60px rgba(4,7,142,0.12); }
+    .mobile-menu { transform: translateX(100%); transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+    .mobile-menu.open { transform: translateX(0); }
+    .testimonial-card { position: relative; }
+    .testimonial-card::before { content: '\201C'; position: absolute; top: -8px; left: 16px; font-family: 'Playfair Display', Georgia, serif; font-size: 4rem; color: rgba(234,83,41,0.15); line-height: 1; }
+  </style>
+</head>
+<body class="font-body text-gray-800 bg-white antialiased">
+
+  <!-- ============ HEADER ============ -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-navy-50" id="header">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="/" class="flex items-center gap-3 group" aria-label="SOMAVAC Home">
+          <img src="/brand_assets/logo-somavac-long-blue.png" alt="SOMAVAC Medical Solutions" class="h-10 w-auto transition-transform duration-300 group-hover:scale-[1.02]">
+        </a>
+        <nav class="hidden lg:flex items-center gap-8" aria-label="Main navigation">
+          <a href="/" class="nav-link font-body font-medium text-navy-700 text-sm tracking-wide">Home</a>
+          <a href="/physicians" class="nav-link font-body font-medium text-navy-700 text-sm tracking-wide">Physicians</a>
+          <a href="/patients" class="nav-link font-body font-medium text-coral-500 text-sm tracking-wide" style="border-bottom: 2px solid #ea5329;">Patients</a>
+          <a href="/#evidence" class="nav-link font-body font-medium text-navy-700 text-sm tracking-wide">Clinical Evidence</a>
+          <a href="/#leadership" class="nav-link font-body font-medium text-navy-700 text-sm tracking-wide">Leadership</a>
+          <a href="/#contact" class="nav-link font-body font-medium text-navy-700 text-sm tracking-wide">Contact</a>
+        </nav>
+        <div class="hidden lg:flex items-center gap-5">
+          <a href="tel:+18337662822" class="font-body font-semibold text-navy-500 text-sm hover:text-coral-500 transition-colors duration-300">(833) 766-2822</a>
+          <a href="#find-provider" class="btn-primary inline-flex items-center gap-2 bg-coral-500 text-white font-body font-semibold text-sm px-6 py-3 rounded-full">Find a Provider</a>
+        </div>
+        <button id="menuToggle" class="lg:hidden p-2 rounded-lg hover:bg-navy-50 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-coral-300" aria-label="Toggle menu" aria-expanded="false">
+          <svg class="w-6 h-6 text-navy-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path id="menuIcon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobileMenu" class="mobile-menu fixed top-20 right-0 bottom-0 w-80 bg-white shadow-floating z-50 p-8 lg:hidden">
+      <nav class="flex flex-col gap-6">
+        <a href="/" class="font-body font-medium text-navy-700 text-lg hover:text-coral-500 transition-colors" onclick="closeMobileMenu()">Home</a>
+        <a href="/physicians" class="font-body font-medium text-navy-700 text-lg hover:text-coral-500 transition-colors" onclick="closeMobileMenu()">Physicians</a>
+        <a href="/patients" class="font-body font-medium text-coral-500 text-lg" onclick="closeMobileMenu()">Patients</a>
+        <a href="/#evidence" class="font-body font-medium text-navy-700 text-lg hover:text-coral-500 transition-colors" onclick="closeMobileMenu()">Clinical Evidence</a>
+        <a href="/#contact" class="font-body font-medium text-navy-700 text-lg hover:text-coral-500 transition-colors" onclick="closeMobileMenu()">Contact</a>
+        <hr class="border-navy-100">
+        <a href="#find-provider" class="btn-primary inline-flex items-center justify-center bg-coral-500 text-white font-body font-semibold px-6 py-3 rounded-full" onclick="closeMobileMenu()">Find a Provider</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="relative min-h-[85vh] flex items-center overflow-hidden grain">
+    <div class="absolute inset-0 bg-gradient-to-br from-navy-900 via-navy-500 to-navy-800"></div>
+    <div class="absolute inset-0" style="background: radial-gradient(ellipse at 30% 60%, rgba(234,83,41,0.12) 0%, transparent 60%);"></div>
+    <div class="absolute bottom-20 left-10 w-96 h-96 rounded-full bg-coral-500/10 blur-3xl"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-32 pb-20">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <div class="animate-fade-up">
+            <span class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-coral-300 font-body font-semibold text-xs tracking-widest uppercase px-4 py-2 rounded-full border border-white/10 mb-8">
+              <span class="w-2 h-2 rounded-full bg-coral-400 animate-pulse"></span>
+              For Patients &amp; Caregivers
+            </span>
+          </div>
+          <h1 class="animate-fade-up delay-100 font-display font-bold text-white heading-tight text-4xl md:text-5xl lg:text-6xl leading-[1.1] mb-6">
+            Your Recovery, <br><span class="text-coral-400">Reimagined.</span>
+          </h1>
+          <p class="animate-fade-up delay-200 font-body text-navy-200 body-relaxed text-lg md:text-xl max-w-2xl mb-10">
+            SOMAVAC&reg; SVS replaces bulky, outdated drain bulbs with a small, quiet, smart pump you can wear discreetly under your clothes &mdash; so you can focus on healing, not managing drains.
+          </p>
+          <div class="animate-fade-up delay-300 flex flex-wrap gap-4">
+            <a href="#find-provider" class="btn-primary inline-flex items-center gap-2 bg-coral-500 text-white font-body font-semibold px-8 py-4 rounded-full text-base">
+              Find a Provider Near You
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+            <a href="#how-it-works" class="btn-secondary inline-flex items-center gap-2 border-2 border-white/30 text-white font-body font-semibold px-8 py-4 rounded-full text-base">
+              See How It Works
+            </a>
+          </div>
+        </div>
+        <div class="animate-fade-up delay-300 hidden lg:flex justify-center">
+          <div class="relative">
+            <div class="absolute inset-0 bg-gradient-to-br from-coral-500/20 to-navy-500/20 rounded-3xl blur-2xl scale-110"></div>
+            <img src="/brand_assets/somavac-device-transparent.png" alt="SOMAVAC SVS device worn discreetly at the waist" class="relative w-full max-w-md rounded-3xl">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PATIENT BENEFITS ============ -->
+  <section class="relative py-24 lg:py-32 mesh-bg">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="reveal font-body font-semibold text-coral-500 text-xs tracking-widest uppercase mb-4 block">Why Patients Love SOMAVAC</span>
+        <h2 class="reveal font-display font-bold text-navy-800 heading-tight text-3xl md:text-4xl lg:text-5xl leading-tight mb-6" style="transition-delay: 0.1s;">
+          Designed Around Your Comfort
+        </h2>
+        <p class="reveal font-body text-gray-600 body-relaxed text-base" style="transition-delay: 0.2s;">
+          For 50 years, patients have dealt with awkward, leaky JP drain bulbs after surgery. SOMAVAC&reg; is the first real upgrade &mdash; a smart pump that makes recovery easier, quieter, and less stressful.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="reveal card-hover bg-white rounded-2xl shadow-elevated p-8 border border-gray-100" style="transition-delay: 0.1s;">
+          <div class="w-14 h-14 rounded-2xl bg-coral-50 flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-coral-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.182 15.182a4.5 4.5 0 01-6.364 0M21 12a9 9 0 11-18 0 9 9 0 0118 0zM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75zm-.375 0h.008v.015h-.008V9.75zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75zm-.375 0h.008v.015h-.008V9.75z"/></svg>
+          </div>
+          <h3 class="font-display font-semibold text-navy-800 text-lg mb-3">Comfortable &amp; Discreet</h3>
+          <p class="font-body text-gray-600 text-sm body-relaxed">
+            Weighs just ounces and fits in a small pouch you wear at your waist &mdash; hidden under clothes. No bulky bulbs pinned inside your surgical bra or dangling at your side.
+          </p>
+        </div>
+
+        <div class="reveal card-hover bg-white rounded-2xl shadow-elevated p-8 border border-gray-100" style="transition-delay: 0.15s;">
+          <div class="w-14 h-14 rounded-2xl bg-coral-50 flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-coral-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z"/></svg>
+          </div>
+          <h3 class="font-display font-semibold text-navy-800 text-lg mb-3">Incredibly Easy to Use</h3>
+          <p class="font-body text-gray-600 text-sm body-relaxed">
+            In clinical studies, patients rated SOMAVAC <strong class="text-navy-700">easier to use than an inhaler or thermometer</strong>. Simple indicator lights tell you everything you need to know &mdash; no guessing.
+          </p>
+        </div>
+
+        <div class="reveal card-hover bg-white rounded-2xl shadow-elevated p-8 border border-gray-100" style="transition-delay: 0.2s;">
+          <div class="w-14 h-14 rounded-2xl bg-coral-50 flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-coral-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.114 5.636a9 9 0 010 12.728M16.463 8.288a5.25 5.25 0 010 7.424M6.75 8.25l4.72-4.72a.75.75 0 011.28.53v15.88a.75.75 0 01-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.01 9.01 0 012.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75z"/></svg>
+          </div>
+          <h3 class="font-display font-semibold text-navy-800 text-lg mb-3">Whisper-Quiet</h3>
+          <p class="font-body text-gray-600 text-sm body-relaxed">
+            Unlike loud hospital-grade suction, SOMAVAC&reg; operates so quietly you&rsquo;ll forget it&rsquo;s there. Sleep, rest, and recover without constant noise or disruption.
+          </p>
+        </div>
+
+        <div class="reveal card-hover bg-white rounded-2xl shadow-elevated p-8 border border-gray-100" style="transition-delay: 0.25s;">
+          <div class="w-14 h-14 rounded-2xl bg-coral-50 flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-coral-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h3 class="font-display font-semibold text-navy-800 text-lg mb-3">Drains Out Sooner</h3>
+          <p class="font-body text-gray-600 text-sm body-relaxed">
+            Continuous smart suction removes fluid more efficiently than traditional bulbs. Clinical data shows drains can be removed <strong class="text-navy-700">up to 30% sooner</strong> &mdash; meaning less time tethered to tubes.
+          </p>
+        </div>
+
+        <div class="reveal card-hover bg-white rounded-2xl shadow-elevated p-8 border border-gray-100" style="transition-delay: 0.3s;">
+          <div class="w-14 h-14 rounded-2xl bg-coral-50 flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-coral-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
+          </div>
+          <h3 class="font-display font-semibold text-navy-800 text-lg mb-3">Fewer Complications</h3>
+          <p class="font-body text-gray-600 text-sm body-relaxed">
+            The fully closed system reduces your risk of infection. Effective drainage lowers the chance of painful fluid buildup (seroma) &mdash; which affects <strong class="text-navy-700">1 in 5 patients</strong> with traditional drains.
+          </p>
+        </div>
+
+        <div class="reveal card-hover bg-white rounded-2xl shadow-elevated p-8 border border-gray-100" style="transition-delay: 0.35s;">
+          <div class="w-14 h-14 rounded-2xl bg-coral-50 flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-coral-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>
+          </div>
+          <h3 class="font-display font-semibold text-navy-800 text-lg mb-3">24/7 Patient Support</h3>
+          <p class="font-body text-gray-600 text-sm body-relaxed">
+            Have a question at 2 AM? SOMAVAC&reg; provides a <strong class="text-navy-700">dedicated U.S.-based support line</strong> you can call anytime. You&rsquo;re never alone during your recovery.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HOW IT WORKS ============ -->
+  <section id="how-it-works" class="relative py-24 lg:py-32 overflow-hidden grain">
+    <div class="absolute inset-0 bg-gradient-to-br from-navy-800 via-navy-500 to-navy-900"></div>
+    <div class="absolute inset-0" style="background: radial-gradient(ellipse at 40% 50%, rgba(234,83,41,0.12) 0%, transparent 60%);"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="reveal font-body font-semibold text-coral-400 text-xs tracking-widest uppercase mb-4 block">How It Works</span>
+        <h2 class="reveal font-display font-bold text-white heading-tight text-3xl md:text-4xl lg:text-5xl leading-tight mb-6" style="transition-delay: 0.1s;">
+          Simple, Smart, Automatic
+        </h2>
+        <p class="reveal font-body text-navy-200 body-relaxed text-base" style="transition-delay: 0.2s;">
+          No stripping. No squeezing. No guessing. SOMAVAC does the work for you.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8 mb-16">
+        <div class="reveal text-center" style="transition-delay: 0.1s;">
+          <div class="w-20 h-20 mx-auto rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center mb-6">
+            <span class="font-display font-bold text-coral-400 text-3xl">1</span>
+          </div>
+          <h3 class="font-display font-semibold text-white text-lg mb-3">Your Surgeon Connects It</h3>
+          <p class="font-body text-navy-200 text-sm body-relaxed max-w-xs mx-auto">
+            After surgery, your surgeon connects SOMAVAC&reg; directly to your surgical drain tubes. It&rsquo;s ready to go before you even leave the hospital.
+          </p>
+        </div>
+
+        <div class="reveal text-center" style="transition-delay: 0.2s;">
+          <div class="w-20 h-20 mx-auto rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center mb-6">
+            <span class="font-display font-bold text-coral-400 text-3xl">2</span>
+          </div>
+          <h3 class="font-display font-semibold text-white text-lg mb-3">Smart Suction Does the Work</h3>
+          <p class="font-body text-navy-200 text-sm body-relaxed max-w-xs mx-auto">
+            Built-in sensors maintain continuous, gentle &minus;100mmHg suction automatically. No manual squeezing. Simple LED lights tell you the status at a glance.
+          </p>
+        </div>
+
+        <div class="reveal text-center" style="transition-delay: 0.3s;">
+          <div class="w-20 h-20 mx-auto rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center mb-6">
+            <span class="font-display font-bold text-coral-400 text-3xl">3</span>
+          </div>
+          <h3 class="font-display font-semibold text-white text-lg mb-3">Empty the Bag &amp; Relax</h3>
+          <p class="font-body text-navy-200 text-sm body-relaxed max-w-xs mx-auto">
+            Fluid collects in a replaceable bag. When it&rsquo;s full, a light alerts you. Swap the bag in seconds &mdash; no mess, no fuss. That&rsquo;s it.
+          </p>
+        </div>
+      </div>
+
+      <!-- Comparison -->
+      <div class="reveal max-w-4xl mx-auto" style="transition-delay: 0.2s;">
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-8">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="w-10 h-10 rounded-full bg-red-500/20 flex items-center justify-center">
+                <svg class="w-5 h-5 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+              </div>
+              <h3 class="font-display font-semibold text-white text-lg">Traditional JP Bulbs</h3>
+            </div>
+            <ul class="space-y-3">
+              <li class="flex items-start gap-3"><svg class="w-4 h-4 text-red-400 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/></svg><span class="font-body text-navy-200 text-sm">Manual squeezing every few hours</span></li>
+              <li class="flex items-start gap-3"><svg class="w-4 h-4 text-red-400 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/></svg><span class="font-body text-navy-200 text-sm">Bulky, visible, awkward to carry</span></li>
+              <li class="flex items-start gap-3"><svg class="w-4 h-4 text-red-400 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/></svg><span class="font-body text-navy-200 text-sm">Suction fades between emptying</span></li>
+              <li class="flex items-start gap-3"><svg class="w-4 h-4 text-red-400 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/></svg><span class="font-body text-navy-200 text-sm">Messy &ldquo;drain stripping&rdquo; required</span></li>
+              <li class="flex items-start gap-3"><svg class="w-4 h-4 text-red-400 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/></svg><span class="font-body text-navy-200 text-sm">50-year-old technology, unchanged</span></li>
+            </ul>
+          </div>
+          <div class="bg-coral-500/10 backdrop-blur-sm rounded-2xl border border-coral-400/30 p-8">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="w-10 h-10 rounded-full bg-coral-500/20 flex items-center justify-center">
+                <svg class="w-5 h-5 text-coral-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              </div>
+              <h3 class="font-display font-semibold text-white text-lg">SOMAVAC&reg; SVS</h3>
+            </div>
+            <ul class="space-y-3">
+              <li class="flex items-start gap-3"><svg class="w-4 h-4 text-coral-400 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span class="font-body text-white text-sm">Automatic, continuous suction 24/7</span></li>
+              <li class="flex items-start gap-3"><svg class="w-4 h-4 text-coral-400 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span class="font-body text-white text-sm">Small, discreet, hidden under clothing</span></li>
+              <li class="flex items-start gap-3"><svg class="w-4 h-4 text-coral-400 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span class="font-body text-white text-sm">Constant &minus;100mmHg &mdash; never fades</span></li>
+              <li class="flex items-start gap-3"><svg class="w-4 h-4 text-coral-400 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span class="font-body text-white text-sm">Simple bag swap &mdash; no mess</span></li>
+              <li class="flex items-start gap-3"><svg class="w-4 h-4 text-coral-400 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span class="font-body text-white text-sm">FDA-cleared smart technology</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHAT'S IN THE KIT ============ -->
+  <section class="relative py-24 lg:py-32 bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div class="reveal">
+          <img src="/brand_assets/somavac-shipping-kit.avif" alt="SOMAVAC shipping kit contents" class="w-full rounded-2xl shadow-floating">
+        </div>
+        <div>
+          <span class="reveal font-body font-semibold text-coral-500 text-xs tracking-widest uppercase mb-4 block">What You Receive</span>
+          <h2 class="reveal font-display font-bold text-navy-800 heading-tight text-3xl md:text-4xl leading-tight mb-6" style="transition-delay: 0.1s;">
+            Everything You Need, Shipped to You
+          </h2>
+          <p class="reveal font-body text-gray-600 body-relaxed text-base mb-8" style="transition-delay: 0.2s;">
+            Your SOMAVAC&reg; kit arrives complete &mdash; ready for your surgeon to set up. No extra parts to buy. No pharmacy trips.
+          </p>
+          <div class="space-y-4">
+            <div class="reveal flex items-start gap-4" style="transition-delay: 0.25s;">
+              <div class="w-8 h-8 rounded-lg bg-coral-50 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-4 h-4 text-coral-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              </div>
+              <p class="font-body text-gray-700 text-sm body-relaxed"><strong class="text-navy-700">SOMAVAC&reg; SVS pump</strong> &mdash; the smart suction device itself</p>
+            </div>
+            <div class="reveal flex items-start gap-4" style="transition-delay: 0.3s;">
+              <div class="w-8 h-8 rounded-lg bg-coral-50 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-4 h-4 text-coral-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              </div>
+              <p class="font-body text-gray-700 text-sm body-relaxed"><strong class="text-navy-700">Collection bags</strong> &mdash; replaceable fluid collection bags</p>
+            </div>
+            <div class="reveal flex items-start gap-4" style="transition-delay: 0.35s;">
+              <div class="w-8 h-8 rounded-lg bg-coral-50 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-4 h-4 text-coral-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              </div>
+              <p class="font-body text-gray-700 text-sm body-relaxed"><strong class="text-navy-700">Carrying pouch</strong> &mdash; discreet waist pouch for wearing the device</p>
+            </div>
+            <div class="reveal flex items-start gap-4" style="transition-delay: 0.4s;">
+              <div class="w-8 h-8 rounded-lg bg-coral-50 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-4 h-4 text-coral-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              </div>
+              <p class="font-body text-gray-700 text-sm body-relaxed"><strong class="text-navy-700">Quick-start guide</strong> &mdash; plus access to training videos and 24/7 phone support</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIALS ============ -->
+  <section class="relative py-24 lg:py-32 bg-navy-50/50">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="reveal font-body font-semibold text-coral-500 text-xs tracking-widest uppercase mb-4 block">Patient Stories</span>
+        <h2 class="reveal font-display font-bold text-navy-800 heading-tight text-3xl md:text-4xl lg:text-5xl leading-tight mb-6" style="transition-delay: 0.1s;">
+          Hear From People Like You
+        </h2>
+      </div>
+
+      <!-- Featured Testimonial -->
+      <div class="reveal mb-12" style="transition-delay: 0.1s;">
+        <div class="bg-white rounded-3xl shadow-floating p-10 lg:p-14 max-w-4xl mx-auto">
+          <svg class="w-12 h-12 text-coral-300/50 mb-6" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zM0 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151C7.546 6.068 5.983 8.789 5.983 11H10v10H0z"/></svg>
+          <p class="font-body text-gray-700 body-relaxed text-xl italic mb-6 max-w-3xl">
+            &ldquo;I had bilateral mastectomy with reconstruction. The SOMAVAC was so much better than JP drains. I barely noticed it was there. The continuous suction meant my drains came out faster and I could actually sleep at night. It gave me back a sense of normalcy during the hardest time of my life.&rdquo;
+          </p>
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-full bg-coral-100 flex items-center justify-center">
+              <span class="font-display font-bold text-coral-600 text-lg">K</span>
+            </div>
+            <div>
+              <p class="font-display font-bold text-navy-800">Kelly M.</p>
+              <p class="font-body text-gray-500 text-sm">Bilateral Mastectomy + Reconstruction Patient</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial Grid -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="reveal testimonial-card card-hover bg-white rounded-2xl shadow-elevated p-8 border border-gray-100" style="transition-delay: 0.15s;">
+          <p class="font-body text-gray-600 text-sm body-relaxed mb-6 italic">
+            &ldquo;The SOMAVAC was so much easier than the JP drains I had with my first surgery. I didn&rsquo;t have to strip them or squeeze bulbs. It just worked. I wish I&rsquo;d had it the first time.&rdquo;
+          </p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-navy-100 flex items-center justify-center">
+              <span class="font-display font-bold text-navy-600 text-sm">C</span>
+            </div>
+            <div>
+              <p class="font-display font-semibold text-navy-800 text-sm">Cindy L.</p>
+              <p class="font-body text-gray-400 text-xs">Mastectomy Patient</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal testimonial-card card-hover bg-white rounded-2xl shadow-elevated p-8 border border-gray-100" style="transition-delay: 0.2s;">
+          <p class="font-body text-gray-600 text-sm body-relaxed mb-6 italic">
+            &ldquo;I was nervous about drains after my surgery. But SOMAVAC was small, quiet, and I could hide it under my shirt. My friends didn&rsquo;t even know I had drains. It made a scary process so much less overwhelming.&rdquo;
+          </p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-navy-100 flex items-center justify-center">
+              <span class="font-display font-bold text-navy-600 text-sm">S</span>
+            </div>
+            <div>
+              <p class="font-display font-semibold text-navy-800 text-sm">Shelley M.</p>
+              <p class="font-body text-gray-400 text-xs">Reconstruction Patient</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal testimonial-card card-hover bg-white rounded-2xl shadow-elevated p-8 border border-gray-100" style="transition-delay: 0.25s;">
+          <p class="font-body text-gray-600 text-sm body-relaxed mb-6 italic">
+            &ldquo;After my double mastectomy I was dreading the drains. SOMAVAC changed everything. The device was tiny and quiet. I could shower, sleep, and move around freely. I genuinely didn&rsquo;t think recovery could feel this manageable.&rdquo;
+          </p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-navy-100 flex items-center justify-center">
+              <span class="font-display font-bold text-navy-600 text-sm">J</span>
+            </div>
+            <div>
+              <p class="font-display font-semibold text-navy-800 text-sm">Jaime B.</p>
+              <p class="font-body text-gray-400 text-xs">Double Mastectomy Patient</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CAREGIVER STORY ============ -->
+  <section class="relative py-24 lg:py-32 bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <span class="reveal font-body font-semibold text-coral-500 text-xs tracking-widest uppercase mb-4 block">A Caregiver&rsquo;s Perspective</span>
+          <h2 class="reveal font-display font-bold text-navy-800 heading-tight text-3xl md:text-4xl leading-tight mb-6" style="transition-delay: 0.1s;">
+            &ldquo;It Gave Her Dignity Back&rdquo;
+          </h2>
+          <p class="reveal font-body text-gray-600 body-relaxed text-base mb-6" style="transition-delay: 0.2s;">
+            Michael Ker watched his wife endure two rounds of JP drain bulbs after breast cancer surgery. The third time, her surgeon used SOMAVAC.
+          </p>
+          <blockquote class="reveal border-l-4 border-coral-400 pl-6 mb-8" style="transition-delay: 0.3s;">
+            <p class="font-body text-gray-700 body-relaxed text-base italic mb-4">
+              &ldquo;The difference was night and day. With JP bulbs, she couldn&rsquo;t sleep, couldn&rsquo;t shower normally, and was constantly worried about the drains leaking. With SOMAVAC, she slept through the night on day one. She wore it under her clothes and went out to lunch three days after surgery. It gave her back her dignity during an incredibly difficult time.&rdquo;
+            </p>
+            <footer>
+              <p class="font-display font-bold text-navy-800">Michael K.</p>
+              <p class="font-body text-gray-500 text-sm">Caregiver &amp; Husband</p>
+            </footer>
+          </blockquote>
+        </div>
+        <div class="reveal" style="transition-delay: 0.2s;">
+          <img src="/brand_assets/caregiver-couple.jpg" alt="A caregiver supporting their partner during recovery" class="w-full rounded-2xl shadow-floating">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SUPPORT ============ -->
+  <section class="relative py-24 lg:py-32 overflow-hidden grain">
+    <div class="absolute inset-0 bg-gradient-to-br from-navy-800 via-navy-500 to-navy-900"></div>
+    <div class="absolute inset-0" style="background: radial-gradient(ellipse at 50% 50%, rgba(234,83,41,0.1) 0%, transparent 60%);"></div>
+
+    <div class="relative z-10 max-w-4xl mx-auto px-6 lg:px-8 text-center">
+      <span class="reveal font-body font-semibold text-coral-400 text-xs tracking-widest uppercase mb-4 block">Always Here for You</span>
+      <h2 class="reveal font-display font-bold text-white heading-tight text-3xl md:text-4xl lg:text-5xl leading-tight mb-6" style="transition-delay: 0.1s;">
+        24/7 Patient Support
+      </h2>
+      <p class="reveal font-body text-navy-200 body-relaxed text-lg max-w-2xl mx-auto mb-10" style="transition-delay: 0.2s;">
+        Recovery doesn&rsquo;t follow business hours. That&rsquo;s why SOMAVAC&reg; provides a dedicated, U.S.-based patient support team available around the clock. Whether you have a question about your device, need help changing a bag, or just want reassurance &mdash; we&rsquo;re one call away.
+      </p>
+      <div class="reveal flex flex-col sm:flex-row items-center justify-center gap-6" style="transition-delay: 0.3s;">
+        <a href="tel:+18337662822" class="btn-primary inline-flex items-center gap-3 bg-coral-500 text-white font-body font-semibold px-10 py-5 rounded-full text-lg">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>
+          (833) 766-2822
+        </a>
+        <p class="font-body text-navy-300 text-sm">Available 24 hours a day, 7 days a week</p>
+      </div>
+
+      <!-- Training Videos -->
+      <div class="reveal mt-16 pt-16 border-t border-white/10" style="transition-delay: 0.2s;">
+        <h3 class="font-display font-semibold text-white text-xl mb-8">Training Videos</h3>
+        <div class="grid sm:grid-cols-3 gap-6">
+          <a href="https://somavac.com/patients/" target="_blank" rel="noopener" class="group bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-6 text-center hover:bg-white/10 transition-colors">
+            <div class="w-14 h-14 mx-auto rounded-full bg-coral-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <svg class="w-7 h-7 text-coral-400" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <p class="font-body font-semibold text-white text-sm">Device Overview</p>
+            <p class="font-body text-navy-300 text-xs mt-1">Getting started with SOMAVAC</p>
+          </a>
+          <a href="https://somavac.com/patients/" target="_blank" rel="noopener" class="group bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-6 text-center hover:bg-white/10 transition-colors">
+            <div class="w-14 h-14 mx-auto rounded-full bg-coral-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <svg class="w-7 h-7 text-coral-400" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <p class="font-body font-semibold text-white text-sm">Indicator Lights</p>
+            <p class="font-body text-navy-300 text-xs mt-1">What the LEDs mean</p>
+          </a>
+          <a href="https://somavac.com/patients/" target="_blank" rel="noopener" class="group bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-6 text-center hover:bg-white/10 transition-colors">
+            <div class="w-14 h-14 mx-auto rounded-full bg-coral-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <svg class="w-7 h-7 text-coral-400" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <p class="font-body font-semibold text-white text-sm">Changing Bags</p>
+            <p class="font-body text-navy-300 text-xs mt-1">Step-by-step bag replacement</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FIND A PROVIDER ============ -->
+  <section id="find-provider" class="relative py-24 lg:py-32 mesh-bg">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-16">
+        <div>
+          <span class="reveal font-body font-semibold text-coral-500 text-xs tracking-widest uppercase mb-4 block">Take the First Step</span>
+          <h2 class="reveal font-display font-bold text-navy-800 heading-tight text-3xl md:text-4xl lg:text-5xl leading-tight mb-6" style="transition-delay: 0.1s;">
+            Find a Provider <br>Near You
+          </h2>
+          <p class="reveal font-body text-gray-600 body-relaxed text-base mb-10" style="transition-delay: 0.2s;">
+            Ask your surgeon about SOMAVAC&reg; SVS. If they&rsquo;re not yet familiar with it, let us know &mdash; we&rsquo;ll connect you with a nearby provider or help get your surgeon set up.
+          </p>
+          <div class="space-y-5">
+            <div class="reveal flex items-start gap-4" style="transition-delay: 0.3s;">
+              <div class="w-10 h-10 rounded-lg bg-coral-50 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <span class="font-display font-bold text-coral-500">1</span>
+              </div>
+              <div>
+                <p class="font-body font-semibold text-navy-700 text-sm">Tell us about your upcoming surgery</p>
+                <p class="font-body text-gray-500 text-xs mt-0.5">Procedure type, location, and your surgeon&rsquo;s name</p>
+              </div>
+            </div>
+            <div class="reveal flex items-start gap-4" style="transition-delay: 0.35s;">
+              <div class="w-10 h-10 rounded-lg bg-coral-50 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <span class="font-display font-bold text-coral-500">2</span>
+              </div>
+              <div>
+                <p class="font-body font-semibold text-navy-700 text-sm">We&rsquo;ll match you with a provider</p>
+                <p class="font-body text-gray-500 text-xs mt-0.5">Or work with your surgeon to integrate SOMAVAC into your care plan</p>
+              </div>
+            </div>
+            <div class="reveal flex items-start gap-4" style="transition-delay: 0.4s;">
+              <div class="w-10 h-10 rounded-lg bg-coral-50 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <span class="font-display font-bold text-coral-500">3</span>
+              </div>
+              <div>
+                <p class="font-body font-semibold text-navy-700 text-sm">Recover with confidence</p>
+                <p class="font-body text-gray-500 text-xs mt-0.5">Full kit shipped to your surgeon, 24/7 support from day one</p>
+              </div>
+            </div>
+          </div>
+          <div class="reveal mt-8" style="transition-delay: 0.45s;">
+            <p class="font-body text-gray-500 text-sm">
+              Questions? Call us anytime: <a href="tel:+18337662822" class="font-semibold text-coral-500 hover:text-coral-600 transition-colors">(833) 766-2822</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="reveal" style="transition-delay: 0.2s;">
+          <form class="bg-white rounded-2xl shadow-floating p-8 lg:p-10 space-y-6" onsubmit="event.preventDefault(); alert('Thank you! We\'ll be in touch within 24 hours to help you find a SOMAVAC provider.');">
+            <h3 class="font-display font-bold text-navy-800 text-xl mb-2">Find a SOMAVAC Provider</h3>
+            <p class="font-body text-gray-500 text-sm mb-4">Tell us a bit about your situation and we&rsquo;ll help connect you with a provider in your area.</p>
+            <div class="grid sm:grid-cols-2 gap-6">
+              <div>
+                <label for="patientFirst" class="font-body font-medium text-navy-700 text-sm mb-2 block">First Name</label>
+                <input type="text" id="patientFirst" required class="w-full px-4 py-3 rounded-xl border border-gray-200 font-body text-sm text-gray-800 bg-gray-50 transition-colors focus:outline-none focus:border-navy-400 focus:ring-2 focus:ring-navy-100 focus:bg-white" placeholder="Sarah">
+              </div>
+              <div>
+                <label for="patientLast" class="font-body font-medium text-navy-700 text-sm mb-2 block">Last Name</label>
+                <input type="text" id="patientLast" required class="w-full px-4 py-3 rounded-xl border border-gray-200 font-body text-sm text-gray-800 bg-gray-50 transition-colors focus:outline-none focus:border-navy-400 focus:ring-2 focus:ring-navy-100 focus:bg-white" placeholder="Johnson">
+              </div>
+            </div>
+            <div>
+              <label for="patientEmail" class="font-body font-medium text-navy-700 text-sm mb-2 block">Email</label>
+              <input type="email" id="patientEmail" required class="w-full px-4 py-3 rounded-xl border border-gray-200 font-body text-sm text-gray-800 bg-gray-50 transition-colors focus:outline-none focus:border-navy-400 focus:ring-2 focus:ring-navy-100 focus:bg-white" placeholder="sarah@email.com">
+            </div>
+            <div>
+              <label for="patientZip" class="font-body font-medium text-navy-700 text-sm mb-2 block">Zip Code</label>
+              <input type="text" id="patientZip" required pattern="[0-9]{5}" class="w-full px-4 py-3 rounded-xl border border-gray-200 font-body text-sm text-gray-800 bg-gray-50 transition-colors focus:outline-none focus:border-navy-400 focus:ring-2 focus:ring-navy-100 focus:bg-white" placeholder="38103">
+            </div>
+            <div>
+              <label for="patientProcedure" class="font-body font-medium text-navy-700 text-sm mb-2 block">Procedure Type</label>
+              <select id="patientProcedure" class="w-full px-4 py-3 rounded-xl border border-gray-200 font-body text-sm text-gray-800 bg-gray-50 transition-colors focus:outline-none focus:border-navy-400 focus:ring-2 focus:ring-navy-100 focus:bg-white">
+                <option value="">Select procedure (optional)</option>
+                <option value="mastectomy">Mastectomy</option>
+                <option value="reconstruction">Breast Reconstruction</option>
+                <option value="hernia">Hernia Repair</option>
+                <option value="abdominoplasty">Abdominoplasty (Tummy Tuck)</option>
+                <option value="orthopedic">Orthopedic Surgery</option>
+                <option value="other">Other / Not Sure</option>
+              </select>
+            </div>
+            <div>
+              <label for="patientSurgeon" class="font-body font-medium text-navy-700 text-sm mb-2 block">Surgeon&rsquo;s Name (if known)</label>
+              <input type="text" id="patientSurgeon" class="w-full px-4 py-3 rounded-xl border border-gray-200 font-body text-sm text-gray-800 bg-gray-50 transition-colors focus:outline-none focus:border-navy-400 focus:ring-2 focus:ring-navy-100 focus:bg-white" placeholder="Dr. Smith">
+            </div>
+            <div>
+              <label for="patientMessage" class="font-body font-medium text-navy-700 text-sm mb-2 block">Anything else we should know?</label>
+              <textarea id="patientMessage" rows="3" class="w-full px-4 py-3 rounded-xl border border-gray-200 font-body text-sm text-gray-800 bg-gray-50 transition-colors focus:outline-none focus:border-navy-400 focus:ring-2 focus:ring-navy-100 focus:bg-white resize-none" placeholder="Surgery date, questions, concerns..."></textarea>
+            </div>
+            <button type="submit" class="btn-primary w-full bg-coral-500 text-white font-body font-semibold px-8 py-4 rounded-full text-base">
+              Find a Provider Near Me
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="relative bg-navy-900 py-16 overflow-hidden grain">
+    <div class="absolute inset-0" style="background: radial-gradient(ellipse at 50% 100%, rgba(4,7,142,0.3) 0%, transparent 60%);"></div>
+    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+        <div class="lg:col-span-2">
+          <img src="/brand_assets/logo-somavac-long-blue.png" alt="SOMAVAC Medical Solutions" class="h-10 w-auto brightness-0 invert mb-6">
+          <p class="font-body text-navy-300 body-relaxed text-sm max-w-md mb-6">
+            SOMAVAC&reg; Medical Solutions is pioneering smart surgical drainage technology from Memphis, Tennessee. Named one of &ldquo;Five Companies to Watch&rdquo; by LSI Market Insights.
+          </p>
+          <a href="tel:+18337662822" class="font-body font-semibold text-coral-400 hover:text-coral-300 transition-colors text-sm">+1 (833) 766-2822</a>
+        </div>
+        <div>
+          <h4 class="font-body font-semibold text-white text-sm mb-6">Pages</h4>
+          <ul class="space-y-3">
+            <li><a href="/" class="font-body text-navy-300 text-sm hover:text-coral-400 transition-colors">Home</a></li>
+            <li><a href="/physicians" class="font-body text-navy-300 text-sm hover:text-coral-400 transition-colors">For Physicians</a></li>
+            <li><a href="/patients" class="font-body text-navy-300 text-sm hover:text-coral-400 transition-colors">For Patients</a></li>
+            <li><a href="/#evidence" class="font-body text-navy-300 text-sm hover:text-coral-400 transition-colors">Clinical Evidence</a></li>
+            <li><a href="/#leadership" class="font-body text-navy-300 text-sm hover:text-coral-400 transition-colors">Leadership</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-body font-semibold text-white text-sm mb-6">Legal</h4>
+          <ul class="space-y-3">
+            <li><a href="#" class="font-body text-navy-300 text-sm hover:text-coral-400 transition-colors">Privacy Statement</a></li>
+            <li><a href="#" class="font-body text-navy-300 text-sm hover:text-coral-400 transition-colors">Terms &amp; Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="font-body text-navy-400 text-xs">&copy; 2026 SOMAVAC&reg; Medical Solutions, Inc. All rights reserved.</p>
+        <p class="font-body text-navy-400 text-xs">Smart Suction Technology&trade; | Memphis, TN</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuIcon = document.getElementById('menuIcon');
+    let menuOpen = false;
+    menuToggle.addEventListener('click', () => { menuOpen = !menuOpen; mobileMenu.classList.toggle('open', menuOpen); menuToggle.setAttribute('aria-expanded', menuOpen); menuIcon.setAttribute('d', menuOpen ? 'M6 18L18 6M6 6l12 12' : 'M4 6h16M4 12h16M4 18h16'); });
+    function closeMobileMenu() { menuOpen = false; mobileMenu.classList.remove('open'); menuToggle.setAttribute('aria-expanded', 'false'); menuIcon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16'); }
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => { header.classList.toggle('shadow-elevated', window.scrollY > 20); });
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); revealObserver.unobserve(entry.target); } }); }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    revealElements.forEach(el => revealObserver.observe(el));
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => { anchor.addEventListener('click', function (e) { const target = document.querySelector(this.getAttribute('href')); if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); } }); });
+  </script>
+</body>
+</html>

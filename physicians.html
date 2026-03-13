@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Physicians | SOMAVAC&reg; Medical Solutions</title>
+  <meta name="description" content="Elevate your post-surgical outcomes with SOMAVAC&reg; SVS. 30% faster drain removal, fewer complications, higher patient satisfaction. Learn how to bring SOMAVAC to your practice.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { 50:'#e8e8f4',100:'#c5c6e3',200:'#9a9bcf',300:'#6e70bb',400:'#4345a7',500:'#04078e',600:'#030676',700:'#02055e',800:'#020347',900:'#01022f' },
+            coral: { 50:'#fef0ec',100:'#fcd9d0',200:'#f9b3a1',300:'#f58d72',400:'#f26743',500:'#ea5329',600:'#c44422',700:'#9e361b',800:'#782814',900:'#521b0d' },
+          },
+          fontFamily: {
+            display: ['"Playfair Display"', 'Georgia', 'serif'],
+            body: ['"DM Sans"', 'Verdana', 'Geneva', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #f1f1f1; }
+    ::-webkit-scrollbar-thumb { background: #04078e; border-radius: 4px; }
+    .grain::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 1;
+    }
+    html { scroll-behavior: smooth; }
+    .heading-tight { letter-spacing: -0.03em; }
+    .body-relaxed { line-height: 1.7; }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+    .animate-fade-up { animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; opacity: 0; }
+    .delay-100 { animation-delay: 0.1s; } .delay-200 { animation-delay: 0.2s; } .delay-300 { animation-delay: 0.3s; } .delay-400 { animation-delay: 0.4s; }
+    .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .btn-primary { transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease; }
+    .btn-primary:hover { transform: scale(1.04); box-shadow: 0 8px 30px -8px rgba(234, 83, 41, 0.5); }
+    .btn-primary:active { transform: scale(0.98); }
+    .btn-primary:focus-visible { outline: 3px solid #f58d72; outline-offset: 3px; }
+    .btn-secondary { transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease, background-color 0.3s ease; }
+    .btn-secondary:hover { transform: scale(1.04); background-color: rgba(255,255,255,0.15); }
+    .btn-secondary:active { transform: scale(0.98); }
+    .btn-secondary:focus-visible { outline: 3px solid rgba(255,255,255,0.6); outline-offset: 3px; }
+    .card-hover { transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease; }
+    .card-hover:hover { transform: translateY(-6px); box-shadow: 0 20px 60px -15px rgba(4, 7, 142, 0.15), 0 8px 20px -8px rgba(4, 7, 142, 0.1); }
+    .nav-link { position: relative; transition: color 0.3s ease; }
+    .nav-link::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: #ea5329; transition: width 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); }
+    .nav-link:hover::after { width: 100%; }
+    .nav-link:hover { color: #ea5329; }
+    .stat-card { position: relative; overflow: hidden; }
+    .stat-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, #04078e, #ea5329); transform: scaleX(0); transform-origin: left; transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
+    .stat-card:hover::before { transform: scaleX(1); }
+    .mesh-bg { background: radial-gradient(ellipse at 20% 50%, rgba(4,7,142,0.08) 0%, transparent 50%), radial-gradient(ellipse at 80% 20%, rgba(234,83,41,0.06) 0%, transparent 50%), radial-gradient(ellipse at 50% 80%, rgba(4,7,142,0.04) 0%, transparent 50%); }
+    .shadow-elevated { box-shadow: 0 1px 2px rgba(4,7,142,0.04), 0 4px 12px rgba(4,7,142,0.06), 0 12px 36px rgba(4,7,142,0.08); }
+    .shadow-floating { box-shadow: 0 2px 4px rgba(4,7,142,0.04), 0 8px 24px rgba(4,7,142,0.08), 0 24px 60px rgba(4,7,142,0.12); }
+    .mobile-menu { transform: translateX(100%); transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+    .mobile-menu.open { transform: translateX(0); }
+  </style>
+</head>
+<body class="font-body text-gray-800 bg-white antialiased">
+
+  <!-- ============ HEADER ============ -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-navy-50" id="header">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="/" class="flex items-center gap-3 group" aria-label="SOMAVAC Home">
+          <img src="/brand_assets/logo-somavac-long-blue.png" alt="SOMAVAC Medical Solutions" class="h-10 w-auto transition-transform duration-300 group-hover:scale-[1.02]">
+        </a>
+        <nav class="hidden lg:flex items-center gap-8" aria-label="Main navigation">
+          <a href="/" class="nav-link font-body font-medium text-navy-700 text-sm tracking-wide">Home</a>
+          <a href="/physicians" class="nav-link font-body font-medium text-coral-500 text-sm tracking-wide" style="border-bottom: 2px solid #ea5329;">Physicians</a>
+          <a href="/patients" class="nav-link font-body font-medium text-navy-700 text-sm tracking-wide">Patients</a>
+          <a href="/#evidence" class="nav-link font-body font-medium text-navy-700 text-sm tracking-wide">Clinical Evidence</a>
+          <a href="/#leadership" class="nav-link font-body font-medium text-navy-700 text-sm tracking-wide">Leadership</a>
+          <a href="/#contact" class="nav-link font-body font-medium text-navy-700 text-sm tracking-wide">Contact</a>
+        </nav>
+        <div class="hidden lg:flex items-center gap-5">
+          <a href="tel:+18337662822" class="font-body font-semibold text-navy-500 text-sm hover:text-coral-500 transition-colors duration-300">(833) 766-2822</a>
+          <a href="#cta" class="btn-primary inline-flex items-center gap-2 bg-coral-500 text-white font-body font-semibold text-sm px-6 py-3 rounded-full">Bring SOMAVAC to Your Practice</a>
+        </div>
+        <button id="menuToggle" class="lg:hidden p-2 rounded-lg hover:bg-navy-50 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-coral-300" aria-label="Toggle menu" aria-expanded="false">
+          <svg class="w-6 h-6 text-navy-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path id="menuIcon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobileMenu" class="mobile-menu fixed top-20 right-0 bottom-0 w-80 bg-white shadow-floating z-50 p-8 lg:hidden">
+      <nav class="flex flex-col gap-6">
+        <a href="/" class="font-body font-medium text-navy-700 text-lg hover:text-coral-500 transition-colors" onclick="closeMobileMenu()">Home</a>
+        <a href="/physicians" class="font-body font-medium text-coral-500 text-lg" onclick="closeMobileMenu()">Physicians</a>
+        <a href="/patients" class="font-body font-medium text-navy-700 text-lg hover:text-coral-500 transition-colors" onclick="closeMobileMenu()">Patients</a>
+        <a href="/#evidence" class="font-body font-medium text-navy-700 text-lg hover:text-coral-500 transition-colors" onclick="closeMobileMenu()">Clinical Evidence</a>
+        <a href="/#contact" class="font-body font-medium text-navy-700 text-lg hover:text-coral-500 transition-colors" onclick="closeMobileMenu()">Contact</a>
+        <hr class="border-navy-100">
+        <a href="#cta" class="btn-primary inline-flex items-center justify-center bg-coral-500 text-white font-body font-semibold px-6 py-3 rounded-full" onclick="closeMobileMenu()">Bring SOMAVAC to Your Practice</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="relative min-h-[85vh] flex items-center overflow-hidden grain">
+    <div class="absolute inset-0 bg-gradient-to-br from-navy-900 via-navy-500 to-navy-800"></div>
+    <div class="absolute inset-0" style="background: radial-gradient(ellipse at 70% 30%, rgba(234,83,41,0.12) 0%, transparent 60%);"></div>
+    <div class="absolute top-20 right-10 w-96 h-96 rounded-full bg-coral-500/10 blur-3xl"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-32 pb-20">
+      <div class="max-w-3xl">
+        <div class="animate-fade-up">
+          <span class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-coral-300 font-body font-semibold text-xs tracking-widest uppercase px-4 py-2 rounded-full border border-white/10 mb-8">
+            <span class="w-2 h-2 rounded-full bg-coral-400 animate-pulse"></span>
+            For Surgeons &amp; Physicians
+          </span>
+        </div>
+        <h1 class="animate-fade-up delay-100 font-display font-bold text-white heading-tight text-4xl md:text-5xl lg:text-6xl leading-[1.1] mb-6">
+          Better Outcomes. <br>Fewer Complications. <br><span class="text-coral-400">Happier Patients.</span>
+        </h1>
+        <p class="animate-fade-up delay-200 font-body text-navy-200 body-relaxed text-lg md:text-xl max-w-2xl mb-10">
+          SOMAVAC&reg; SVS is the only FDA-cleared smart surgical drain pump &mdash; replacing 50-year-old JP bulb technology with continuous, sensor-controlled suction that enables drain removal up to 30% sooner.
+        </p>
+        <div class="animate-fade-up delay-300 flex flex-wrap gap-4">
+          <a href="#cta" class="btn-primary inline-flex items-center gap-2 bg-coral-500 text-white font-body font-semibold px-8 py-4 rounded-full text-base">
+            Bring SOMAVAC to Your Practice
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+          <a href="#data" class="btn-secondary inline-flex items-center gap-2 border-2 border-white/30 text-white font-body font-semibold px-8 py-4 rounded-full text-base">
+            View Clinical Data
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRACTICE BENEFITS ============ -->
+  <section class="relative py-24 lg:py-32 mesh-bg">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="reveal font-body font-semibold text-coral-500 text-xs tracking-widest uppercase mb-4 block">Practice Benefits</span>
+        <h2 class="reveal font-display font-bold text-navy-800 heading-tight text-3xl md:text-4xl lg:text-5xl leading-tight mb-6" style="transition-delay: 0.1s;">
+          Elevate Your Standard of Care
+        </h2>
+        <p class="reveal font-body text-gray-600 body-relaxed text-base" style="transition-delay: 0.2s;">
+          800,000+ U.S. surgical patients require drain suction annually. 20% experience complicated seromas, costing $1B+ in interventions. SOMAVAC&reg; addresses this with the first meaningful innovation in surgical drainage in 50 years.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="reveal card-hover bg-white rounded-2xl shadow-elevated p-8 border border-gray-100" style="transition-delay: 0.1s;">
+          <div class="w-14 h-14 rounded-2xl bg-navy-50 flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-navy-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h3 class="font-display font-semibold text-navy-800 text-lg mb-3">Faster Drain Removal</h3>
+          <p class="font-body text-gray-600 text-sm body-relaxed">
+            Continuous &minus;100mmHg suction removes fluid more expeditiously than passive bulbs. Clinical data shows drains can be removed as early as <strong class="text-navy-700">8.3 days</strong> in obese mastectomy patients &mdash; up to 30% sooner than standard of care.
+          </p>
+        </div>
+
+        <div class="reveal card-hover bg-white rounded-2xl shadow-elevated p-8 border border-gray-100" style="transition-delay: 0.15s;">
+          <div class="w-14 h-14 rounded-2xl bg-navy-50 flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-navy-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <h3 class="font-display font-semibold text-navy-800 text-lg mb-3">Reduced Complication Rates</h3>
+          <p class="font-body text-gray-600 text-sm body-relaxed">
+            The fully closed system with one-way drain connectors minimizes surgical site exposure to infectious materials. Timely drain removal reduces infection risk &mdash; which <strong class="text-navy-700">triples after 3 weeks</strong> (Hannah et al., 2016).
+          </p>
+        </div>
+
+        <div class="reveal card-hover bg-white rounded-2xl shadow-elevated p-8 border border-gray-100" style="transition-delay: 0.2s;">
+          <div class="w-14 h-14 rounded-2xl bg-navy-50 flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-navy-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+          </div>
+          <h3 class="font-display font-semibold text-navy-800 text-lg mb-3">Fewer Drains Per Patient</h3>
+          <p class="font-body text-gray-600 text-sm body-relaxed">
+            Due to constant, effective fluid removal, surgeons in clinical studies reported using <strong class="text-navy-700">fewer drains per patient</strong> with SOMAVAC&reg; &mdash; simplifying the surgical plan while maintaining effective drainage.
+          </p>
+        </div>
+
+        <div class="reveal card-hover bg-white rounded-2xl shadow-elevated p-8 border border-gray-100" style="transition-delay: 0.25s;">
+          <div class="w-14 h-14 rounded-2xl bg-navy-50 flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-navy-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+          </div>
+          <h3 class="font-display font-semibold text-navy-800 text-lg mb-3">Reduced Reoperations</h3>
+          <p class="font-body text-gray-600 text-sm body-relaxed">
+            Literature confirms <strong class="text-navy-700">1 in 5 women require reoperation</strong> with traditional drains. By removing fluid more efficiently and reducing seroma formation, SOMAVAC&reg; helps lower reoperation rates and associated costs.
+          </p>
+        </div>
+
+        <div class="reveal card-hover bg-white rounded-2xl shadow-elevated p-8 border border-gray-100" style="transition-delay: 0.3s;">
+          <div class="w-14 h-14 rounded-2xl bg-navy-50 flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-navy-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h3 class="font-display font-semibold text-navy-800 text-lg mb-3">Higher Patient Satisfaction</h3>
+          <p class="font-body text-gray-600 text-sm body-relaxed">
+            Patients in the SOMAVAC&reg; clinical study reported it was <strong class="text-navy-700">easier to use than an inhaler or thermometer</strong>. Patients consistently describe the experience as transformative compared to JP bulbs.
+          </p>
+        </div>
+
+        <div class="reveal card-hover bg-white rounded-2xl shadow-elevated p-8 border border-gray-100" style="transition-delay: 0.35s;">
+          <div class="w-14 h-14 rounded-2xl bg-navy-50 flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-navy-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          </div>
+          <h3 class="font-display font-semibold text-navy-800 text-lg mb-3">Fewer Follow-Up Visits</h3>
+          <p class="font-body text-gray-600 text-sm body-relaxed">
+            Faster drain removal and fewer complications mean reduced post-operative office visits &mdash; freeing clinical time, improving throughput, and reducing the administrative burden on your practice.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CLINICAL DATA ============ -->
+  <section id="data" class="relative py-24 lg:py-32 overflow-hidden grain">
+    <div class="absolute inset-0 bg-gradient-to-br from-navy-800 via-navy-500 to-navy-900"></div>
+    <div class="absolute inset-0" style="background: radial-gradient(ellipse at 60% 40%, rgba(234,83,41,0.12) 0%, transparent 60%);"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="reveal font-body font-semibold text-coral-400 text-xs tracking-widest uppercase mb-4 block">Clinical Evidence</span>
+        <h2 class="reveal font-display font-bold text-white heading-tight text-3xl md:text-4xl lg:text-5xl leading-tight mb-6" style="transition-delay: 0.1s;">
+          Data That Speaks for Itself
+        </h2>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <div class="reveal stat-card bg-white/10 backdrop-blur-sm rounded-2xl border border-white/10 p-8 text-center" style="transition-delay: 0.1s;">
+          <p class="font-display font-bold text-coral-400 text-4xl heading-tight mb-2">30%</p>
+          <p class="font-body text-white text-sm font-medium">Faster drain removal</p>
+        </div>
+        <div class="reveal stat-card bg-white/10 backdrop-blur-sm rounded-2xl border border-white/10 p-8 text-center" style="transition-delay: 0.15s;">
+          <p class="font-display font-bold text-coral-400 text-4xl heading-tight mb-2">8.3</p>
+          <p class="font-body text-white text-sm font-medium">Days to removal in obese mastectomy</p>
+        </div>
+        <div class="reveal stat-card bg-white/10 backdrop-blur-sm rounded-2xl border border-white/10 p-8 text-center" style="transition-delay: 0.2s;">
+          <p class="font-display font-bold text-coral-400 text-4xl heading-tight mb-2">Fewer</p>
+          <p class="font-body text-white text-sm font-medium">Drains per patient reported</p>
+        </div>
+        <div class="reveal stat-card bg-white/10 backdrop-blur-sm rounded-2xl border border-white/10 p-8 text-center" style="transition-delay: 0.25s;">
+          <p class="font-display font-bold text-coral-400 text-4xl heading-tight mb-2">Easier</p>
+          <p class="font-body text-white text-sm font-medium">Than an inhaler (patient-reported)</p>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8 mb-12">
+        <div class="reveal rounded-2xl overflow-hidden bg-white shadow-elevated" style="transition-delay: 0.1s;">
+          <img src="/brand_assets/chart-drain-time.png" alt="Chart: reduced drain time" class="w-full h-auto">
+          <div class="p-4"><p class="font-body font-semibold text-navy-700 text-sm">Less Drain Time</p></div>
+        </div>
+        <div class="reveal rounded-2xl overflow-hidden bg-white shadow-elevated" style="transition-delay: 0.2s;">
+          <img src="/brand_assets/chart-drain-output.png" alt="Chart: drain output over time" class="w-full h-auto">
+          <div class="p-4"><p class="font-body font-semibold text-navy-700 text-sm">Representative Drain Output</p></div>
+        </div>
+        <div class="reveal rounded-2xl overflow-hidden bg-white shadow-elevated" style="transition-delay: 0.3s;">
+          <img src="/brand_assets/chart-sus-scores.png" alt="SUS usability scores" class="w-full h-auto">
+          <div class="p-4"><p class="font-body font-semibold text-navy-700 text-sm">Ease of Use (SUS Scores)</p></div>
+        </div>
+      </div>
+      <p class="reveal text-center font-body text-navy-300 text-xs">*Early clinical results. Data on file. References: Olsen et al. (2015), Hannah et al. (2016), Gadiraju et al. (2025).</p>
+    </div>
+  </section>
+
+  <!-- ============ INDICATED PROCEDURES ============ -->
+  <section class="relative py-24 lg:py-32 bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="reveal font-body font-semibold text-coral-500 text-xs tracking-widest uppercase mb-4 block">Clinical Applications</span>
+        <h2 class="reveal font-display font-bold text-navy-800 heading-tight text-3xl md:text-4xl lg:text-5xl leading-tight mb-4" style="transition-delay: 0.1s;">
+          FDA-Cleared for Seroma Prophylaxis
+        </h2>
+        <p class="reveal font-body text-gray-600 body-relaxed text-base" style="transition-delay: 0.2s;">
+          SOMAVAC&reg; SVS is indicated for removal of bodily fluids following large flap forming plastic and general surgeries. Most commonly used in:
+        </p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
+        <div class="reveal card-hover bg-navy-50 rounded-2xl p-6 text-center" style="transition-delay: 0.1s;">
+          <div class="w-14 h-14 mx-auto rounded-2xl bg-white flex items-center justify-center mb-4 shadow-elevated">
+            <svg class="w-7 h-7 text-navy-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+          </div>
+          <h3 class="font-display font-semibold text-navy-800 text-base">Mastectomy</h3>
+        </div>
+        <div class="reveal card-hover bg-navy-50 rounded-2xl p-6 text-center" style="transition-delay: 0.15s;">
+          <div class="w-14 h-14 mx-auto rounded-2xl bg-white flex items-center justify-center mb-4 shadow-elevated">
+            <svg class="w-7 h-7 text-navy-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+          </div>
+          <h3 class="font-display font-semibold text-navy-800 text-base">Reconstruction</h3>
+        </div>
+        <div class="reveal card-hover bg-navy-50 rounded-2xl p-6 text-center" style="transition-delay: 0.2s;">
+          <div class="w-14 h-14 mx-auto rounded-2xl bg-white flex items-center justify-center mb-4 shadow-elevated">
+            <svg class="w-7 h-7 text-navy-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <h3 class="font-display font-semibold text-navy-800 text-base">Hernia Repair</h3>
+        </div>
+        <div class="reveal card-hover bg-navy-50 rounded-2xl p-6 text-center" style="transition-delay: 0.25s;">
+          <div class="w-14 h-14 mx-auto rounded-2xl bg-white flex items-center justify-center mb-4 shadow-elevated">
+            <svg class="w-7 h-7 text-navy-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+          </div>
+          <h3 class="font-display font-semibold text-navy-800 text-base">Abdominoplasty</h3>
+        </div>
+        <div class="reveal card-hover bg-navy-50 rounded-2xl p-6 text-center" style="transition-delay: 0.3s;">
+          <div class="w-14 h-14 mx-auto rounded-2xl bg-white flex items-center justify-center mb-4 shadow-elevated">
+            <svg class="w-7 h-7 text-navy-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+          </div>
+          <h3 class="font-display font-semibold text-navy-800 text-base">Orthopedic</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ADVISOR ENDORSEMENT ============ -->
+  <section class="relative py-24 lg:py-32 bg-navy-50/50">
+    <div class="max-w-4xl mx-auto px-6 lg:px-8">
+      <div class="reveal bg-white rounded-3xl shadow-floating p-10 lg:p-14 text-center">
+        <svg class="w-12 h-12 text-coral-300/50 mx-auto mb-6" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zM0 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151C7.546 6.068 5.983 8.789 5.983 11H10v10H0z"/></svg>
+        <p class="font-body text-gray-700 body-relaxed text-xl italic mb-8 max-w-2xl mx-auto">
+          &ldquo;SOMAVAC is an exciting new technology designed to enhance patient recovery and improve overall outcomes. Early feedback indicates significant improvements in patient comfort and satisfaction.&rdquo;
+        </p>
+        <p class="font-display font-bold text-navy-800 text-lg">Dr. Aldona Spiegel, MD</p>
+        <p class="font-body text-gray-500 text-sm mt-1">Director, Center for Breast Restoration &mdash; Houston Methodist Hospital</p>
+        <p class="font-body text-gray-400 text-xs mt-1">100+ peer-reviewed publications &bull; SOMAVAC Strategic Advisor</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section id="cta" class="relative py-24 lg:py-32 mesh-bg">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-16">
+        <div>
+          <span class="reveal font-body font-semibold text-coral-500 text-xs tracking-widest uppercase mb-4 block">Get Started</span>
+          <h2 class="reveal font-display font-bold text-navy-800 heading-tight text-3xl md:text-4xl lg:text-5xl leading-tight mb-6" style="transition-delay: 0.1s;">
+            Bring SOMAVAC&reg; to Your Practice
+          </h2>
+          <p class="reveal font-body text-gray-600 body-relaxed text-base mb-10" style="transition-delay: 0.2s;">
+            We work directly with surgical practices to integrate SOMAVAC&reg; SVS into your post-operative workflow. Our clinical team provides onboarding, training, and ongoing support.
+          </p>
+          <div class="space-y-5">
+            <div class="reveal flex items-start gap-4" style="transition-delay: 0.3s;">
+              <div class="w-10 h-10 rounded-lg bg-navy-50 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-5 h-5 text-navy-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              </div>
+              <div>
+                <p class="font-body font-semibold text-navy-700 text-sm">Clinical consultation &amp; product demo</p>
+                <p class="font-body text-gray-500 text-xs mt-0.5">Our team walks through the device, data, and integration process</p>
+              </div>
+            </div>
+            <div class="reveal flex items-start gap-4" style="transition-delay: 0.35s;">
+              <div class="w-10 h-10 rounded-lg bg-navy-50 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-5 h-5 text-navy-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              </div>
+              <div>
+                <p class="font-body font-semibold text-navy-700 text-sm">VAC committee support</p>
+                <p class="font-body text-gray-500 text-xs mt-0.5">Three VAC committee approvals already received &mdash; we help navigate yours</p>
+              </div>
+            </div>
+            <div class="reveal flex items-start gap-4" style="transition-delay: 0.4s;">
+              <div class="w-10 h-10 rounded-lg bg-navy-50 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-5 h-5 text-navy-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              </div>
+              <div>
+                <p class="font-body font-semibold text-navy-700 text-sm">Full clinical data package</p>
+                <p class="font-body text-gray-500 text-xs mt-0.5">Early results, SUS scores, peer-reviewed references</p>
+              </div>
+            </div>
+            <div class="reveal flex items-start gap-4" style="transition-delay: 0.45s;">
+              <div class="w-10 h-10 rounded-lg bg-navy-50 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-5 h-5 text-navy-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              </div>
+              <div>
+                <p class="font-body font-semibold text-navy-700 text-sm">Staff training &amp; patient education materials</p>
+                <p class="font-body text-gray-500 text-xs mt-0.5">24/7 U.S.-based patient support included: (833) 766-2822</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal" style="transition-delay: 0.2s;">
+          <form class="bg-white rounded-2xl shadow-floating p-8 lg:p-10 space-y-6" onsubmit="event.preventDefault(); alert('Thank you! Our clinical team will be in touch within 24 hours.');">
+            <h3 class="font-display font-bold text-navy-800 text-xl mb-2">Request a Practice Consultation</h3>
+            <p class="font-body text-gray-500 text-sm mb-4">Fill out the form below and our clinical team will reach out within 24 hours.</p>
+            <div class="grid sm:grid-cols-2 gap-6">
+              <div>
+                <label for="firstName" class="font-body font-medium text-navy-700 text-sm mb-2 block">First Name</label>
+                <input type="text" id="firstName" required class="w-full px-4 py-3 rounded-xl border border-gray-200 font-body text-sm text-gray-800 bg-gray-50 transition-colors focus:outline-none focus:border-navy-400 focus:ring-2 focus:ring-navy-100 focus:bg-white" placeholder="Jane">
+              </div>
+              <div>
+                <label for="lastName" class="font-body font-medium text-navy-700 text-sm mb-2 block">Last Name</label>
+                <input type="text" id="lastName" required class="w-full px-4 py-3 rounded-xl border border-gray-200 font-body text-sm text-gray-800 bg-gray-50 transition-colors focus:outline-none focus:border-navy-400 focus:ring-2 focus:ring-navy-100 focus:bg-white" placeholder="Smith, MD">
+              </div>
+            </div>
+            <div>
+              <label for="email" class="font-body font-medium text-navy-700 text-sm mb-2 block">Email</label>
+              <input type="email" id="email" required class="w-full px-4 py-3 rounded-xl border border-gray-200 font-body text-sm text-gray-800 bg-gray-50 transition-colors focus:outline-none focus:border-navy-400 focus:ring-2 focus:ring-navy-100 focus:bg-white" placeholder="jane@hospital.org">
+            </div>
+            <div>
+              <label for="practice" class="font-body font-medium text-navy-700 text-sm mb-2 block">Practice / Hospital</label>
+              <input type="text" id="practice" class="w-full px-4 py-3 rounded-xl border border-gray-200 font-body text-sm text-gray-800 bg-gray-50 transition-colors focus:outline-none focus:border-navy-400 focus:ring-2 focus:ring-navy-100 focus:bg-white" placeholder="Memorial Hospital">
+            </div>
+            <div>
+              <label for="specialty" class="font-body font-medium text-navy-700 text-sm mb-2 block">Specialty</label>
+              <select id="specialty" class="w-full px-4 py-3 rounded-xl border border-gray-200 font-body text-sm text-gray-800 bg-gray-50 transition-colors focus:outline-none focus:border-navy-400 focus:ring-2 focus:ring-navy-100 focus:bg-white">
+                <option value="">Select specialty</option>
+                <option value="plastic">Plastic Surgery</option>
+                <option value="breast">Breast Surgery / Oncology</option>
+                <option value="general">General Surgery</option>
+                <option value="ortho">Orthopedic Surgery</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div>
+              <label for="message" class="font-body font-medium text-navy-700 text-sm mb-2 block">Anything else?</label>
+              <textarea id="message" rows="3" class="w-full px-4 py-3 rounded-xl border border-gray-200 font-body text-sm text-gray-800 bg-gray-50 transition-colors focus:outline-none focus:border-navy-400 focus:ring-2 focus:ring-navy-100 focus:bg-white resize-none" placeholder="Monthly case volume, questions, etc."></textarea>
+            </div>
+            <button type="submit" class="btn-primary w-full bg-coral-500 text-white font-body font-semibold px-8 py-4 rounded-full text-base">
+              Request Practice Consultation
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="relative bg-navy-900 py-16 overflow-hidden grain">
+    <div class="absolute inset-0" style="background: radial-gradient(ellipse at 50% 100%, rgba(4,7,142,0.3) 0%, transparent 60%);"></div>
+    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+        <div class="lg:col-span-2">
+          <img src="/brand_assets/logo-somavac-long-blue.png" alt="SOMAVAC Medical Solutions" class="h-10 w-auto brightness-0 invert mb-6">
+          <p class="font-body text-navy-300 body-relaxed text-sm max-w-md mb-6">
+            SOMAVAC&reg; Medical Solutions is pioneering smart surgical drainage technology from Memphis, Tennessee. Named one of &ldquo;Five Companies to Watch&rdquo; by LSI Market Insights.
+          </p>
+          <a href="tel:+18337662822" class="font-body font-semibold text-coral-400 hover:text-coral-300 transition-colors text-sm">+1 (833) 766-2822</a>
+        </div>
+        <div>
+          <h4 class="font-body font-semibold text-white text-sm mb-6">Pages</h4>
+          <ul class="space-y-3">
+            <li><a href="/" class="font-body text-navy-300 text-sm hover:text-coral-400 transition-colors">Home</a></li>
+            <li><a href="/physicians" class="font-body text-navy-300 text-sm hover:text-coral-400 transition-colors">For Physicians</a></li>
+            <li><a href="/patients" class="font-body text-navy-300 text-sm hover:text-coral-400 transition-colors">For Patients</a></li>
+            <li><a href="/#evidence" class="font-body text-navy-300 text-sm hover:text-coral-400 transition-colors">Clinical Evidence</a></li>
+            <li><a href="/#leadership" class="font-body text-navy-300 text-sm hover:text-coral-400 transition-colors">Leadership</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-body font-semibold text-white text-sm mb-6">Legal</h4>
+          <ul class="space-y-3">
+            <li><a href="#" class="font-body text-navy-300 text-sm hover:text-coral-400 transition-colors">Privacy Statement</a></li>
+            <li><a href="#" class="font-body text-navy-300 text-sm hover:text-coral-400 transition-colors">Terms &amp; Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="font-body text-navy-400 text-xs">&copy; 2026 SOMAVAC&reg; Medical Solutions, Inc. All rights reserved.</p>
+        <p class="font-body text-navy-400 text-xs">Smart Suction Technology&trade; | Memphis, TN</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuIcon = document.getElementById('menuIcon');
+    let menuOpen = false;
+    menuToggle.addEventListener('click', () => { menuOpen = !menuOpen; mobileMenu.classList.toggle('open', menuOpen); menuToggle.setAttribute('aria-expanded', menuOpen); menuIcon.setAttribute('d', menuOpen ? 'M6 18L18 6M6 6l12 12' : 'M4 6h16M4 12h16M4 18h16'); });
+    function closeMobileMenu() { menuOpen = false; mobileMenu.classList.remove('open'); menuToggle.setAttribute('aria-expanded', 'false'); menuIcon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16'); }
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => { header.classList.toggle('shadow-elevated', window.scrollY > 20); });
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); revealObserver.unobserve(entry.target); } }); }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    revealElements.forEach(el => revealObserver.observe(el));
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => { anchor.addEventListener('click', function (e) { const target = document.querySelector(this.getAttribute('href')); if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); } }); });
+  </script>
+</body>
+</html>
