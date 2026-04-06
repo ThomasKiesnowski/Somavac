@@ -84,7 +84,7 @@
           <a href="/physicians" class="nav-link font-body font-medium text-coral-500 text-sm tracking-wide" style="border-bottom: 2px solid #ea5329;">Physicians</a>
           <a href="/patients" class="nav-link font-body font-medium text-navy-700 text-sm tracking-wide">Patients</a>
           <a href="/#evidence" class="nav-link font-body font-medium text-navy-700 text-sm tracking-wide">Clinical Evidence</a>
-          <a href="/#leadership" class="nav-link font-body font-medium text-navy-700 text-sm tracking-wide">Leadership</a>
+          <a href="/team" class="nav-link font-body font-medium text-navy-700 text-sm tracking-wide">Team</a>
           <a href="/#contact" class="nav-link font-body font-medium text-navy-700 text-sm tracking-wide">Contact</a>
         </nav>
         <div class="hidden lg:flex items-center gap-5">
@@ -412,104 +412,102 @@
         </div>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-8 mb-12">
+      <div class="grid md:grid-cols-2 gap-8 mb-12">
 
         <!-- Drain Time Bar Chart -->
-        <div class="reveal rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm border border-white/10 p-6" style="transition-delay: 0.1s;">
-          <p class="font-body font-semibold text-white text-sm mb-1">Average Time With Drains</p>
-          <p class="font-body text-navy-300 text-xs mb-6">Prospective mastectomy study (N=45)</p>
-          <div class="flex items-end gap-8 justify-center h-48 mb-4">
-            <div class="flex flex-col items-center gap-2">
-              <p class="font-display font-bold text-coral-400 text-lg">11.1</p>
-              <div class="w-20 rounded-t-lg bg-gradient-to-t from-coral-600 to-coral-400 chart-bar" style="height: 0px;" data-height="130px"></div>
-              <p class="font-body text-white text-xs font-semibold mt-1">SOMAVAC</p>
+        <div class="reveal rounded-2xl overflow-hidden bg-white p-8" style="transition-delay: 0.1s;">
+          <p class="font-display font-bold text-navy-800 text-lg mb-1">Average Time With Drains</p>
+          <p class="font-body text-gray-500 text-sm mb-8">Prospective mastectomy study &bull; N=45 &bull; p=0.003</p>
+          <div class="flex items-end gap-12 justify-center h-56 mb-6">
+            <div class="flex flex-col items-center gap-3 flex-1 max-w-[140px]">
+              <p class="font-display font-bold text-coral-500 text-3xl">11.1<span class="text-lg ml-1">days</span></p>
+              <div class="w-full rounded-t-xl bg-gradient-to-t from-coral-600 to-coral-400 chart-bar" style="height: 0px;" data-height="140px"></div>
+              <p class="font-body text-navy-800 text-sm font-bold mt-2">SOMAVAC&reg;</p>
             </div>
-            <div class="flex flex-col items-center gap-2">
-              <p class="font-display font-bold text-navy-300 text-lg">16.3</p>
-              <div class="w-20 rounded-t-lg bg-gradient-to-t from-navy-600 to-navy-400 chart-bar" style="height: 0px;" data-height="192px"></div>
-              <p class="font-body text-navy-300 text-xs font-semibold mt-1">JP Bulbs</p>
+            <div class="flex flex-col items-center gap-3 flex-1 max-w-[140px]">
+              <p class="font-display font-bold text-gray-400 text-3xl">16.3<span class="text-lg ml-1">days</span></p>
+              <div class="w-full rounded-t-xl bg-gray-200 chart-bar" style="height: 0px;" data-height="210px"></div>
+              <p class="font-body text-gray-500 text-sm font-semibold mt-2">JP Bulbs</p>
             </div>
           </div>
-          <div class="text-center">
-            <span class="inline-block bg-coral-500/20 text-coral-300 font-body font-semibold text-xs px-3 py-1 rounded-full">p = 0.003</span>
-          </div>
+          <p class="font-body text-gray-400 text-xs text-center">Nearly <strong class="text-coral-500">5 fewer days</strong> with drains</p>
         </div>
 
         <!-- SUS Usability Score Chart -->
-        <div class="reveal rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm border border-white/10 p-6" style="transition-delay: 0.2s;">
-          <p class="font-body font-semibold text-white text-sm mb-1">System Usability Score</p>
-          <p class="font-body text-navy-300 text-xs mb-6">Patient-reported ease of use (0&ndash;100)</p>
-          <div class="flex items-end gap-4 justify-center h-48 mb-4">
-            <div class="flex flex-col items-center gap-2">
-              <p class="font-display font-bold text-navy-400 text-sm">46.7</p>
-              <div class="w-14 rounded-t-lg bg-gradient-to-t from-navy-600 to-navy-400 chart-bar" style="height: 0px;" data-height="90px"></div>
-              <p class="font-body text-navy-400 text-[10px] mt-1">JP Bulbs</p>
+        <div class="reveal rounded-2xl overflow-hidden bg-white p-8" style="transition-delay: 0.2s;">
+          <p class="font-display font-bold text-navy-800 text-lg mb-1">Ease of Use (SUS Score)</p>
+          <p class="font-body text-gray-500 text-sm mb-8">Patient-reported &bull; 0&ndash;100 scale &bull; p=0.0008</p>
+          <div class="flex items-end gap-6 justify-center h-56 mb-6">
+            <div class="flex flex-col items-center gap-3 flex-1 max-w-[100px]">
+              <p class="font-display font-bold text-gray-400 text-2xl">46.7</p>
+              <div class="w-full rounded-t-xl bg-gray-200 chart-bar" style="height: 0px;" data-height="100px"></div>
+              <p class="font-body text-gray-500 text-xs font-semibold mt-2">JP Bulbs</p>
             </div>
-            <div class="flex flex-col items-center gap-2">
-              <p class="font-display font-bold text-coral-400 text-sm">93.1</p>
-              <div class="w-14 rounded-t-lg bg-gradient-to-t from-coral-600 to-coral-400 chart-bar" style="height: 0px;" data-height="179px"></div>
-              <p class="font-body text-white text-[10px] font-semibold mt-1">SOMAVAC</p>
+            <div class="flex flex-col items-center gap-3 flex-1 max-w-[100px]">
+              <p class="font-display font-bold text-coral-500 text-2xl">93.1</p>
+              <div class="w-full rounded-t-xl bg-gradient-to-t from-coral-600 to-coral-400 chart-bar" style="height: 0px;" data-height="200px"></div>
+              <p class="font-body text-navy-800 text-xs font-bold mt-2">SOMAVAC</p>
             </div>
-            <div class="flex flex-col items-center gap-2">
-              <p class="font-display font-bold text-navy-300 text-sm">82</p>
-              <div class="w-14 rounded-t-lg bg-navy-500/50 chart-bar" style="height: 0px;" data-height="157px"></div>
-              <p class="font-body text-navy-400 text-[10px] mt-1">Therm.</p>
+            <div class="flex flex-col items-center gap-3 flex-1 max-w-[100px]">
+              <p class="font-display font-bold text-gray-300 text-2xl">82</p>
+              <div class="w-full rounded-t-xl bg-gray-100 chart-bar" style="height: 0px;" data-height="176px"></div>
+              <p class="font-body text-gray-400 text-xs mt-2">Thermometer</p>
             </div>
-            <div class="flex flex-col items-center gap-2">
-              <p class="font-display font-bold text-navy-300 text-sm">78</p>
-              <div class="w-14 rounded-t-lg bg-navy-500/50 chart-bar" style="height: 0px;" data-height="150px"></div>
-              <p class="font-body text-navy-400 text-[10px] mt-1">Inhaler</p>
+            <div class="flex flex-col items-center gap-3 flex-1 max-w-[100px]">
+              <p class="font-display font-bold text-gray-300 text-2xl">78</p>
+              <div class="w-full rounded-t-xl bg-gray-100 chart-bar" style="height: 0px;" data-height="168px"></div>
+              <p class="font-body text-gray-400 text-xs mt-2">Inhaler</p>
             </div>
           </div>
-          <div class="text-center">
-            <span class="inline-block bg-coral-500/20 text-coral-300 font-body font-semibold text-xs px-3 py-1 rounded-full">p = 0.0008</span>
-          </div>
+          <p class="font-body text-gray-400 text-xs text-center">Rated <strong class="text-coral-500">&ldquo;best imaginable&rdquo;</strong> on SUS scale</p>
         </div>
 
-        <!-- Complication Reduction Chart -->
-        <div class="reveal rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm border border-white/10 p-6" style="transition-delay: 0.3s;">
-          <p class="font-body font-semibold text-white text-sm mb-1">Complication Reduction</p>
-          <p class="font-body text-navy-300 text-xs mb-6">SOMAVAC vs. standard of care</p>
-          <div class="space-y-5 mt-4">
+      </div>
+
+      <!-- Complication Reduction - full width -->
+      <div class="reveal rounded-2xl overflow-hidden bg-white p-8 mb-12" style="transition-delay: 0.3s;">
+        <div class="max-w-3xl mx-auto">
+          <p class="font-display font-bold text-navy-800 text-lg mb-1 text-center">Complication Reduction</p>
+          <p class="font-body text-gray-500 text-sm mb-8 text-center">SOMAVAC vs. standard of care</p>
+          <div class="grid sm:grid-cols-2 gap-x-12 gap-y-6">
             <div>
-              <div class="flex justify-between mb-1.5">
-                <span class="font-body text-navy-200 text-xs">Seroma / Hematoma</span>
-                <span class="font-body font-semibold text-coral-400 text-xs">&minus;3.9%</span>
+              <div class="flex justify-between mb-2">
+                <span class="font-body text-navy-800 text-sm font-medium">Seroma / Hematoma</span>
+                <span class="font-body font-bold text-coral-500 text-sm">&minus;3.9%</span>
               </div>
-              <div class="w-full h-3 bg-navy-700 rounded-full overflow-hidden">
+              <div class="w-full h-4 bg-gray-100 rounded-full overflow-hidden">
                 <div class="h-full bg-gradient-to-r from-coral-500 to-coral-400 rounded-full chart-bar-h" style="width: 0;" data-width="78%"></div>
               </div>
             </div>
             <div>
-              <div class="flex justify-between mb-1.5">
-                <span class="font-body text-navy-200 text-xs">Drainage Intervention</span>
-                <span class="font-body font-semibold text-coral-400 text-xs">&minus;8.7%</span>
+              <div class="flex justify-between mb-2">
+                <span class="font-body text-navy-800 text-sm font-medium">Drainage Intervention</span>
+                <span class="font-body font-bold text-coral-500 text-sm">&minus;8.7%</span>
               </div>
-              <div class="w-full h-3 bg-navy-700 rounded-full overflow-hidden">
+              <div class="w-full h-4 bg-gray-100 rounded-full overflow-hidden">
                 <div class="h-full bg-gradient-to-r from-coral-500 to-coral-400 rounded-full chart-bar-h" style="width: 0;" data-width="65%"></div>
               </div>
             </div>
             <div>
-              <div class="flex justify-between mb-1.5">
-                <span class="font-body text-navy-200 text-xs">Wound Dehiscence</span>
-                <span class="font-body font-semibold text-coral-400 text-xs">&minus;4.3%</span>
+              <div class="flex justify-between mb-2">
+                <span class="font-body text-navy-800 text-sm font-medium">Wound Dehiscence</span>
+                <span class="font-body font-bold text-coral-500 text-sm">&minus;4.3%</span>
               </div>
-              <div class="w-full h-3 bg-navy-700 rounded-full overflow-hidden">
+              <div class="w-full h-4 bg-gray-100 rounded-full overflow-hidden">
                 <div class="h-full bg-gradient-to-r from-coral-500 to-coral-400 rounded-full chart-bar-h" style="width: 0;" data-width="55%"></div>
               </div>
             </div>
             <div>
-              <div class="flex justify-between mb-1.5">
-                <span class="font-body text-navy-200 text-xs">Infections in Study</span>
-                <span class="font-body font-semibold text-coral-400 text-xs">Zero</span>
+              <div class="flex justify-between mb-2">
+                <span class="font-body text-navy-800 text-sm font-medium">Infections in Study</span>
+                <span class="font-body font-bold text-coral-500 text-sm">Zero</span>
               </div>
-              <div class="w-full h-3 bg-navy-700 rounded-full overflow-hidden">
+              <div class="w-full h-4 bg-gray-100 rounded-full overflow-hidden">
                 <div class="h-full bg-gradient-to-r from-coral-500 to-coral-400 rounded-full chart-bar-h" style="width: 0;" data-width="100%"></div>
               </div>
             </div>
           </div>
         </div>
-
       </div>
       <p class="reveal text-center font-body text-navy-300 text-xs mb-16">*Early clinical results. Data on file. References: Olsen et al. (2015), Hannah et al. (2016), Gadiraju et al. (2025).</p>
 
@@ -856,7 +854,7 @@
             <li><a href="/physicians" class="font-body text-navy-300 text-sm hover:text-coral-400 transition-colors">For Physicians</a></li>
             <li><a href="/patients" class="font-body text-navy-300 text-sm hover:text-coral-400 transition-colors">For Patients</a></li>
             <li><a href="/#evidence" class="font-body text-navy-300 text-sm hover:text-coral-400 transition-colors">Clinical Evidence</a></li>
-            <li><a href="/#leadership" class="font-body text-navy-300 text-sm hover:text-coral-400 transition-colors">Leadership</a></li>
+            <li><a href="/team" class="font-body text-navy-300 text-sm hover:text-coral-400 transition-colors">Team</a></li>
           </ul>
         </div>
         <div>

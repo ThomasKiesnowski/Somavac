@@ -187,7 +187,7 @@
           <a href="/patients" class="nav-link font-body font-medium text-navy-700 text-sm tracking-wide">Patients</a>
           <a href="#how-it-works" class="nav-link font-body font-medium text-navy-700 text-sm tracking-wide">How It Works</a>
           <a href="#evidence" class="nav-link font-body font-medium text-navy-700 text-sm tracking-wide">Clinical Evidence</a>
-          <a href="#leadership" class="nav-link font-body font-medium text-navy-700 text-sm tracking-wide">Leadership</a>
+          <a href="/team" class="nav-link font-body font-medium text-navy-700 text-sm tracking-wide">Team</a>
           <a href="#contact" class="nav-link font-body font-medium text-navy-700 text-sm tracking-wide">Contact</a>
         </nav>
         <div class="hidden lg:flex items-center gap-5">
@@ -205,7 +205,7 @@
         <a href="/patients" class="font-body font-medium text-navy-700 text-lg hover:text-coral-500 transition-colors" onclick="closeMobileMenu()">Patients</a>
         <a href="#how-it-works" class="font-body font-medium text-navy-700 text-lg hover:text-coral-500 transition-colors" onclick="closeMobileMenu()">How It Works</a>
         <a href="#evidence" class="font-body font-medium text-navy-700 text-lg hover:text-coral-500 transition-colors" onclick="closeMobileMenu()">Clinical Evidence</a>
-        <a href="#leadership" class="font-body font-medium text-navy-700 text-lg hover:text-coral-500 transition-colors" onclick="closeMobileMenu()">Leadership</a>
+        <a href="/team" class="font-body font-medium text-navy-700 text-lg hover:text-coral-500 transition-colors" onclick="closeMobileMenu()">Team</a>
         <a href="#contact" class="font-body font-medium text-navy-700 text-lg hover:text-coral-500 transition-colors" onclick="closeMobileMenu()">Contact</a>
         <hr class="border-navy-100">
         <a href="tel:+18337662822" class="font-body font-semibold text-navy-500">(833) 766-2822</a>
@@ -568,104 +568,102 @@
       </div>
 
       <!-- Interactive Charts -->
-      <div class="grid md:grid-cols-3 gap-8 mb-12">
+      <div class="grid md:grid-cols-2 gap-8 mb-12">
 
         <!-- Drain Time Bar Chart -->
-        <div class="reveal rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm border border-white/10 p-6" style="transition-delay: 0.1s;">
-          <p class="font-body font-semibold text-white text-sm mb-1">Average Time With Drains</p>
-          <p class="font-body text-navy-300 text-xs mb-6">Prospective mastectomy study (N=45)</p>
-          <div class="flex items-end gap-8 justify-center h-48 mb-4">
-            <div class="flex flex-col items-center gap-2">
-              <p class="font-display font-bold text-coral-400 text-lg">11.1</p>
-              <div class="w-20 rounded-t-lg bg-gradient-to-t from-coral-600 to-coral-400 chart-bar" style="height: 0px;" data-height="130px"></div>
-              <p class="font-body text-white text-xs font-semibold mt-1">SOMAVAC</p>
+        <div class="reveal rounded-2xl overflow-hidden bg-white p-8" style="transition-delay: 0.1s;">
+          <p class="font-display font-bold text-navy-800 text-lg mb-1">Average Time With Drains</p>
+          <p class="font-body text-gray-500 text-sm mb-8">Prospective mastectomy study &bull; N=45 &bull; p=0.003</p>
+          <div class="flex items-end gap-12 justify-center h-56 mb-6">
+            <div class="flex flex-col items-center gap-3 flex-1 max-w-[140px]">
+              <p class="font-display font-bold text-coral-500 text-3xl">11.1<span class="text-lg ml-1">days</span></p>
+              <div class="w-full rounded-t-xl bg-gradient-to-t from-coral-600 to-coral-400 chart-bar" style="height: 0px;" data-height="140px"></div>
+              <p class="font-body text-navy-800 text-sm font-bold mt-2">SOMAVAC&reg;</p>
             </div>
-            <div class="flex flex-col items-center gap-2">
-              <p class="font-display font-bold text-navy-300 text-lg">16.3</p>
-              <div class="w-20 rounded-t-lg bg-gradient-to-t from-navy-600 to-navy-400 chart-bar" style="height: 0px;" data-height="192px"></div>
-              <p class="font-body text-navy-300 text-xs font-semibold mt-1">JP Bulbs</p>
+            <div class="flex flex-col items-center gap-3 flex-1 max-w-[140px]">
+              <p class="font-display font-bold text-gray-400 text-3xl">16.3<span class="text-lg ml-1">days</span></p>
+              <div class="w-full rounded-t-xl bg-gray-200 chart-bar" style="height: 0px;" data-height="210px"></div>
+              <p class="font-body text-gray-500 text-sm font-semibold mt-2">JP Bulbs</p>
             </div>
           </div>
-          <div class="text-center">
-            <span class="inline-block bg-coral-500/20 text-coral-300 font-body font-semibold text-xs px-3 py-1 rounded-full">p = 0.003</span>
-          </div>
+          <p class="font-body text-gray-400 text-xs text-center">Nearly <strong class="text-coral-500">5 fewer days</strong> with drains</p>
         </div>
 
         <!-- SUS Usability Score Chart -->
-        <div class="reveal rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm border border-white/10 p-6" style="transition-delay: 0.2s;">
-          <p class="font-body font-semibold text-white text-sm mb-1">System Usability Score</p>
-          <p class="font-body text-navy-300 text-xs mb-6">Patient-reported ease of use (0&ndash;100)</p>
-          <div class="flex items-end gap-4 justify-center h-48 mb-4">
-            <div class="flex flex-col items-center gap-2">
-              <p class="font-display font-bold text-navy-400 text-sm">46.7</p>
-              <div class="w-14 rounded-t-lg bg-gradient-to-t from-navy-600 to-navy-400 chart-bar" style="height: 0px;" data-height="90px"></div>
-              <p class="font-body text-navy-400 text-[10px] mt-1">JP Bulbs</p>
+        <div class="reveal rounded-2xl overflow-hidden bg-white p-8" style="transition-delay: 0.2s;">
+          <p class="font-display font-bold text-navy-800 text-lg mb-1">Ease of Use (SUS Score)</p>
+          <p class="font-body text-gray-500 text-sm mb-8">Patient-reported &bull; 0&ndash;100 scale &bull; p=0.0008</p>
+          <div class="flex items-end gap-6 justify-center h-56 mb-6">
+            <div class="flex flex-col items-center gap-3 flex-1 max-w-[100px]">
+              <p class="font-display font-bold text-gray-400 text-2xl">46.7</p>
+              <div class="w-full rounded-t-xl bg-gray-200 chart-bar" style="height: 0px;" data-height="100px"></div>
+              <p class="font-body text-gray-500 text-xs font-semibold mt-2">JP Bulbs</p>
             </div>
-            <div class="flex flex-col items-center gap-2">
-              <p class="font-display font-bold text-coral-400 text-sm">93.1</p>
-              <div class="w-14 rounded-t-lg bg-gradient-to-t from-coral-600 to-coral-400 chart-bar" style="height: 0px;" data-height="179px"></div>
-              <p class="font-body text-white text-[10px] font-semibold mt-1">SOMAVAC</p>
+            <div class="flex flex-col items-center gap-3 flex-1 max-w-[100px]">
+              <p class="font-display font-bold text-coral-500 text-2xl">93.1</p>
+              <div class="w-full rounded-t-xl bg-gradient-to-t from-coral-600 to-coral-400 chart-bar" style="height: 0px;" data-height="200px"></div>
+              <p class="font-body text-navy-800 text-xs font-bold mt-2">SOMAVAC</p>
             </div>
-            <div class="flex flex-col items-center gap-2">
-              <p class="font-display font-bold text-navy-300 text-sm">82</p>
-              <div class="w-14 rounded-t-lg bg-navy-500/50 chart-bar" style="height: 0px;" data-height="157px"></div>
-              <p class="font-body text-navy-400 text-[10px] mt-1">Therm.</p>
+            <div class="flex flex-col items-center gap-3 flex-1 max-w-[100px]">
+              <p class="font-display font-bold text-gray-300 text-2xl">82</p>
+              <div class="w-full rounded-t-xl bg-gray-100 chart-bar" style="height: 0px;" data-height="176px"></div>
+              <p class="font-body text-gray-400 text-xs mt-2">Thermometer</p>
             </div>
-            <div class="flex flex-col items-center gap-2">
-              <p class="font-display font-bold text-navy-300 text-sm">78</p>
-              <div class="w-14 rounded-t-lg bg-navy-500/50 chart-bar" style="height: 0px;" data-height="150px"></div>
-              <p class="font-body text-navy-400 text-[10px] mt-1">Inhaler</p>
+            <div class="flex flex-col items-center gap-3 flex-1 max-w-[100px]">
+              <p class="font-display font-bold text-gray-300 text-2xl">78</p>
+              <div class="w-full rounded-t-xl bg-gray-100 chart-bar" style="height: 0px;" data-height="168px"></div>
+              <p class="font-body text-gray-400 text-xs mt-2">Inhaler</p>
             </div>
           </div>
-          <div class="text-center">
-            <span class="inline-block bg-coral-500/20 text-coral-300 font-body font-semibold text-xs px-3 py-1 rounded-full">p = 0.0008</span>
-          </div>
+          <p class="font-body text-gray-400 text-xs text-center">Rated <strong class="text-coral-500">&ldquo;best imaginable&rdquo;</strong> on SUS scale</p>
         </div>
 
-        <!-- Complication Reduction Chart -->
-        <div class="reveal rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm border border-white/10 p-6" style="transition-delay: 0.3s;">
-          <p class="font-body font-semibold text-white text-sm mb-1">Complication Reduction</p>
-          <p class="font-body text-navy-300 text-xs mb-6">SOMAVAC vs. standard of care</p>
-          <div class="space-y-5 mt-4">
+      </div>
+
+      <!-- Complication Reduction - full width -->
+      <div class="reveal rounded-2xl overflow-hidden bg-white p-8 mb-12" style="transition-delay: 0.3s;">
+        <div class="max-w-3xl mx-auto">
+          <p class="font-display font-bold text-navy-800 text-lg mb-1 text-center">Complication Reduction</p>
+          <p class="font-body text-gray-500 text-sm mb-8 text-center">SOMAVAC vs. standard of care</p>
+          <div class="grid sm:grid-cols-2 gap-x-12 gap-y-6">
             <div>
-              <div class="flex justify-between mb-1.5">
-                <span class="font-body text-navy-200 text-xs">Seroma / Hematoma</span>
-                <span class="font-body font-semibold text-coral-400 text-xs">&minus;3.9%</span>
+              <div class="flex justify-between mb-2">
+                <span class="font-body text-navy-800 text-sm font-medium">Seroma / Hematoma</span>
+                <span class="font-body font-bold text-coral-500 text-sm">&minus;3.9%</span>
               </div>
-              <div class="w-full h-3 bg-navy-700 rounded-full overflow-hidden">
-                <div class="h-full bg-gradient-to-r from-coral-500 to-coral-400 rounded-full chart-bar-h" style="width: 0; --target-width: 78%;" data-width="78%"></div>
+              <div class="w-full h-4 bg-gray-100 rounded-full overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-coral-500 to-coral-400 rounded-full chart-bar-h" style="width: 0;" data-width="78%"></div>
               </div>
             </div>
             <div>
-              <div class="flex justify-between mb-1.5">
-                <span class="font-body text-navy-200 text-xs">Drainage Intervention</span>
-                <span class="font-body font-semibold text-coral-400 text-xs">&minus;8.7%</span>
+              <div class="flex justify-between mb-2">
+                <span class="font-body text-navy-800 text-sm font-medium">Drainage Intervention</span>
+                <span class="font-body font-bold text-coral-500 text-sm">&minus;8.7%</span>
               </div>
-              <div class="w-full h-3 bg-navy-700 rounded-full overflow-hidden">
-                <div class="h-full bg-gradient-to-r from-coral-500 to-coral-400 rounded-full chart-bar-h" style="width: 0; --target-width: 65%;" data-width="65%"></div>
-              </div>
-            </div>
-            <div>
-              <div class="flex justify-between mb-1.5">
-                <span class="font-body text-navy-200 text-xs">Wound Dehiscence</span>
-                <span class="font-body font-semibold text-coral-400 text-xs">&minus;4.3%</span>
-              </div>
-              <div class="w-full h-3 bg-navy-700 rounded-full overflow-hidden">
-                <div class="h-full bg-gradient-to-r from-coral-500 to-coral-400 rounded-full chart-bar-h" style="width: 0; --target-width: 55%;" data-width="55%"></div>
+              <div class="w-full h-4 bg-gray-100 rounded-full overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-coral-500 to-coral-400 rounded-full chart-bar-h" style="width: 0;" data-width="65%"></div>
               </div>
             </div>
             <div>
-              <div class="flex justify-between mb-1.5">
-                <span class="font-body text-navy-200 text-xs">Infections in Study</span>
-                <span class="font-body font-semibold text-coral-400 text-xs">Zero</span>
+              <div class="flex justify-between mb-2">
+                <span class="font-body text-navy-800 text-sm font-medium">Wound Dehiscence</span>
+                <span class="font-body font-bold text-coral-500 text-sm">&minus;4.3%</span>
               </div>
-              <div class="w-full h-3 bg-navy-700 rounded-full overflow-hidden">
-                <div class="h-full bg-gradient-to-r from-coral-500 to-coral-400 rounded-full chart-bar-h" style="width: 0; --target-width: 100%;" data-width="100%"></div>
+              <div class="w-full h-4 bg-gray-100 rounded-full overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-coral-500 to-coral-400 rounded-full chart-bar-h" style="width: 0;" data-width="55%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="font-body text-navy-800 text-sm font-medium">Infections in Study</span>
+                <span class="font-body font-bold text-coral-500 text-sm">Zero</span>
+              </div>
+              <div class="w-full h-4 bg-gray-100 rounded-full overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-coral-500 to-coral-400 rounded-full chart-bar-h" style="width: 0;" data-width="100%"></div>
               </div>
             </div>
           </div>
         </div>
-
       </div>
 
       <div class="text-center">
@@ -790,79 +788,6 @@
     </div>
   </section>
 
-  <!-- ============ LEADERSHIP ============ -->
-  <section id="leadership" class="relative py-24 lg:py-32 bg-white overflow-hidden mesh-bg">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8">
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="reveal font-body font-semibold text-coral-500 text-xs tracking-widest uppercase mb-4 block">Leadership</span>
-        <h2 class="reveal font-display font-bold text-navy-800 heading-tight text-3xl md:text-4xl lg:text-5xl leading-tight mb-6" style="transition-delay: 0.1s;">
-          The Team Transforming Recovery
-        </h2>
-        <p class="reveal font-body text-gray-600 body-relaxed text-base" style="transition-delay: 0.2s;">
-          SOMAVAC is backed by $11M in funding from Launch Tennessee, BioTN Foundation, Innova Memphis, and ZeroTo510. Headquartered in Memphis, TN with clinical pilots expanding across the U.S.
-        </p>
-      </div>
-
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Elizabeth Hoff -->
-        <div class="reveal card-hover bg-white rounded-2xl shadow-elevated overflow-hidden border border-gray-100" style="transition-delay: 0.1s;">
-          <div class="aspect-[4/5] overflow-hidden bg-navy-50">
-            <img src="/brand_assets/elizabeth-hoff.jpg" alt="Elizabeth Hoff, CEO" class="w-full h-full object-cover object-top">
-          </div>
-          <div class="p-6">
-            <h3 class="font-display font-bold text-navy-800 text-xl mb-1">Elizabeth Hoff</h3>
-            <p class="font-body font-semibold text-coral-500 text-sm mb-3">Chief Executive Officer</p>
-            <p class="font-body text-gray-600 text-sm body-relaxed">
-              30+ years in MedTech leadership at Guidant, Gore, and Medtronic. Launched 5 standard-of-care-changing technologies including endovascular aortic repair and implantable cardiac monitoring. BA in Business &amp; Psychology, Rice University.
-            </p>
-          </div>
-        </div>
-
-        <!-- Phil Ryan -->
-        <div class="reveal card-hover bg-white rounded-2xl shadow-elevated overflow-hidden border border-gray-100" style="transition-delay: 0.2s;">
-          <div class="aspect-[4/5] overflow-hidden bg-navy-50 flex items-center justify-center">
-            <div class="w-32 h-32 rounded-full bg-navy-100 flex items-center justify-center">
-              <span class="font-display font-bold text-navy-500 text-5xl">PR</span>
-            </div>
-          </div>
-          <div class="p-6">
-            <h3 class="font-display font-bold text-navy-800 text-xl mb-1">Phil Ryan</h3>
-            <p class="font-body font-semibold text-coral-500 text-sm mb-3">Chief Operating Officer</p>
-            <p class="font-body text-gray-600 text-sm body-relaxed">
-              20+ years in MedTech product development and operations, including transformative leadership at Olympus ENT. MS in Engineering Management. Oversees operations, quality management, and distribution.
-            </p>
-          </div>
-        </div>
-
-        <!-- Dr. Spiegel -->
-        <div class="reveal card-hover bg-white rounded-2xl shadow-elevated overflow-hidden border border-gray-100" style="transition-delay: 0.3s;">
-          <div class="aspect-[4/5] overflow-hidden bg-navy-50 flex items-center justify-center">
-            <div class="w-32 h-32 rounded-full bg-coral-50 flex items-center justify-center">
-              <span class="font-display font-bold text-coral-500 text-5xl">AS</span>
-            </div>
-          </div>
-          <div class="p-6">
-            <h3 class="font-display font-bold text-navy-800 text-xl mb-1">Dr. Aldona Spiegel</h3>
-            <p class="font-body font-semibold text-coral-500 text-sm mb-3">Strategic Advisor</p>
-            <p class="font-body text-gray-600 text-sm body-relaxed">
-              World-renowned plastic reconstructive surgeon. Director of the Center for Breast Restoration and Chief of the Division of Surgical Innovation at Houston Methodist Hospital. 100+ publications.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Dr. Spiegel quote -->
-      <div class="reveal mt-12 bg-navy-50 rounded-2xl p-8 lg:p-10 border border-navy-100 text-center max-w-3xl mx-auto">
-        <svg class="w-10 h-10 text-coral-300/60 mx-auto mb-4" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zM0 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151C7.546 6.068 5.983 8.789 5.983 11H10v10H0z"/></svg>
-        <p class="font-body text-gray-700 body-relaxed text-lg italic mb-4">
-          &ldquo;SOMAVAC is an exciting new technology designed to enhance patient recovery and improve overall outcomes. Early feedback indicates significant improvements in patient comfort and satisfaction.&rdquo;
-        </p>
-        <p class="font-body font-semibold text-navy-700 text-sm">Dr. Aldona Spiegel, MD</p>
-        <p class="font-body text-gray-500 text-xs">Director, Center for Breast Restoration &mdash; Houston Methodist Hospital</p>
-      </div>
-    </div>
-  </section>
-
   <!-- ============ LIFESTYLE IMAGE ============ -->
   <section class="relative h-96 overflow-hidden">
     <img src="/brand_assets/bg-woman-reading.jpg" alt="Patient recovering comfortably at home" class="absolute inset-0 w-full h-full object-cover">
@@ -977,7 +902,7 @@
             <li><a href="#how-it-works" class="font-body text-navy-300 text-sm hover:text-coral-400 transition-colors">How It Works</a></li>
             <li><a href="#evidence" class="font-body text-navy-300 text-sm hover:text-coral-400 transition-colors">Clinical Evidence</a></li>
             <li><a href="#testimonials" class="font-body text-navy-300 text-sm hover:text-coral-400 transition-colors">Testimonials</a></li>
-            <li><a href="#leadership" class="font-body text-navy-300 text-sm hover:text-coral-400 transition-colors">Leadership</a></li>
+            <li><a href="/team" class="font-body text-navy-300 text-sm hover:text-coral-400 transition-colors">Team</a></li>
             <li><a href="#contact" class="font-body text-navy-300 text-sm hover:text-coral-400 transition-colors">Contact</a></li>
           </ul>
         </div>

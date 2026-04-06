@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Team | SOMAVAC&reg; Medical Solutions</title>
+  <meta name="description" content="Meet the SOMAVAC leadership team &mdash; experienced MedTech veterans transforming post-surgical recovery with smart drainage technology. Backed by $11M in funding from Launch Tennessee, BioTN Foundation, Innova Memphis, and ZeroTo510.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { 50:'#e8e8f4',100:'#c5c6e3',200:'#9a9bcf',300:'#6e70bb',400:'#4345a7',500:'#04078e',600:'#030676',700:'#02055e',800:'#020347',900:'#01022f' },
+            coral: { 50:'#fef0ec',100:'#fcd9d0',200:'#f9b3a1',300:'#f58d72',400:'#f26743',500:'#ea5329',600:'#c44422',700:'#9e361b',800:'#782814',900:'#521b0d' },
+          },
+          fontFamily: {
+            display: ['"Playfair Display"', 'Georgia', 'serif'],
+            body: ['"DM Sans"', 'Verdana', 'Geneva', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #f1f1f1; }
+    ::-webkit-scrollbar-thumb { background: #04078e; border-radius: 4px; }
+    .grain::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 1;
+    }
+    html { scroll-behavior: smooth; }
+    .heading-tight { letter-spacing: -0.03em; }
+    .body-relaxed { line-height: 1.7; }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+    .animate-fade-up { animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; opacity: 0; }
+    .delay-100 { animation-delay: 0.1s; } .delay-200 { animation-delay: 0.2s; } .delay-300 { animation-delay: 0.3s; } .delay-400 { animation-delay: 0.4s; }
+    .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .btn-primary { transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease; }
+    .btn-primary:hover { transform: scale(1.04); box-shadow: 0 8px 30px -8px rgba(234, 83, 41, 0.5); }
+    .btn-primary:active { transform: scale(0.98); }
+    .btn-primary:focus-visible { outline: 3px solid #f58d72; outline-offset: 3px; }
+    .btn-secondary { transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease, background-color 0.3s ease; }
+    .btn-secondary:hover { transform: scale(1.04); background-color: rgba(255,255,255,0.15); }
+    .btn-secondary:active { transform: scale(0.98); }
+    .btn-secondary:focus-visible { outline: 3px solid rgba(255,255,255,0.6); outline-offset: 3px; }
+    .card-hover { transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease; }
+    .card-hover:hover { transform: translateY(-6px); box-shadow: 0 20px 60px -15px rgba(4, 7, 142, 0.15), 0 8px 20px -8px rgba(4, 7, 142, 0.1); }
+    .nav-link { position: relative; transition: color 0.3s ease; }
+    .nav-link::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: #ea5329; transition: width 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); }
+    .nav-link:hover::after { width: 100%; }
+    .nav-link:hover { color: #ea5329; }
+    .stat-card { position: relative; overflow: hidden; }
+    .stat-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, #04078e, #ea5329); transform: scaleX(0); transform-origin: left; transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
+    .stat-card:hover::before { transform: scaleX(1); }
+    .mesh-bg { background: radial-gradient(ellipse at 20% 50%, rgba(4,7,142,0.08) 0%, transparent 50%), radial-gradient(ellipse at 80% 20%, rgba(234,83,41,0.06) 0%, transparent 50%), radial-gradient(ellipse at 50% 80%, rgba(4,7,142,0.04) 0%, transparent 50%); }
+    .shadow-elevated { box-shadow: 0 1px 2px rgba(4,7,142,0.04), 0 4px 12px rgba(4,7,142,0.06), 0 12px 36px rgba(4,7,142,0.08); }
+    .shadow-floating { box-shadow: 0 2px 4px rgba(4,7,142,0.04), 0 8px 24px rgba(4,7,142,0.08), 0 24px 60px rgba(4,7,142,0.12); }
+    .mobile-menu { transform: translateX(100%); transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+    .mobile-menu.open { transform: translateX(0); }
+  </style>
+</head>
+<body class="font-body text-gray-800 bg-white antialiased">
+
+  <!-- ============ HEADER ============ -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-navy-50" id="header">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="/" class="flex items-center gap-3 group" aria-label="SOMAVAC Home">
+          <img src="/brand_assets/logo-somavac-long-blue.png" alt="SOMAVAC Medical Solutions" class="h-10 w-auto transition-transform duration-300 group-hover:scale-[1.02]">
+        </a>
+        <nav class="hidden lg:flex items-center gap-8" aria-label="Main navigation">
+          <a href="/" class="nav-link font-body font-medium text-navy-700 text-sm tracking-wide">Home</a>
+          <a href="/physicians" class="nav-link font-body font-medium text-navy-700 text-sm tracking-wide">Physicians</a>
+          <a href="/patients" class="nav-link font-body font-medium text-navy-700 text-sm tracking-wide">Patients</a>
+          <a href="/team" class="nav-link font-body font-medium text-coral-500 text-sm tracking-wide" style="border-bottom: 2px solid #ea5329;">Team</a>
+          <a href="/#contact" class="nav-link font-body font-medium text-navy-700 text-sm tracking-wide">Contact</a>
+        </nav>
+        <div class="hidden lg:flex items-center gap-5">
+          <a href="tel:+18337662822" class="font-body font-semibold text-navy-500 text-sm hover:text-coral-500 transition-colors duration-300">(833) 766-2822</a>
+          <a href="/#contact" class="btn-primary inline-flex items-center gap-2 bg-coral-500 text-white font-body font-semibold text-sm px-6 py-3 rounded-full">Get in Touch</a>
+        </div>
+        <button id="menuToggle" class="lg:hidden p-2 rounded-lg hover:bg-navy-50 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-coral-300" aria-label="Toggle menu" aria-expanded="false">
+          <svg class="w-6 h-6 text-navy-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path id="menuIcon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobileMenu" class="mobile-menu fixed top-20 right-0 bottom-0 w-80 bg-white shadow-floating z-50 p-8 lg:hidden">
+      <nav class="flex flex-col gap-6">
+        <a href="/" class="font-body font-medium text-navy-700 text-lg hover:text-coral-500 transition-colors" onclick="closeMobileMenu()">Home</a>
+        <a href="/physicians" class="font-body font-medium text-navy-700 text-lg hover:text-coral-500 transition-colors" onclick="closeMobileMenu()">Physicians</a>
+        <a href="/patients" class="font-body font-medium text-navy-700 text-lg hover:text-coral-500 transition-colors" onclick="closeMobileMenu()">Patients</a>
+        <a href="/team" class="font-body font-medium text-coral-500 text-lg" onclick="closeMobileMenu()">Team</a>
+        <a href="/#contact" class="font-body font-medium text-navy-700 text-lg hover:text-coral-500 transition-colors" onclick="closeMobileMenu()">Contact</a>
+        <hr class="border-navy-100">
+        <a href="/#contact" class="btn-primary inline-flex items-center justify-center bg-coral-500 text-white font-body font-semibold px-6 py-3 rounded-full" onclick="closeMobileMenu()">Get in Touch</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="relative min-h-[70vh] flex items-center overflow-hidden grain">
+    <div class="absolute inset-0 bg-gradient-to-br from-navy-900 via-navy-500 to-navy-800"></div>
+    <div class="absolute inset-0" style="background: radial-gradient(ellipse at 70% 30%, rgba(234,83,41,0.12) 0%, transparent 60%);"></div>
+    <div class="absolute top-20 right-10 w-96 h-96 rounded-full bg-coral-500/10 blur-3xl"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-32 pb-20">
+      <div class="max-w-3xl">
+        <div class="animate-fade-up">
+          <span class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-coral-300 font-body font-semibold text-xs tracking-widest uppercase px-4 py-2 rounded-full border border-white/10 mb-8">
+            <span class="w-2 h-2 rounded-full bg-coral-400 animate-pulse"></span>
+            Our Team
+          </span>
+        </div>
+        <h1 class="animate-fade-up delay-100 font-display font-bold text-white heading-tight text-4xl md:text-5xl lg:text-6xl leading-[1.1] mb-6">
+          The Team <br><span class="text-coral-400">Transforming</span> Recovery
+        </h1>
+        <p class="animate-fade-up delay-200 font-body text-navy-200 body-relaxed text-lg md:text-xl max-w-2xl mb-4">
+          Backed by <strong class="text-white">$11M in funding</strong> from Launch Tennessee, BioTN Foundation, Innova Memphis, and ZeroTo510 &mdash; our team brings decades of MedTech experience to a single mission: better post-surgical outcomes.
+        </p>
+        <p class="animate-fade-up delay-300 font-body text-navy-300 body-relaxed text-base max-w-2xl">
+          Headquartered in Memphis, TN &mdash; the heart of medical device innovation.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LEADERSHIP CARDS ============ -->
+  <section class="relative py-24 lg:py-32 bg-white overflow-hidden">
+    <div class="absolute inset-0 mesh-bg"></div>
+    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="reveal font-body font-semibold text-coral-500 text-xs tracking-widest uppercase mb-4 block">Leadership</span>
+        <h2 class="reveal font-display font-bold text-navy-800 heading-tight text-3xl md:text-4xl lg:text-5xl leading-tight mb-6" style="transition-delay: 0.1s;">
+          Experienced Leaders, <span class="text-coral-500">Proven Results</span>
+        </h2>
+        <p class="reveal font-body text-gray-600 body-relaxed text-lg" style="transition-delay: 0.2s;">
+          Our leadership team combines deep MedTech expertise with a passion for improving patient care.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+        <!-- Elizabeth Hoff -->
+        <div class="reveal card-hover bg-white rounded-2xl shadow-elevated border border-gray-100 overflow-hidden" style="transition-delay: 0.1s;">
+          <div class="relative h-72 overflow-hidden">
+            <img src="/brand_assets/elizabeth-hoff.jpg" alt="Elizabeth Hoff, CEO of SOMAVAC Medical Solutions" class="w-full h-full object-cover object-top">
+            <div class="absolute inset-0 bg-gradient-to-t from-navy-900/70 via-transparent to-transparent"></div>
+            <div class="absolute bottom-4 left-6 right-6">
+              <h3 class="font-display font-bold text-white text-xl">Elizabeth Hoff</h3>
+              <p class="font-body font-semibold text-coral-300 text-sm">Chief Executive Officer</p>
+            </div>
+          </div>
+          <div class="p-6">
+            <p class="font-body text-gray-600 text-sm body-relaxed mb-4">
+              30+ years in MedTech with leadership roles at Guidant, Gore, and Medtronic. Launched 5 standard-of-care-changing technologies that have improved outcomes for millions of patients worldwide.
+            </p>
+            <div class="flex items-center gap-2 pt-4 border-t border-gray-100">
+              <svg class="w-4 h-4 text-navy-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342"/></svg>
+              <p class="font-body text-navy-500 text-xs">BA Business &amp; Psychology, Rice University</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Phil Ryan -->
+        <div class="reveal card-hover bg-white rounded-2xl shadow-elevated border border-gray-100 overflow-hidden" style="transition-delay: 0.2s;">
+          <div class="relative h-72 overflow-hidden bg-gradient-to-br from-navy-50 to-navy-100 flex items-center justify-center">
+            <div class="w-32 h-32 rounded-full bg-navy-500 flex items-center justify-center shadow-lg">
+              <span class="font-display font-bold text-white text-4xl">PR</span>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-navy-900/70 via-transparent to-transparent"></div>
+            <div class="absolute bottom-4 left-6 right-6">
+              <h3 class="font-display font-bold text-white text-xl">Phil Ryan</h3>
+              <p class="font-body font-semibold text-coral-300 text-sm">Chief Operating Officer</p>
+            </div>
+          </div>
+          <div class="p-6">
+            <p class="font-body text-gray-600 text-sm body-relaxed mb-4">
+              20+ years of MedTech operations experience, including significant tenure at Olympus ENT. Expert in scaling medical device commercialization and building high-performance teams.
+            </p>
+            <div class="flex items-center gap-2 pt-4 border-t border-gray-100">
+              <svg class="w-4 h-4 text-navy-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342"/></svg>
+              <p class="font-body text-navy-500 text-xs">MS Engineering Management</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dr. Aldona Spiegel -->
+        <div class="reveal card-hover bg-white rounded-2xl shadow-elevated border border-gray-100 overflow-hidden" style="transition-delay: 0.3s;">
+          <div class="relative h-72 overflow-hidden bg-gradient-to-br from-coral-50 to-coral-100 flex items-center justify-center">
+            <div class="w-32 h-32 rounded-full bg-coral-500 flex items-center justify-center shadow-lg">
+              <span class="font-display font-bold text-white text-4xl">AS</span>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-navy-900/70 via-transparent to-transparent"></div>
+            <div class="absolute bottom-4 left-6 right-6">
+              <h3 class="font-display font-bold text-white text-xl">Dr. Aldona Spiegel</h3>
+              <p class="font-body font-semibold text-coral-300 text-sm">Strategic Advisor</p>
+            </div>
+          </div>
+          <div class="p-6">
+            <p class="font-body text-gray-600 text-sm body-relaxed mb-4">
+              Director of the Center for Breast Restoration at Houston Methodist. A nationally recognized surgeon with 100+ publications advancing reconstructive surgery techniques and patient outcomes.
+            </p>
+            <div class="flex items-center gap-2 pt-4 border-t border-gray-100">
+              <svg class="w-4 h-4 text-navy-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/></svg>
+              <p class="font-body text-navy-500 text-xs">100+ peer-reviewed publications</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DR. SPIEGEL QUOTE ============ -->
+  <section class="relative py-20 lg:py-28 overflow-hidden grain">
+    <div class="absolute inset-0 bg-gradient-to-br from-navy-900 via-navy-800 to-navy-900"></div>
+    <div class="absolute inset-0" style="background: radial-gradient(ellipse at 30% 50%, rgba(234,83,41,0.08) 0%, transparent 60%);"></div>
+    <div class="relative z-10 max-w-4xl mx-auto px-6 lg:px-8 text-center">
+      <div class="reveal">
+        <svg class="w-12 h-12 text-coral-500/60 mx-auto mb-8" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+        </svg>
+      </div>
+      <blockquote class="reveal" style="transition-delay: 0.1s;">
+        <p class="font-display font-medium text-white text-2xl md:text-3xl lg:text-4xl leading-snug heading-tight mb-8">
+          SOMAVAC is an exciting new technology designed to enhance patient recovery and improve overall outcomes. Early feedback indicates significant improvements in <span class="text-coral-400">patient comfort</span> and <span class="text-coral-400">satisfaction</span>.
+        </p>
+      </blockquote>
+      <div class="reveal" style="transition-delay: 0.2s;">
+        <div class="flex items-center justify-center gap-4">
+          <div class="w-14 h-14 rounded-full bg-coral-500 flex items-center justify-center flex-shrink-0">
+            <span class="font-display font-bold text-white text-lg">AS</span>
+          </div>
+          <div class="text-left">
+            <p class="font-body font-semibold text-white text-base">Dr. Aldona Spiegel</p>
+            <p class="font-body text-navy-300 text-sm">Director, Center for Breast Restoration &mdash; Houston Methodist</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FUNDING BAR ============ -->
+  <section class="relative bg-navy-50/50 py-12">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+      <p class="reveal font-body text-gray-400 text-xs uppercase tracking-widest mb-6">Backed By</p>
+      <div class="reveal flex flex-wrap items-center justify-center gap-x-10 gap-y-4" style="transition-delay: 0.1s;">
+        <span class="font-body font-semibold text-navy-400 text-sm">Launch Tennessee</span>
+        <span class="font-body font-semibold text-navy-400 text-sm">BioTN Foundation</span>
+        <span class="font-body font-semibold text-navy-400 text-sm">Innova Memphis</span>
+        <span class="font-body font-semibold text-navy-400 text-sm">ZeroTo510</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="relative bg-navy-900 py-16 overflow-hidden grain">
+    <div class="absolute inset-0" style="background: radial-gradient(ellipse at 50% 100%, rgba(4,7,142,0.3) 0%, transparent 60%);"></div>
+    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+        <div class="lg:col-span-2">
+          <img src="/brand_assets/logo-somavac-long-blue.png" alt="SOMAVAC Medical Solutions" class="h-10 w-auto brightness-0 invert mb-6">
+          <p class="font-body text-navy-300 body-relaxed text-sm max-w-md mb-6">
+            SOMAVAC&reg; Medical Solutions is pioneering smart surgical drainage technology from Memphis, Tennessee. Named one of &ldquo;Five Companies to Watch&rdquo; by LSI Market Insights.
+          </p>
+          <a href="tel:+18337662822" class="font-body font-semibold text-coral-400 hover:text-coral-300 transition-colors text-sm">+1 (833) 766-2822</a>
+        </div>
+        <div>
+          <h4 class="font-body font-semibold text-white text-sm mb-6">Pages</h4>
+          <ul class="space-y-3">
+            <li><a href="/" class="font-body text-navy-300 text-sm hover:text-coral-400 transition-colors">Home</a></li>
+            <li><a href="/physicians" class="font-body text-navy-300 text-sm hover:text-coral-400 transition-colors">For Physicians</a></li>
+            <li><a href="/patients" class="font-body text-navy-300 text-sm hover:text-coral-400 transition-colors">For Patients</a></li>
+            <li><a href="/team" class="font-body text-navy-300 text-sm hover:text-coral-400 transition-colors">Team</a></li>
+            <li><a href="/#contact" class="font-body text-navy-300 text-sm hover:text-coral-400 transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-body font-semibold text-white text-sm mb-6">Legal</h4>
+          <ul class="space-y-3">
+            <li><a href="#" class="font-body text-navy-300 text-sm hover:text-coral-400 transition-colors">Privacy Statement</a></li>
+            <li><a href="#" class="font-body text-navy-300 text-sm hover:text-coral-400 transition-colors">Terms &amp; Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-white/10 pt-8 mb-6">
+        <p class="font-body text-navy-500 text-[10px] leading-relaxed max-w-5xl">
+          The SOMAVAC&reg; Sustained Vacuum System (SVS) is intended for the removal of bodily fluids following large flap forming plastic and general surgeries. There are potential risks associated with the use of a SOMAVAC SVS including a temporary lack of suction which could result in minor pain or engorgement because of some fluid retention. Talk to your surgeon about indications, warnings, precautions, adverse events and other important medical information. This information is for educational purposes only. Only your health care professional can determine if a SOMAVAC SVS is right for you. Patient results may vary.
+        </p>
+      </div>
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="font-body text-navy-400 text-xs">&copy; 2026 SOMAVAC&reg; Medical Solutions, Inc. All rights reserved.</p>
+        <p class="font-body text-navy-400 text-xs">Smart Suction Technology&trade; | Memphis, TN</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuIcon = document.getElementById('menuIcon');
+    let menuOpen = false;
+    menuToggle.addEventListener('click', () => { menuOpen = !menuOpen; mobileMenu.classList.toggle('open', menuOpen); menuToggle.setAttribute('aria-expanded', menuOpen); menuIcon.setAttribute('d', menuOpen ? 'M6 18L18 6M6 6l12 12' : 'M4 6h16M4 12h16M4 18h16'); });
+    function closeMobileMenu() { menuOpen = false; mobileMenu.classList.remove('open'); menuToggle.setAttribute('aria-expanded', 'false'); menuIcon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16'); }
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => { header.classList.toggle('shadow-elevated', window.scrollY > 20); });
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); revealObserver.unobserve(entry.target); } }); }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    revealElements.forEach(el => revealObserver.observe(el));
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => { anchor.addEventListener('click', function (e) { const target = document.querySelector(this.getAttribute('href')); if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); } }); });
+  </script>
+</body>
+</html>
