@@ -413,18 +413,103 @@
       </div>
 
       <div class="grid md:grid-cols-3 gap-8 mb-12">
-        <div class="reveal rounded-2xl overflow-hidden bg-white shadow-elevated" style="transition-delay: 0.1s;">
-          <img src="/brand_assets/chart-drain-time.png" alt="Chart: reduced drain time" class="w-full h-auto">
-          <div class="p-4"><p class="font-body font-semibold text-navy-700 text-sm">Less Drain Time</p></div>
+
+        <!-- Drain Time Bar Chart -->
+        <div class="reveal rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm border border-white/10 p-6" style="transition-delay: 0.1s;">
+          <p class="font-body font-semibold text-white text-sm mb-1">Average Time With Drains</p>
+          <p class="font-body text-navy-300 text-xs mb-6">Prospective mastectomy study (N=45)</p>
+          <div class="flex items-end gap-8 justify-center h-48 mb-4">
+            <div class="flex flex-col items-center gap-2">
+              <p class="font-display font-bold text-coral-400 text-lg">11.1</p>
+              <div class="w-20 rounded-t-lg bg-gradient-to-t from-coral-600 to-coral-400 chart-bar" style="height: 0;" data-height="68%"></div>
+              <p class="font-body text-white text-xs font-semibold mt-1">SOMAVAC</p>
+            </div>
+            <div class="flex flex-col items-center gap-2">
+              <p class="font-display font-bold text-navy-300 text-lg">16.3</p>
+              <div class="w-20 rounded-t-lg bg-gradient-to-t from-navy-600 to-navy-400 chart-bar" style="height: 0;" data-height="100%"></div>
+              <p class="font-body text-navy-300 text-xs font-semibold mt-1">JP Bulbs</p>
+            </div>
+          </div>
+          <div class="text-center">
+            <span class="inline-block bg-coral-500/20 text-coral-300 font-body font-semibold text-xs px-3 py-1 rounded-full">p = 0.003</span>
+          </div>
         </div>
-        <div class="reveal rounded-2xl overflow-hidden bg-white shadow-elevated" style="transition-delay: 0.2s;">
-          <img src="/brand_assets/chart-drain-output.png" alt="Chart: drain output over time" class="w-full h-auto">
-          <div class="p-4"><p class="font-body font-semibold text-navy-700 text-sm">Representative Drain Output</p></div>
+
+        <!-- SUS Usability Score Chart -->
+        <div class="reveal rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm border border-white/10 p-6" style="transition-delay: 0.2s;">
+          <p class="font-body font-semibold text-white text-sm mb-1">System Usability Score</p>
+          <p class="font-body text-navy-300 text-xs mb-6">Patient-reported ease of use (0&ndash;100)</p>
+          <div class="flex items-end gap-4 justify-center h-48 mb-4">
+            <div class="flex flex-col items-center gap-2">
+              <p class="font-display font-bold text-navy-400 text-sm">46.7</p>
+              <div class="w-14 rounded-t-lg bg-gradient-to-t from-navy-600 to-navy-400 chart-bar" style="height: 0;" data-height="47%"></div>
+              <p class="font-body text-navy-400 text-[10px] mt-1">JP Bulbs</p>
+            </div>
+            <div class="flex flex-col items-center gap-2">
+              <p class="font-display font-bold text-coral-400 text-sm">93.1</p>
+              <div class="w-14 rounded-t-lg bg-gradient-to-t from-coral-600 to-coral-400 chart-bar" style="height: 0;" data-height="93%"></div>
+              <p class="font-body text-white text-[10px] font-semibold mt-1">SOMAVAC</p>
+            </div>
+            <div class="flex flex-col items-center gap-2">
+              <p class="font-display font-bold text-navy-300 text-sm">82</p>
+              <div class="w-14 rounded-t-lg bg-navy-500/50 chart-bar" style="height: 0;" data-height="82%"></div>
+              <p class="font-body text-navy-400 text-[10px] mt-1">Therm.</p>
+            </div>
+            <div class="flex flex-col items-center gap-2">
+              <p class="font-display font-bold text-navy-300 text-sm">78</p>
+              <div class="w-14 rounded-t-lg bg-navy-500/50 chart-bar" style="height: 0;" data-height="78%"></div>
+              <p class="font-body text-navy-400 text-[10px] mt-1">Inhaler</p>
+            </div>
+          </div>
+          <div class="text-center">
+            <span class="inline-block bg-coral-500/20 text-coral-300 font-body font-semibold text-xs px-3 py-1 rounded-full">p = 0.0008</span>
+          </div>
         </div>
-        <div class="reveal rounded-2xl overflow-hidden bg-white shadow-elevated" style="transition-delay: 0.3s;">
-          <img src="/brand_assets/chart-sus-scores.png" alt="SUS usability scores" class="w-full h-auto">
-          <div class="p-4"><p class="font-body font-semibold text-navy-700 text-sm">Ease of Use (SUS Scores)</p></div>
+
+        <!-- Complication Reduction Chart -->
+        <div class="reveal rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm border border-white/10 p-6" style="transition-delay: 0.3s;">
+          <p class="font-body font-semibold text-white text-sm mb-1">Complication Reduction</p>
+          <p class="font-body text-navy-300 text-xs mb-6">SOMAVAC vs. standard of care</p>
+          <div class="space-y-5 mt-4">
+            <div>
+              <div class="flex justify-between mb-1.5">
+                <span class="font-body text-navy-200 text-xs">Seroma / Hematoma</span>
+                <span class="font-body font-semibold text-coral-400 text-xs">&minus;3.9%</span>
+              </div>
+              <div class="w-full h-3 bg-navy-700 rounded-full overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-coral-500 to-coral-400 rounded-full chart-bar-h" style="width: 0;" data-width="78%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-1.5">
+                <span class="font-body text-navy-200 text-xs">Drainage Intervention</span>
+                <span class="font-body font-semibold text-coral-400 text-xs">&minus;8.7%</span>
+              </div>
+              <div class="w-full h-3 bg-navy-700 rounded-full overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-coral-500 to-coral-400 rounded-full chart-bar-h" style="width: 0;" data-width="65%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-1.5">
+                <span class="font-body text-navy-200 text-xs">Wound Dehiscence</span>
+                <span class="font-body font-semibold text-coral-400 text-xs">&minus;4.3%</span>
+              </div>
+              <div class="w-full h-3 bg-navy-700 rounded-full overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-coral-500 to-coral-400 rounded-full chart-bar-h" style="width: 0;" data-width="55%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-1.5">
+                <span class="font-body text-navy-200 text-xs">Infections in Study</span>
+                <span class="font-body font-semibold text-coral-400 text-xs">Zero</span>
+              </div>
+              <div class="w-full h-3 bg-navy-700 rounded-full overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-coral-500 to-coral-400 rounded-full chart-bar-h" style="width: 0;" data-width="100%"></div>
+              </div>
+            </div>
+          </div>
         </div>
+
       </div>
       <p class="reveal text-center font-body text-navy-300 text-xs mb-16">*Early clinical results. Data on file. References: Olsen et al. (2015), Hannah et al. (2016), Gadiraju et al. (2025).</p>
 
@@ -807,6 +892,21 @@
     const revealObserver = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); revealObserver.unobserve(entry.target); } }); }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
     revealElements.forEach(el => revealObserver.observe(el));
     document.querySelectorAll('a[href^="#"]').forEach(anchor => { anchor.addEventListener('click', function (e) { const target = document.querySelector(this.getAttribute('href')); if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); } }); });
+    // Chart bar animations
+    const chartObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.querySelectorAll('.chart-bar').forEach((bar, i) => {
+            setTimeout(() => { bar.style.transition = 'height 1s cubic-bezier(0.16, 1, 0.3, 1)'; bar.style.height = bar.dataset.height; }, i * 150);
+          });
+          entry.target.querySelectorAll('.chart-bar-h').forEach((bar, i) => {
+            setTimeout(() => { bar.style.transition = 'width 1s cubic-bezier(0.16, 1, 0.3, 1)'; bar.style.width = bar.dataset.width; }, i * 200);
+          });
+          chartObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+    document.querySelectorAll('.grid').forEach(g => { if (g.querySelector('.chart-bar, .chart-bar-h')) chartObserver.observe(g); });
   </script>
 </body>
 </html>
