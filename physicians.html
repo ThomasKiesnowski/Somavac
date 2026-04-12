@@ -5,10 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>For Physicians | SOMAVAC&reg; Medical Solutions</title>
   <meta name="description" content="Elevate your post-surgical outcomes with SOMAVAC&reg; SVS. 30% faster drain removal, fewer complications, higher patient satisfaction. Learn how to bring SOMAVAC to your practice.">
+  <link rel="canonical" href="https://somavac.com/physicians">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="For Physicians | SOMAVAC&reg; Deep Tissue Negative Pressure Therapy">
+  <meta property="og:description" content="30% faster drain removal, fewer complications, higher patient satisfaction. Bring SOMAVAC to your practice.">
+  <meta property="og:url" content="https://somavac.com/physicians">
+  <meta property="og:image" content="https://somavac.com/brand_assets/somavac-product-image.png">
+  <meta property="og:site_name" content="SOMAVAC Medical Solutions">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="For Physicians | SOMAVAC&reg; Deep Tissue Negative Pressure Therapy">
+  <meta name="twitter:description" content="30% faster drain removal, fewer complications, higher patient satisfaction. Bring SOMAVAC to your practice.">
+  <meta name="twitter:image" content="https://somavac.com/brand_assets/somavac-product-image.png">
+  <link rel="icon" type="image/png" href="/brand_assets/logo-flower-blue.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type": "Question", "name": "What type of drains can I use with SOMAVAC?", "acceptedAnswer": {"@type": "Answer", "text": "SOMAVAC drain connectors attach to 15Fr-19Fr non-collapsible drains of your choice."}},
+      {"@type": "Question", "name": "Is SOMAVAC sterile?", "acceptedAnswer": {"@type": "Answer", "text": "The SOMAVAC drain connectors are supplied in sterile packaging. The device itself is not sterile and should be attached to the drain connectors after the sterile field has been taken down."}},
+      {"@type": "Question", "name": "How much pressure does SOMAVAC apply?", "acceptedAnswer": {"@type": "Answer", "text": "SOMAVAC applies -100mmHg at the end of the drains, controlled by a built-in pressure sensor. The pumps continuously seek -100mmHg to generate consistent, continuous suction."}},
+      {"@type": "Question", "name": "How many drains can I connect to a SOMAVAC?", "acceptedAnswer": {"@type": "Answer", "text": "SOMAVAC accepts 1-4 drains. There are two pumps per device. Each side of the fluid collection bag holds 50cc (100cc total)."}},
+      {"@type": "Question", "name": "Is SOMAVAC cleared by the FDA?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. SOMAVAC has been cleared by the FDA for use in post-operative drainage management since 2018."}},
+      {"@type": "Question", "name": "Is SOMAVAC covered by insurance?", "acceptedAnswer": {"@type": "Answer", "text": "SOMAVAC is covered within the overall cost of surgery. It is available in select hospitals."}},
+      {"@type": "Question", "name": "Can patients shower with SOMAVAC?", "acceptedAnswer": {"@type": "Answer", "text": "The SOMAVAC device must be kept dry. If allowed by the physician, negative pressure therapy may be disconnected temporarily to allow showering."}}
+    ]
+  }
+  </script>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
   <script>
     tailwind.config = {
       theme: {
@@ -18,8 +45,8 @@
             coral: { 50:'#fef0ec',100:'#fcd9d0',200:'#f9b3a1',300:'#f58d72',400:'#f26743',500:'#ea5329',600:'#c44422',700:'#9e361b',800:'#782814',900:'#521b0d' },
           },
           fontFamily: {
-            display: ['"Playfair Display"', 'Georgia', 'serif'],
-            body: ['"DM Sans"', 'Verdana', 'Geneva', 'sans-serif'],
+            display: ['"Montserrat"', 'Arial', 'sans-serif'],
+            body: ['"Source Sans 3"', 'Verdana', 'Geneva', 'sans-serif'],
           },
         }
       }
@@ -68,6 +95,99 @@
     .shadow-floating { box-shadow: 0 2px 4px rgba(4,7,142,0.04), 0 8px 24px rgba(4,7,142,0.08), 0 24px 60px rgba(4,7,142,0.12); }
     .mobile-menu { transform: translateX(100%); transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
     .mobile-menu.open { transform: translateX(0); }
+    @keyframes orbit {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    @keyframes pulse-ring {
+      0% { transform: scale(0.95); opacity: 0.6; }
+      50% { transform: scale(1.05); opacity: 0.2; }
+      100% { transform: scale(0.95); opacity: 0.6; }
+    }
+    @keyframes shimmer {
+      0% { background-position: -200% 0; }
+      100% { background-position: 200% 0; }
+    }
+    @keyframes dot-pulse {
+      0%, 100% { transform: scale(1); opacity: 0.8; }
+      50% { transform: scale(1.4); opacity: 1; }
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+    .product-showcase {
+      position: relative;
+    }
+    .product-showcase .orbit-ring {
+      position: absolute;
+      border-radius: 50%;
+      border: 1.5px solid rgba(234,83,41,0.15);
+      animation: orbit linear infinite;
+      pointer-events: none;
+    }
+    .product-showcase .orbit-ring::after {
+      content: '';
+      position: absolute;
+      top: -4px;
+      left: 50%;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #ea5329;
+      box-shadow: 0 0 12px 3px rgba(234,83,41,0.5);
+    }
+    .product-showcase .orbit-ring-1 {
+      inset: -20px;
+      animation-duration: 8s;
+    }
+    .product-showcase .orbit-ring-2 {
+      inset: -40px;
+      border-color: rgba(4,7,142,0.12);
+      animation-duration: 12s;
+      animation-direction: reverse;
+    }
+    .product-showcase .orbit-ring-2::after {
+      background: #4345a7;
+      box-shadow: 0 0 12px 3px rgba(67,69,167,0.5);
+    }
+    .product-showcase .glow-base {
+      position: absolute;
+      inset: -10%;
+      background: radial-gradient(ellipse at center, rgba(234,83,41,0.12) 0%, transparent 70%);
+      animation: pulse-ring 4s ease-in-out infinite;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .product-showcase .shimmer-bar {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, rgba(234,83,41,0.6), transparent);
+      background-size: 200% 100%;
+      animation: shimmer 3s ease-in-out infinite;
+      border-radius: 2px;
+    }
+    .product-showcase .feature-dot {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #ea5329;
+      box-shadow: 0 0 0 4px rgba(234,83,41,0.2);
+      animation: dot-pulse 2.5s ease-in-out infinite;
+      z-index: 20;
+    }
+    .product-showcase .feature-dot::before {
+      content: '';
+      position: absolute;
+      inset: -6px;
+      border-radius: 50%;
+      border: 1px solid rgba(234,83,41,0.3);
+      animation: pulse-ring 2.5s ease-in-out infinite;
+    }
   </style>
 </head>
 <body class="font-body text-gray-800 bg-white antialiased">
@@ -116,30 +236,46 @@
     <div class="absolute top-20 right-10 w-96 h-96 rounded-full bg-coral-500/10 blur-3xl"></div>
 
     <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-32 pb-20">
-      <div class="max-w-3xl">
-        <div class="animate-fade-up">
-          <span class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-coral-300 font-body font-semibold text-xs tracking-widest uppercase px-4 py-2 rounded-full border border-white/10 mb-8">
-            <span class="w-2 h-2 rounded-full bg-coral-400 animate-pulse"></span>
-            For Surgeons &amp; Physicians
-          </span>
+      <div class="grid md:grid-cols-2 gap-10 lg:gap-16 items-center">
+        <div>
+          <div class="animate-fade-up">
+            <span class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-coral-300 font-body font-semibold text-xs tracking-widest uppercase px-4 py-2 rounded-full border border-white/10 mb-8">
+              <span class="w-2 h-2 rounded-full bg-coral-400 animate-pulse"></span>
+              For Surgeons &amp; Physicians
+            </span>
+          </div>
+          <h1 class="animate-fade-up delay-100 font-display font-bold text-white heading-tight text-4xl md:text-5xl lg:text-6xl leading-[1.1] mb-6">
+            Elevate Post-Surgical <br>Outcomes With <br><span class="text-coral-400">Deep Tissue</span> Therapy
+          </h1>
+          <p class="animate-fade-up delay-200 font-body text-navy-200 body-relaxed text-lg md:text-xl max-w-2xl mb-4">
+            Negative pressure wound therapy is proven and standard of care. SOMAVAC&reg; SVS takes it where it&rsquo;s never been &mdash; the deep wound space &mdash; with continuous sensor-controlled suction at &minus;100mmHg.
+          </p>
+          <p class="animate-fade-up delay-200 font-body text-navy-300 body-relaxed text-base max-w-2xl mb-10">
+            Removes stagnant fluid. Creates tissue apposition. Enables ADM integration. Drains out up to 30% sooner.
+          </p>
+          <div class="animate-fade-up delay-300 flex flex-wrap gap-4">
+            <a href="#cta" class="btn-primary inline-flex items-center gap-2 bg-coral-500 text-white font-body font-semibold px-8 py-4 rounded-full text-base">
+              Bring SOMAVAC to Your Practice
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+            <a href="#data" class="btn-secondary inline-flex items-center gap-2 border-2 border-white/30 text-white font-body font-semibold px-8 py-4 rounded-full text-base">
+              View Clinical Data
+            </a>
+          </div>
         </div>
-        <h1 class="animate-fade-up delay-100 font-display font-bold text-white heading-tight text-4xl md:text-5xl lg:text-6xl leading-[1.1] mb-6">
-          The First &amp; Only <br><span class="text-coral-400">Deep Tissue</span> Negative <br>Pressure Therapy
-        </h1>
-        <p class="animate-fade-up delay-200 font-body text-navy-200 body-relaxed text-lg md:text-xl max-w-2xl mb-4">
-          Negative pressure wound therapy is proven and standard of care. SOMAVAC&reg; SVS takes it where it&rsquo;s never been &mdash; the deep wound space &mdash; with continuous sensor-controlled suction at &minus;100mmHg.
-        </p>
-        <p class="animate-fade-up delay-200 font-body text-navy-300 body-relaxed text-base max-w-2xl mb-10">
-          Removes stagnant fluid. Creates tissue apposition. Enables ADM integration. Drains out up to 30% sooner.
-        </p>
-        <div class="animate-fade-up delay-300 flex flex-wrap gap-4">
-          <a href="#cta" class="btn-primary inline-flex items-center gap-2 bg-coral-500 text-white font-body font-semibold px-8 py-4 rounded-full text-base">
-            Bring SOMAVAC to Your Practice
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-          </a>
-          <a href="#data" class="btn-secondary inline-flex items-center gap-2 border-2 border-white/30 text-white font-body font-semibold px-8 py-4 rounded-full text-base">
-            View Clinical Data
-          </a>
+        <div class="animate-fade-up delay-400 relative hidden md:block">
+          <div class="product-showcase relative mx-auto w-full max-w-sm lg:max-w-lg" style="animation: float 5s ease-in-out infinite;">
+            <div class="glow-base"></div>
+            <div class="orbit-ring orbit-ring-1"></div>
+            <div class="orbit-ring orbit-ring-2"></div>
+            <div class="relative z-10 bg-white rounded-3xl p-6 border border-white/20 shadow-2xl">
+              <img src="/brand_assets/somavac-product-image.png" alt="SOMAVAC SVS smart surgical drain pump system with measurement card and tubing" class="w-full h-auto relative z-10 drop-shadow-2xl">
+              <div class="shimmer-bar"></div>
+            </div>
+            <div class="feature-dot" style="top: 30%; left: -5px; animation-delay: 0s;"></div>
+            <div class="feature-dot" style="top: 50%; right: -5px; animation-delay: 0.8s;"></div>
+            <div class="feature-dot" style="bottom: 25%; left: 20%; animation-delay: 1.6s;"></div>
+          </div>
         </div>
       </div>
     </div>
@@ -173,7 +309,7 @@
           Surface Healing vs. <span class="text-coral-500">Deep Tissue</span> Therapy
         </h2>
         <p class="reveal font-body text-gray-600 body-relaxed text-lg" style="transition-delay: 0.2s;">
-          Surface NPWT devices like Prevena address incision healing externally. SOMAVAC&reg; is the only device &mdash; protected by 5 US patents &mdash; that delivers continuous negative pressure directly into the deep wound space.
+          Surface NPWT devices address incision healing externally. SOMAVAC&reg; is the only device that delivers continuous negative pressure directly into the deep wound space.
         </p>
       </div>
 
@@ -227,68 +363,68 @@
       </div>
 
       <!-- Side-by-side comparison -->
-      <div class="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
-        <div class="reveal bg-gray-50 rounded-2xl p-8 border border-gray-200" style="transition-delay: 0.1s;">
-          <div class="flex items-center gap-3 mb-6">
-            <div class="w-10 h-10 rounded-xl bg-gray-200 flex items-center justify-center">
+      <div class="grid md:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto">
+        <div class="reveal bg-gray-50 rounded-2xl p-6 md:p-8 border border-gray-200" style="transition-delay: 0.1s;">
+          <div class="flex items-center gap-3 mb-5 md:mb-6">
+            <div class="w-10 h-10 rounded-xl bg-gray-200 flex items-center justify-center flex-shrink-0">
               <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
             </div>
-            <div>
-              <h3 class="font-display font-bold text-navy-800 text-lg">Surface NPWT</h3>
-              <p class="font-body text-gray-400 text-xs uppercase tracking-wide">Prevena, KCI, Smith &amp; Nephew</p>
+            <div class="min-w-0">
+              <h3 class="font-display font-bold text-navy-800 text-base md:text-lg">Surface NPWT</h3>
+              <p class="font-body text-gray-400 text-xs uppercase tracking-wide">Traditional Surface Devices</p>
             </div>
           </div>
           <ul class="space-y-3 text-sm font-body text-gray-600">
             <li class="flex items-start gap-3">
-              <svg class="w-4 h-4 text-gray-400 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-              Pressure on incision surface
+              <svg class="w-4 h-4 text-gray-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <span>Pressure on incision surface</span>
             </li>
             <li class="flex items-start gap-3">
-              <svg class="w-4 h-4 text-gray-400 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-              Helps surface tissues approximate for incision healing
+              <svg class="w-4 h-4 text-gray-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <span>Helps surface tissues approximate for incision healing</span>
             </li>
             <li class="flex items-start gap-3">
-              <svg class="w-4 h-4 text-red-300 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-              <strong class="text-gray-800">Does not</strong>&nbsp;remove fluid from deep wound space
+              <svg class="w-4 h-4 text-red-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+              <span><strong class="text-gray-800">Does not</strong> remove fluid from deep wound space</span>
             </li>
             <li class="flex items-start gap-3">
-              <svg class="w-4 h-4 text-red-300 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-              <strong class="text-gray-800">Does not</strong>&nbsp;create deep tissue apposition or promote ADM integration
+              <svg class="w-4 h-4 text-red-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+              <span><strong class="text-gray-800">Does not</strong> create deep tissue apposition or promote ADM integration</span>
             </li>
           </ul>
         </div>
-        <div class="reveal bg-gradient-to-br from-navy-500 to-navy-700 rounded-2xl p-8 border border-navy-400/30 relative overflow-hidden grain" style="transition-delay: 0.2s;">
+        <div class="reveal bg-gradient-to-br from-navy-500 to-navy-700 rounded-2xl p-6 md:p-8 border border-navy-400/30 relative overflow-hidden grain" style="transition-delay: 0.2s;">
           <div class="absolute top-0 right-0 w-32 h-32 bg-coral-500/10 blur-2xl rounded-full"></div>
           <div class="relative z-10">
-            <div class="flex items-center gap-3 mb-6">
-              <div class="w-10 h-10 rounded-xl bg-coral-500 flex items-center justify-center">
+            <div class="flex items-center gap-3 mb-5 md:mb-6">
+              <div class="w-10 h-10 rounded-xl bg-coral-500 flex items-center justify-center flex-shrink-0">
                 <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
               </div>
-              <div>
-                <h3 class="font-display font-bold text-white text-lg">SOMAVAC&reg; Deep Tissue Therapy</h3>
-                <p class="font-body text-coral-300 text-xs uppercase tracking-wide">Patented &bull; First &amp; Only</p>
+              <div class="min-w-0">
+                <h3 class="font-display font-bold text-white text-base md:text-lg">SOMAVAC&reg; Deep Tissue Therapy</h3>
+                <p class="font-body text-coral-300 text-xs uppercase tracking-wide">First &amp; Only</p>
               </div>
             </div>
             <ul class="space-y-3 text-sm font-body text-navy-100">
               <li class="flex items-start gap-3">
-                <svg class="w-4 h-4 text-coral-400 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                Continuous &minus;100mmHg <strong class="text-white">into the deep wound space</strong>
+                <svg class="w-4 h-4 text-coral-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span>Continuous &minus;100mmHg <strong class="text-white">into the deep wound space</strong></span>
               </li>
               <li class="flex items-start gap-3">
-                <svg class="w-4 h-4 text-coral-400 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                Removes fluid to <strong class="text-white">prevent seroma formation</strong>
+                <svg class="w-4 h-4 text-coral-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span>Removes fluid to <strong class="text-white">prevent seroma formation</strong></span>
               </li>
               <li class="flex items-start gap-3">
-                <svg class="w-4 h-4 text-coral-400 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                Creates <strong class="text-white">tissue apposition</strong> for proper healing
+                <svg class="w-4 h-4 text-coral-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span>Creates <strong class="text-white">tissue apposition</strong> for proper healing</span>
               </li>
               <li class="flex items-start gap-3">
-                <svg class="w-4 h-4 text-coral-400 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                Enables <strong class="text-white">ADM integration</strong> &mdash; protects tissue investment
+                <svg class="w-4 h-4 text-coral-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span>Enables <strong class="text-white">ADM integration</strong> &mdash; protects tissue investment</span>
               </li>
               <li class="flex items-start gap-3">
-                <svg class="w-4 h-4 text-coral-400 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                Reduces infection risk by <strong class="text-white">eliminating stagnant fluid</strong>
+                <svg class="w-4 h-4 text-coral-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span>Reduces infection risk by <strong class="text-white">eliminating stagnant fluid</strong></span>
               </li>
             </ul>
           </div>
@@ -415,18 +551,18 @@
       <div class="grid md:grid-cols-2 gap-8 mb-12">
 
         <!-- Drain Time Bar Chart -->
-        <div class="reveal rounded-2xl overflow-hidden bg-white p-8" style="transition-delay: 0.1s;">
-          <p class="font-display font-bold text-navy-800 text-lg mb-1">Average Time With Drains</p>
-          <p class="font-body text-gray-500 text-sm mb-6">Prospective mastectomy study &bull; N=45 &bull; p=0.003</p>
-          <div class="flex gap-10 justify-center">
-            <div class="flex flex-col items-center w-28">
+        <div class="reveal rounded-2xl overflow-hidden bg-white p-5 sm:p-8" style="transition-delay: 0.1s;">
+          <p class="font-display font-bold text-navy-800 text-base sm:text-lg mb-1">Average Time With Drains</p>
+          <p class="font-body text-gray-500 text-xs sm:text-sm mb-6">Prospective mastectomy study &bull; N=45 &bull; p=0.003</p>
+          <div class="flex gap-6 sm:gap-10 justify-center">
+            <div class="flex flex-col items-center flex-1 max-w-[112px]">
               <p class="font-display font-bold text-coral-500 text-2xl mb-3">11.1 <span class="text-sm">days</span></p>
               <div class="w-full relative" style="height: 160px;">
                 <div class="absolute bottom-0 left-0 right-0 rounded-t-xl bg-gradient-to-t from-coral-600 to-coral-400 chart-bar" style="height: 0px;" data-height="105px"></div>
               </div>
               <p class="font-body text-navy-800 text-sm font-bold mt-3">SOMAVAC&reg;</p>
             </div>
-            <div class="flex flex-col items-center w-28">
+            <div class="flex flex-col items-center flex-1 max-w-[112px]">
               <p class="font-display font-bold text-gray-400 text-2xl mb-3">16.3 <span class="text-sm">days</span></p>
               <div class="w-full relative" style="height: 160px;">
                 <div class="absolute bottom-0 left-0 right-0 rounded-t-xl bg-gray-200 chart-bar" style="height: 0px;" data-height="155px"></div>
@@ -438,37 +574,37 @@
         </div>
 
         <!-- SUS Usability Score Chart -->
-        <div class="reveal rounded-2xl overflow-hidden bg-white p-8" style="transition-delay: 0.2s;">
-          <p class="font-display font-bold text-navy-800 text-lg mb-1">Ease of Use (SUS Score)</p>
-          <p class="font-body text-gray-500 text-sm mb-6">Patient-reported &bull; 0&ndash;100 scale &bull; p=0.0008</p>
-          <div class="flex gap-6 justify-center">
-            <div class="flex flex-col items-center w-20">
-              <p class="font-display font-bold text-gray-400 text-lg mb-3">46.7</p>
-              <div class="w-full relative" style="height: 160px;">
+        <div class="reveal rounded-2xl overflow-hidden bg-white p-5 sm:p-8" style="transition-delay: 0.2s;">
+          <p class="font-display font-bold text-navy-800 text-base sm:text-lg mb-1">Ease of Use (SUS Score)</p>
+          <p class="font-body text-gray-500 text-xs sm:text-sm mb-6">Patient-reported &bull; 0&ndash;100 scale &bull; p=0.0008</p>
+          <div class="flex gap-3 sm:gap-6 justify-center">
+            <div class="flex flex-col items-center flex-1 max-w-[80px]">
+              <p class="font-display font-bold text-gray-400 text-base sm:text-lg mb-3">46.7</p>
+              <div class="w-full relative" style="height: 140px;">
                 <div class="absolute bottom-0 left-0 right-0 rounded-t-xl bg-gray-200 chart-bar" style="height: 0px;" data-height="75px"></div>
               </div>
-              <p class="font-body text-gray-500 text-xs font-semibold mt-3">JP Bulbs</p>
+              <p class="font-body text-gray-500 text-[10px] sm:text-xs font-semibold mt-3">JP Bulbs</p>
             </div>
-            <div class="flex flex-col items-center w-20">
-              <p class="font-display font-bold text-coral-500 text-lg mb-3">93.1</p>
-              <div class="w-full relative" style="height: 160px;">
+            <div class="flex flex-col items-center flex-1 max-w-[80px]">
+              <p class="font-display font-bold text-coral-500 text-base sm:text-lg mb-3">93.1</p>
+              <div class="w-full relative" style="height: 140px;">
                 <div class="absolute bottom-0 left-0 right-0 rounded-t-xl bg-gradient-to-t from-coral-600 to-coral-400 chart-bar" style="height: 0px;" data-height="150px"></div>
               </div>
-              <p class="font-body text-navy-800 text-xs font-bold mt-3">SOMAVAC</p>
+              <p class="font-body text-navy-800 text-[10px] sm:text-xs font-bold mt-3">SOMAVAC</p>
             </div>
-            <div class="flex flex-col items-center w-20">
-              <p class="font-display font-bold text-gray-300 text-lg mb-3">82</p>
-              <div class="w-full relative" style="height: 160px;">
+            <div class="flex flex-col items-center flex-1 max-w-[80px]">
+              <p class="font-display font-bold text-gray-300 text-base sm:text-lg mb-3">82</p>
+              <div class="w-full relative" style="height: 140px;">
                 <div class="absolute bottom-0 left-0 right-0 rounded-t-xl bg-gray-100 chart-bar" style="height: 0px;" data-height="132px"></div>
               </div>
-              <p class="font-body text-gray-400 text-xs mt-3">Therm.</p>
+              <p class="font-body text-gray-400 text-[10px] sm:text-xs mt-3">Therm.</p>
             </div>
-            <div class="flex flex-col items-center w-20">
-              <p class="font-display font-bold text-gray-300 text-lg mb-3">78</p>
-              <div class="w-full relative" style="height: 160px;">
+            <div class="flex flex-col items-center flex-1 max-w-[80px]">
+              <p class="font-display font-bold text-gray-300 text-base sm:text-lg mb-3">78</p>
+              <div class="w-full relative" style="height: 140px;">
                 <div class="absolute bottom-0 left-0 right-0 rounded-t-xl bg-gray-100 chart-bar" style="height: 0px;" data-height="125px"></div>
               </div>
-              <p class="font-body text-gray-400 text-xs mt-3">Inhaler</p>
+              <p class="font-body text-gray-400 text-[10px] sm:text-xs mt-3">Inhaler</p>
             </div>
           </div>
           <p class="font-body text-gray-400 text-xs text-center mt-6">Rated <strong class="text-coral-500">&ldquo;best imaginable&rdquo;</strong> on SUS scale</p>
@@ -477,7 +613,7 @@
       </div>
 
       <!-- Complication Reduction - full width -->
-      <div class="reveal rounded-2xl overflow-hidden bg-white p-8 mb-12" style="transition-delay: 0.3s;">
+      <div class="reveal rounded-2xl overflow-hidden bg-white p-5 sm:p-8 mb-12" style="transition-delay: 0.3s;">
         <div class="max-w-3xl mx-auto">
           <p class="font-display font-bold text-navy-800 text-lg mb-1 text-center">Complication Reduction</p>
           <p class="font-body text-gray-500 text-sm mb-8 text-center">SOMAVAC vs. standard of care</p>
@@ -697,9 +833,9 @@
       </div>
 
       <!-- Spiegel featured quote -->
-      <div class="reveal bg-white rounded-3xl shadow-floating p-10 lg:p-14 text-center max-w-4xl mx-auto">
+      <div class="reveal bg-white rounded-2xl md:rounded-3xl shadow-floating p-6 sm:p-10 lg:p-14 text-center max-w-4xl mx-auto">
         <svg class="w-12 h-12 text-coral-300/50 mx-auto mb-6" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zM0 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151C7.546 6.068 5.983 8.789 5.983 11H10v10H0z"/></svg>
-        <p class="font-body text-gray-700 body-relaxed text-xl italic mb-8 max-w-2xl mx-auto">
+        <p class="font-body text-gray-700 body-relaxed text-base sm:text-xl italic mb-8 max-w-2xl mx-auto">
           &ldquo;SOMAVAC is an exciting new technology designed to enhance patient recovery and improve overall outcomes. Early feedback indicates significant improvements in patient comfort and satisfaction.&rdquo;
         </p>
         <p class="font-display font-bold text-navy-800 text-lg">Dr. Aldona Spiegel, MD</p>
@@ -745,6 +881,90 @@
         <p class="font-body text-gray-500 text-xs max-w-2xl mx-auto">
           Economic model based on published literature and clinical data. Reoperation costs estimated at $25K&ndash;$46K per event. SSI data from Olsen et al. (2008). Covered within the overall cost of surgery.
         </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section id="faq" class="relative py-24 lg:py-32 bg-navy-50/50">
+    <div class="max-w-4xl mx-auto px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="reveal font-body font-semibold text-coral-500 text-xs tracking-widest uppercase mb-4 block">Frequently Asked Questions</span>
+        <h2 class="reveal font-display font-bold text-navy-800 heading-tight text-3xl md:text-4xl lg:text-5xl leading-tight mb-6" style="transition-delay: 0.1s;">
+          Clinician FAQ
+        </h2>
+      </div>
+
+      <div class="space-y-4">
+        <div class="reveal bg-white rounded-2xl shadow-elevated border border-gray-100 overflow-hidden" style="transition-delay: 0.1s;">
+          <button class="faq-toggle w-full flex items-center justify-between p-6 text-left" aria-expanded="false">
+            <h3 class="font-display font-semibold text-navy-800 text-base pr-4">What type of drains can I use with SOMAVAC?</h3>
+            <svg class="w-5 h-5 text-coral-500 flex-shrink-0 faq-icon" style="transition: transform 0.3s ease;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-content hidden px-6 pb-6">
+            <p class="font-body text-gray-600 text-sm body-relaxed">SOMAVAC drain connectors attach to 15Fr&ndash;19Fr non-collapsible drains of your choice. This gives you flexibility to use your preferred drain while benefiting from continuous deep tissue negative pressure therapy.</p>
+          </div>
+        </div>
+
+        <div class="reveal bg-white rounded-2xl shadow-elevated border border-gray-100 overflow-hidden" style="transition-delay: 0.15s;">
+          <button class="faq-toggle w-full flex items-center justify-between p-6 text-left" aria-expanded="false">
+            <h3 class="font-display font-semibold text-navy-800 text-base pr-4">Is SOMAVAC sterile?</h3>
+            <svg class="w-5 h-5 text-coral-500 flex-shrink-0 faq-icon" style="transition: transform 0.3s ease;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-content hidden px-6 pb-6">
+            <p class="font-body text-gray-600 text-sm body-relaxed">The SOMAVAC drain connectors are supplied in sterile packaging. The device itself is not sterile and should be attached to the drain connectors after the sterile field has been taken down.</p>
+          </div>
+        </div>
+
+        <div class="reveal bg-white rounded-2xl shadow-elevated border border-gray-100 overflow-hidden" style="transition-delay: 0.2s;">
+          <button class="faq-toggle w-full flex items-center justify-between p-6 text-left" aria-expanded="false">
+            <h3 class="font-display font-semibold text-navy-800 text-base pr-4">How much pressure does SOMAVAC apply?</h3>
+            <svg class="w-5 h-5 text-coral-500 flex-shrink-0 faq-icon" style="transition: transform 0.3s ease;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-content hidden px-6 pb-6">
+            <p class="font-body text-gray-600 text-sm body-relaxed">SOMAVAC applies &minus;100mmHg at the end of the drains, controlled by a built-in pressure sensor. The pumps continuously seek &minus;100mmHg to generate consistent, continuous suction around the clock.</p>
+          </div>
+        </div>
+
+        <div class="reveal bg-white rounded-2xl shadow-elevated border border-gray-100 overflow-hidden" style="transition-delay: 0.25s;">
+          <button class="faq-toggle w-full flex items-center justify-between p-6 text-left" aria-expanded="false">
+            <h3 class="font-display font-semibold text-navy-800 text-base pr-4">How many drains can I connect to a SOMAVAC?</h3>
+            <svg class="w-5 h-5 text-coral-500 flex-shrink-0 faq-icon" style="transition: transform 0.3s ease;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-content hidden px-6 pb-6">
+            <p class="font-body text-gray-600 text-sm body-relaxed">SOMAVAC accepts 1&ndash;4 drains. There are two pumps per device. If more than 2 drains are used, drains 1A &amp; 1B are recorded by pump 1, and drains 2A &amp; 2B are recorded by pump 2. Each side of the fluid collection bag holds 50cc (100cc total).</p>
+          </div>
+        </div>
+
+        <div class="reveal bg-white rounded-2xl shadow-elevated border border-gray-100 overflow-hidden" style="transition-delay: 0.3s;">
+          <button class="faq-toggle w-full flex items-center justify-between p-6 text-left" aria-expanded="false">
+            <h3 class="font-display font-semibold text-navy-800 text-base pr-4">Is SOMAVAC cleared by the FDA?</h3>
+            <svg class="w-5 h-5 text-coral-500 flex-shrink-0 faq-icon" style="transition: transform 0.3s ease;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-content hidden px-6 pb-6">
+            <p class="font-body text-gray-600 text-sm body-relaxed">Yes. SOMAVAC has been cleared by the FDA for use in post-operative drainage management since 2018. It is indicated for the removal of bodily fluids following large flap forming plastic and general surgeries.</p>
+          </div>
+        </div>
+
+        <div class="reveal bg-white rounded-2xl shadow-elevated border border-gray-100 overflow-hidden" style="transition-delay: 0.35s;">
+          <button class="faq-toggle w-full flex items-center justify-between p-6 text-left" aria-expanded="false">
+            <h3 class="font-display font-semibold text-navy-800 text-base pr-4">Is SOMAVAC covered by insurance?</h3>
+            <svg class="w-5 h-5 text-coral-500 flex-shrink-0 faq-icon" style="transition: transform 0.3s ease;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-content hidden px-6 pb-6">
+            <p class="font-body text-gray-600 text-sm body-relaxed">SOMAVAC is covered within the overall cost of surgery. It is available in select hospitals. Please reach out to us if you would like to use SOMAVAC with your patients.</p>
+          </div>
+        </div>
+
+        <div class="reveal bg-white rounded-2xl shadow-elevated border border-gray-100 overflow-hidden" style="transition-delay: 0.4s;">
+          <button class="faq-toggle w-full flex items-center justify-between p-6 text-left" aria-expanded="false">
+            <h3 class="font-display font-semibold text-navy-800 text-base pr-4">Can patients shower with SOMAVAC?</h3>
+            <svg class="w-5 h-5 text-coral-500 flex-shrink-0 faq-icon" style="transition: transform 0.3s ease;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-content hidden px-6 pb-6">
+            <p class="font-body text-gray-600 text-sm body-relaxed">The SOMAVAC device must be kept dry. If allowed by the physician, negative pressure therapy may be disconnected temporarily to allow showering. Instructions are included in the patient kit.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -802,7 +1022,7 @@
         </div>
 
         <div class="reveal" style="transition-delay: 0.2s;">
-          <form class="bg-white rounded-2xl shadow-floating p-8 lg:p-10 space-y-6" onsubmit="event.preventDefault(); alert('Thank you! Our clinical team will be in touch within 24 hours.');">
+          <form class="bg-white rounded-2xl shadow-floating p-6 sm:p-8 lg:p-10 space-y-5 sm:space-y-6" onsubmit="event.preventDefault(); alert('Thank you! Our clinical team will be in touch within 24 hours.');">
             <h3 class="font-display font-bold text-navy-800 text-xl mb-2">Request a Practice Consultation</h3>
             <p class="font-body text-gray-500 text-sm mb-4">Fill out the form below and our clinical team will reach out within 24 hours.</p>
             <div class="grid sm:grid-cols-2 gap-6">
@@ -858,6 +1078,14 @@
             SOMAVAC&reg; Medical Solutions is pioneering smart surgical drainage technology from Memphis, Tennessee. Named one of &ldquo;Five Companies to Watch&rdquo; by LSI Market Insights.
           </p>
           <a href="tel:+18337662822" class="font-body font-semibold text-coral-400 hover:text-coral-300 transition-colors text-sm">+1 (833) 766-2822</a>
+          <div class="flex items-center gap-4 mt-4">
+            <a href="https://www.linkedin.com/company/somavac/" target="_blank" rel="noopener noreferrer" class="text-navy-400 hover:text-coral-400 transition-colors" aria-label="SOMAVAC on LinkedIn">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="https://x.com/somavac" target="_blank" rel="noopener noreferrer" class="text-navy-400 hover:text-coral-400 transition-colors" aria-label="SOMAVAC on X">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+          </div>
         </div>
         <div>
           <h4 class="font-body font-semibold text-white text-sm mb-6">Pages</h4>
@@ -867,13 +1095,14 @@
             <li><a href="/patients" class="font-body text-navy-300 text-sm hover:text-coral-400 transition-colors">For Patients</a></li>
             <li><a href="/#evidence" class="font-body text-navy-300 text-sm hover:text-coral-400 transition-colors">Clinical Evidence</a></li>
             <li><a href="/team" class="font-body text-navy-300 text-sm hover:text-coral-400 transition-colors">Team</a></li>
+            <li><a href="/#contact" class="font-body text-navy-300 text-sm hover:text-coral-400 transition-colors">Contact</a></li>
           </ul>
         </div>
         <div>
           <h4 class="font-body font-semibold text-white text-sm mb-6">Legal</h4>
           <ul class="space-y-3">
-            <li><a href="#" class="font-body text-navy-300 text-sm hover:text-coral-400 transition-colors">Privacy Statement</a></li>
-            <li><a href="#" class="font-body text-navy-300 text-sm hover:text-coral-400 transition-colors">Terms &amp; Conditions</a></li>
+            <li><a href="/privacy" class="font-body text-navy-300 text-sm hover:text-coral-400 transition-colors">Privacy Statement</a></li>
+            <li><a href="/terms" class="font-body text-navy-300 text-sm hover:text-coral-400 transition-colors">Terms &amp; Conditions</a></li>
           </ul>
         </div>
       </div>
@@ -917,6 +1146,17 @@
       });
     }, { threshold: 0.3 });
     document.querySelectorAll('.grid').forEach(g => { if (g.querySelector('.chart-bar, .chart-bar-h')) chartObserver.observe(g); });
+    // FAQ toggles
+    document.querySelectorAll('.faq-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const content = btn.nextElementSibling;
+        const icon = btn.querySelector('.faq-icon');
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', !expanded);
+        content.classList.toggle('hidden', expanded);
+        icon.style.transform = expanded ? 'rotate(0deg)' : 'rotate(180deg)';
+      });
+    });
   </script>
 </body>
 </html>
