@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>For Patients | SOMAVAC&reg; Medical Solutions</title>
-  <meta name="description" content="Recover faster, more comfortably after surgery with SOMAVAC&reg; SVS. Discreet, easy-to-use smart drain pump. Find a SOMAVAC provider near you.">
+  <meta name="description" content="Recover faster, more comfortably after surgery with SOMAVAC&reg; SVS. Discreet, easy-to-use smart drain pump — read patient stories and find a provider near you.">
+  <meta name="keywords" content="SOMAVAC patient, smart surgical drain, JP drain alternative, mastectomy recovery, breast reconstruction, post-surgical drain pump, find SOMAVAC provider">
+  <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://somavac.com/patients">
   <meta property="og:type" content="website">
   <meta property="og:title" content="For Patients | SOMAVAC&reg; Smart Surgical Drain Pump">
@@ -82,6 +84,24 @@
     .mobile-menu.open { transform: translateX(0); }
     .testimonial-card { position: relative; }
     .testimonial-card::before { content: '\201C'; position: absolute; top: -8px; left: 16px; font-family: 'Playfair Display', Georgia, serif; font-size: 4rem; color: rgba(234,83,41,0.15); line-height: 1; }
+    .story-card { transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease; }
+    .story-card:hover { transform: translateY(-4px); box-shadow: 0 18px 45px -15px rgba(4, 7, 142, 0.18), 0 6px 16px -6px rgba(4, 7, 142, 0.10); }
+    .story-card-img { filter: saturate(0.92); transition: filter 0.4s ease, transform 0.5s ease; }
+    .story-card:hover .story-card-img { filter: saturate(1.08); transform: scale(1.04); }
+    .audience-pill {
+      background: white; color: #02055e; border: 2px solid #c5c6e3;
+      transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+    }
+    .audience-pill:hover { border-color: #f58d72; color: #ea5329; }
+    .audience-pill.active { background: #ea5329; color: white; border-color: #ea5329; box-shadow: 0 8px 22px -10px rgba(234, 83, 41, 0.55); }
+    .audience-pill.active:hover { color: white; }
+    .audience-pill .audience-count {
+      display: inline-block; min-width: 1.25rem; padding: 0 0.4rem; margin-left: 0.5rem;
+      font-size: 0.65rem; font-weight: 700; line-height: 1.05rem; text-align: center;
+      border-radius: 999px; background: rgba(4, 7, 142, 0.08); color: #02055e;
+    }
+    .audience-pill.active .audience-count { background: rgba(255,255,255,0.22); color: white; }
+    .empty-state { padding: 3rem 2rem; border: 2px dashed #c5c6e3; border-radius: 1.25rem; text-align: center; color: #4345a7; }
   </style>
 </head>
 <body class="font-body text-gray-800 bg-white antialiased">
@@ -438,60 +458,20 @@
 
       <!-- YouTube Video: It's Time for a Surgical Drain Revolution -->
       <div class="reveal max-w-3xl mx-auto mb-12" style="transition-delay: 0.15s;">
+        <div class="text-center mb-6">
+          <span class="font-body font-semibold text-coral-400 text-xs tracking-widest uppercase mb-3 block">Watch</span>
+          <h2 class="font-display font-bold text-white heading-tight text-3xl md:text-4xl lg:text-5xl leading-tight">
+            Our Vision for a Surgical Drain Revolution
+          </h2>
+        </div>
         <div class="rounded-2xl overflow-hidden shadow-2xl">
           <div class="relative w-full" style="padding-bottom: 56.25%;">
-            <iframe src="https://www.youtube.com/embed/obbQd6JE3l0" title="It's Time for a Surgical Drain Revolution — SOMAVAC" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="absolute inset-0 w-full h-full"></iframe>
+            <iframe src="https://www.youtube.com/embed/obbQd6JE3l0" title="Our Vision for a Surgical Drain Revolution — SOMAVAC" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="absolute inset-0 w-full h-full"></iframe>
           </div>
         </div>
         <p class="font-body text-navy-300 text-sm text-center mt-4">SOMAVAC is taking care of the final leg of the breast cancer journey &mdash; improving both the surgical recovery and patient outcomes.</p>
       </div>
 
-    </div>
-  </section>
-
-  <!-- ============ WHAT'S IN THE KIT ============ -->
-  <section class="relative py-20 lg:py-24 bg-white">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8">
-      <div class="grid lg:grid-cols-2 gap-16 items-center">
-        <div class="reveal">
-          <img src="/brand_assets/somavac-shipping-kit.avif" alt="SOMAVAC shipping kit contents" class="w-full rounded-2xl shadow-floating">
-        </div>
-        <div>
-          <span class="reveal font-body font-semibold text-coral-500 text-xs tracking-widest uppercase mb-4 block">What You Receive</span>
-          <h2 class="reveal font-display font-bold text-navy-800 heading-tight text-3xl md:text-4xl leading-tight mb-6" style="transition-delay: 0.1s;">
-            Everything You Need, Shipped to You
-          </h2>
-          <p class="reveal font-body text-gray-600 body-relaxed text-base mb-8" style="transition-delay: 0.2s;">
-            Your SOMAVAC&reg; kit arrives complete &mdash; ready for your surgeon to set up. No extra parts to buy. No pharmacy trips.
-          </p>
-          <div class="space-y-4">
-            <div class="reveal flex items-start gap-4" style="transition-delay: 0.25s;">
-              <div class="w-8 h-8 rounded-lg bg-coral-50 flex items-center justify-center flex-shrink-0 mt-0.5">
-                <svg class="w-4 h-4 text-coral-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-              </div>
-              <p class="font-body text-gray-700 text-sm body-relaxed"><strong class="text-navy-700">SOMAVAC&reg; SVS pump</strong> &mdash; the smart suction device itself</p>
-            </div>
-            <div class="reveal flex items-start gap-4" style="transition-delay: 0.3s;">
-              <div class="w-8 h-8 rounded-lg bg-coral-50 flex items-center justify-center flex-shrink-0 mt-0.5">
-                <svg class="w-4 h-4 text-coral-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-              </div>
-              <p class="font-body text-gray-700 text-sm body-relaxed"><strong class="text-navy-700">Collection bags</strong> &mdash; replaceable fluid collection bags</p>
-            </div>
-            <div class="reveal flex items-start gap-4" style="transition-delay: 0.35s;">
-              <div class="w-8 h-8 rounded-lg bg-coral-50 flex items-center justify-center flex-shrink-0 mt-0.5">
-                <svg class="w-4 h-4 text-coral-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-              </div>
-              <p class="font-body text-gray-700 text-sm body-relaxed"><strong class="text-navy-700">Carrying pouch</strong> &mdash; discreet waist pouch for wearing the device</p>
-            </div>
-            <div class="reveal flex items-start gap-4" style="transition-delay: 0.4s;">
-              <div class="w-8 h-8 rounded-lg bg-coral-50 flex items-center justify-center flex-shrink-0 mt-0.5">
-                <svg class="w-4 h-4 text-coral-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-              </div>
-              <p class="font-body text-gray-700 text-sm body-relaxed"><strong class="text-navy-700">Quick-start guide</strong> &mdash; plus access to training videos and 24/7 phone support</p>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -542,222 +522,39 @@
     </div>
   </section>
 
-  <!-- ============ TESTIMONIALS ============ -->
+  <!-- ============ STORIES (cards + filter) ============ -->
   <section class="relative py-20 lg:py-24 bg-navy-50/50">
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
-      <div class="text-center max-w-3xl mx-auto mb-12">
+      <div class="text-center max-w-3xl mx-auto mb-10">
         <span class="reveal font-body font-semibold text-coral-500 text-xs tracking-widest uppercase mb-4 block">Patient Stories</span>
-        <h2 class="reveal font-display font-bold text-navy-800 heading-tight text-3xl md:text-4xl lg:text-5xl leading-tight mb-6" style="transition-delay: 0.1s;">
+        <h2 class="reveal font-display font-bold text-navy-800 heading-tight text-3xl md:text-4xl lg:text-5xl leading-tight" style="transition-delay: 0.1s;">
           Hear From People Like You
         </h2>
+        <p class="reveal font-body text-gray-600 body-relaxed text-base mt-4" style="transition-delay: 0.2s;">
+          Real first-person accounts from patients, caregivers, and physicians. Tap any card to read the full story.
+        </p>
       </div>
 
-      <!-- Featured Testimonial -->
-      <div class="reveal mb-12" style="transition-delay: 0.1s;">
-        <div class="bg-white rounded-3xl shadow-floating p-10 lg:p-14 max-w-4xl mx-auto">
-          <svg class="w-12 h-12 text-coral-300/50 mb-6" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zM0 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151C7.546 6.068 5.983 8.789 5.983 11H10v10H0z"/></svg>
-          <p class="font-body text-gray-700 body-relaxed text-xl italic mb-6 max-w-3xl">
-            &ldquo;I had bilateral mastectomy with reconstruction. The SOMAVAC was so much better than JP drains. I barely noticed it was there. The continuous suction meant my drains came out faster and I could actually sleep at night. It gave me back a sense of normalcy during the hardest time of my life.&rdquo;
-          </p>
-          <div class="flex items-center gap-4">
-            <div class="w-12 h-12 rounded-full bg-coral-100 flex items-center justify-center">
-              <span class="font-display font-bold text-coral-600 text-lg">K</span>
-            </div>
-            <div>
-              <p class="font-display font-bold text-navy-800">Kelly M.</p>
-              <p class="font-body text-gray-500 text-sm">Bilateral Mastectomy + Reconstruction Patient</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div class="reveal flex flex-wrap items-center justify-center gap-2 mb-10" role="tablist" aria-label="Filter stories by audience" data-audience-filters></div>
 
-      <!-- Testimonial Carousel -->
-      <div class="reveal testimonial-carousel relative" data-carousel>
+      <div class="reveal relative" data-cards-root>
         <div class="overflow-hidden -mx-4 px-4">
-          <div class="carousel-track flex gap-6 transition-transform duration-500 ease-out" data-carousel-track>
-            <article class="carousel-slide bg-white rounded-2xl shadow-elevated p-8 border border-gray-100 flex-shrink-0 w-full md:w-[calc((100%-1.5rem)/2)] lg:w-[calc((100%-3rem)/3)]">
-              <div class="flex items-center gap-1 mb-4">
-                <svg class="w-5 h-5 text-coral-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                <svg class="w-5 h-5 text-coral-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                <svg class="w-5 h-5 text-coral-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                <svg class="w-5 h-5 text-coral-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                <svg class="w-5 h-5 text-coral-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-              </div>
-              <p class="font-body text-gray-600 text-sm body-relaxed mb-6 italic">
-                &ldquo;The SOMAVAC was so much easier than the JP drains I had with my first surgery. I didn&rsquo;t have to strip them or squeeze bulbs. It just worked. I wish I&rsquo;d had it the first time.&rdquo;
-              </p>
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-navy-100 flex items-center justify-center">
-                  <span class="font-display font-bold text-navy-600 text-sm">C</span>
-                </div>
-                <div>
-                  <p class="font-display font-semibold text-navy-800 text-sm">Cindy L.</p>
-                  <p class="font-body text-gray-400 text-xs">Mastectomy Patient</p>
-                </div>
-              </div>
-            </article>
-
-            <article class="carousel-slide bg-white rounded-2xl shadow-elevated p-8 border border-gray-100 flex-shrink-0 w-full md:w-[calc((100%-1.5rem)/2)] lg:w-[calc((100%-3rem)/3)]">
-              <div class="flex items-center gap-1 mb-4">
-                <svg class="w-5 h-5 text-coral-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                <svg class="w-5 h-5 text-coral-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                <svg class="w-5 h-5 text-coral-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                <svg class="w-5 h-5 text-coral-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                <svg class="w-5 h-5 text-coral-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-              </div>
-              <p class="font-body text-gray-600 text-sm body-relaxed mb-6 italic">
-                &ldquo;I was nervous about drains after my surgery. But SOMAVAC was small, quiet, and I could hide it under my shirt. My friends didn&rsquo;t even know I had drains. It made a scary process so much less overwhelming.&rdquo;
-              </p>
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-navy-100 flex items-center justify-center">
-                  <span class="font-display font-bold text-navy-600 text-sm">S</span>
-                </div>
-                <div>
-                  <p class="font-display font-semibold text-navy-800 text-sm">Shelley M.</p>
-                  <p class="font-body text-gray-400 text-xs">Reconstruction Patient</p>
-                </div>
-              </div>
-            </article>
-
-            <article class="carousel-slide bg-white rounded-2xl shadow-elevated p-8 border border-gray-100 flex-shrink-0 w-full md:w-[calc((100%-1.5rem)/2)] lg:w-[calc((100%-3rem)/3)]">
-              <div class="flex items-center gap-1 mb-4">
-                <svg class="w-5 h-5 text-coral-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                <svg class="w-5 h-5 text-coral-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                <svg class="w-5 h-5 text-coral-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                <svg class="w-5 h-5 text-coral-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                <svg class="w-5 h-5 text-coral-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-              </div>
-              <p class="font-body text-gray-600 text-sm body-relaxed mb-6 italic">
-                &ldquo;After my double mastectomy I was dreading the drains. SOMAVAC changed everything. The device was tiny and quiet. I could shower, sleep, and move around freely. I genuinely didn&rsquo;t think recovery could feel this manageable.&rdquo;
-              </p>
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-navy-100 flex items-center justify-center">
-                  <span class="font-display font-bold text-navy-600 text-sm">J</span>
-                </div>
-                <div>
-                  <p class="font-display font-semibold text-navy-800 text-sm">Jaime B.</p>
-                  <p class="font-body text-gray-400 text-xs">Double Mastectomy Patient</p>
-                </div>
-              </div>
-            </article>
-
-            <article class="carousel-slide bg-white rounded-2xl shadow-elevated p-8 border border-gray-100 flex-shrink-0 w-full md:w-[calc((100%-1.5rem)/2)] lg:w-[calc((100%-3rem)/3)]">
-              <div class="flex items-center gap-1 mb-4">
-                <svg class="w-5 h-5 text-coral-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                <svg class="w-5 h-5 text-coral-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                <svg class="w-5 h-5 text-coral-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                <svg class="w-5 h-5 text-coral-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                <svg class="w-5 h-5 text-coral-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-              </div>
-              <p class="font-body text-gray-600 text-sm body-relaxed mb-6 italic">
-                &ldquo;Somavac made my recovery so much better. I had my drains out at 9 days when they thought it&rsquo;d be 2 weeks with bulbs. We were out eating pizza as a family after 2 days! I love that thing!&rdquo;
-              </p>
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-coral-100 flex items-center justify-center">
-                  <span class="font-display font-bold text-coral-600 text-sm">K</span>
-                </div>
-                <div>
-                  <p class="font-display font-semibold text-navy-800 text-sm">Kelly M.</p>
-                  <p class="font-body text-gray-400 text-xs">Bilateral Mastectomy</p>
-                </div>
-              </div>
-            </article>
-
-            <article class="carousel-slide bg-white rounded-2xl shadow-elevated p-8 border border-gray-100 flex-shrink-0 w-full md:w-[calc((100%-1.5rem)/2)] lg:w-[calc((100%-3rem)/3)]">
-              <div class="flex items-center gap-1 mb-4">
-                <svg class="w-5 h-5 text-coral-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                <svg class="w-5 h-5 text-coral-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                <svg class="w-5 h-5 text-coral-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                <svg class="w-5 h-5 text-coral-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                <svg class="w-5 h-5 text-coral-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-              </div>
-              <p class="font-body text-gray-600 text-sm body-relaxed mb-6 italic">
-                &ldquo;SOMAVAC was clean, easy to use and took away all of the frustrations of the JP bulbs. I even got my drains removed after 7 days. Game changer.&rdquo;
-              </p>
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-navy-100 flex items-center justify-center">
-                  <span class="font-display font-bold text-navy-600 text-sm">L</span>
-                </div>
-                <div>
-                  <p class="font-display font-semibold text-navy-800 text-sm">Leah S.</p>
-                  <p class="font-body text-gray-400 text-xs">Bilateral Mastectomy with Reconstruction</p>
-                </div>
-              </div>
-            </article>
-
-            <article class="carousel-slide bg-white rounded-2xl shadow-elevated p-8 border border-gray-100 flex-shrink-0 w-full md:w-[calc((100%-1.5rem)/2)] lg:w-[calc((100%-3rem)/3)]">
-              <div class="flex items-center gap-1 mb-4">
-                <svg class="w-5 h-5 text-coral-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                <svg class="w-5 h-5 text-coral-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                <svg class="w-5 h-5 text-coral-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                <svg class="w-5 h-5 text-coral-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                <svg class="w-5 h-5 text-coral-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-              </div>
-              <p class="font-body text-gray-600 text-sm body-relaxed mb-6 italic">
-                &ldquo;I was given Somavac after my surgery and couldn&rsquo;t believe how easy it was. When I needed another surgery, my surgeon was going to give me the bulbs and I refused. I demanded Somavac again. Bulbs cannot be justified anymore.&rdquo;
-              </p>
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-coral-100 flex items-center justify-center">
-                  <span class="font-display font-bold text-coral-600 text-sm">J</span>
-                </div>
-                <div>
-                  <p class="font-display font-semibold text-navy-800 text-sm">Jaime B.</p>
-                  <p class="font-body text-gray-400 text-xs">Repeat Patient</p>
-                </div>
-              </div>
-            </article>
-          </div>
+          <div class="flex gap-6 transition-transform duration-500 ease-out" data-cards-track></div>
         </div>
-
-        <!-- Carousel controls -->
         <div class="flex items-center justify-between mt-8">
-          <button type="button" class="carousel-prev w-12 h-12 rounded-full bg-white border-2 border-navy-200 text-navy-600 hover:border-coral-400 hover:text-coral-500 transition-colors duration-300 flex items-center justify-center shadow-elevated focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-300" aria-label="Previous testimonial" data-carousel-prev>
+          <button type="button" class="w-12 h-12 rounded-full bg-white border-2 border-navy-200 text-navy-600 hover:border-coral-400 hover:text-coral-500 transition-colors duration-300 flex items-center justify-center shadow-elevated focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-300" aria-label="Previous stories" data-cards-prev>
             <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
           </button>
-          <div class="flex items-center gap-2" data-carousel-dots aria-label="Testimonial slide indicators"></div>
-          <button type="button" class="carousel-next w-12 h-12 rounded-full bg-white border-2 border-navy-200 text-navy-600 hover:border-coral-400 hover:text-coral-500 transition-colors duration-300 flex items-center justify-center shadow-elevated focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-300" aria-label="Next testimonial" data-carousel-next>
+          <div class="flex items-center gap-2" data-cards-dots aria-label="Slide indicators"></div>
+          <button type="button" class="w-12 h-12 rounded-full bg-white border-2 border-navy-200 text-navy-600 hover:border-coral-400 hover:text-coral-500 transition-colors duration-300 flex items-center justify-center shadow-elevated focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-300" aria-label="Next stories" data-cards-next>
             <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
           </button>
         </div>
       </div>
+
       <div class="reveal text-center mt-10">
         <a href="#find-provider" class="btn-primary inline-flex items-center gap-2 bg-coral-500 text-white font-body font-semibold px-8 py-4 rounded-full text-base">
           Ask Your Surgeon About SOMAVAC
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ CAREGIVER STORY ============ -->
-  <section class="relative py-20 lg:py-24 bg-white">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8">
-      <div class="grid lg:grid-cols-2 gap-16 items-center">
-        <div>
-          <span class="reveal font-body font-semibold text-coral-500 text-xs tracking-widest uppercase mb-4 block">A Caregiver&rsquo;s Perspective</span>
-          <h2 class="reveal font-display font-bold text-navy-800 heading-tight text-3xl md:text-4xl leading-tight mb-6" style="transition-delay: 0.1s;">
-            &ldquo;It Gave Her Dignity Back&rdquo;
-          </h2>
-          <p class="reveal font-body text-gray-600 body-relaxed text-base mb-6" style="transition-delay: 0.2s;">
-            Michael Ker watched his wife endure two rounds of JP drain bulbs after breast cancer surgery. The third time, her surgeon used SOMAVAC.
-          </p>
-          <blockquote class="reveal border-l-4 border-coral-400 pl-6 mb-8" style="transition-delay: 0.3s;">
-            <p class="font-body text-gray-700 body-relaxed text-base italic mb-4">
-              &ldquo;The difference was night and day. With JP bulbs, she couldn&rsquo;t sleep, couldn&rsquo;t shower normally, and was constantly worried about the drains leaking. With SOMAVAC, she slept through the night on day one. She wore it under her clothes and went out to lunch three days after surgery. It gave her back her dignity during an incredibly difficult time.&rdquo;
-            </p>
-            <footer>
-              <p class="font-display font-bold text-navy-800">Michael K.</p>
-              <p class="font-body text-gray-500 text-sm">Caregiver &amp; Husband</p>
-            </footer>
-          </blockquote>
-        </div>
-        <div class="reveal" style="transition-delay: 0.2s;">
-          <img src="/brand_assets/caregiver-couple.jpg" alt="A caregiver supporting their partner during recovery" class="w-full rounded-2xl shadow-floating">
-        </div>
-      </div>
-      <div class="reveal text-center mt-10">
-        <a href="#find-provider" class="btn-primary inline-flex items-center gap-2 bg-coral-500 text-white font-body font-semibold px-8 py-4 rounded-full text-base">
-          Find a SOMAVAC Provider Near You
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
         </a>
       </div>
@@ -976,6 +773,138 @@
       window.addEventListener('resize', () => { update(); });
       update();
     });
+  </script>
+  <script src="/stories-data.js"></script>
+  <script>
+    // ===========================================================
+    // Stories cards + audience filter (data-driven from stories-data.js)
+    // ===========================================================
+    (function () {
+      const STORIES = window.PATIENT_STORIES || [];
+      const AUDIENCES = window.PATIENT_STORY_AUDIENCES || [];
+      const cardsTrack = document.querySelector('[data-cards-track]');
+      const cardsDots = document.querySelector('[data-cards-dots]');
+      const cardsPrevBtn = document.querySelector('[data-cards-prev]');
+      const cardsNextBtn = document.querySelector('[data-cards-next]');
+      const filterBar = document.querySelector('[data-audience-filters]');
+      if (!cardsTrack || !filterBar) return;
+
+      let audienceFilter = 'all';
+      let cardsIndex = 0;
+
+      const initialsOf = (n) => (n || '?').trim().charAt(0).toUpperCase();
+      const audienceCount = (id) => id === 'all' ? STORIES.length : STORIES.filter(s => s.audience === id).length;
+      const visibleStories = () => audienceFilter === 'all' ? STORIES : STORIES.filter(s => s.audience === audienceFilter);
+
+      function buildFilterPills() {
+        filterBar.innerHTML = AUDIENCES.map(a => `
+          <button type="button" role="tab" aria-selected="${a.id === audienceFilter}" data-audience-pill="${a.id}"
+            class="audience-pill ${a.id === audienceFilter ? 'active' : ''} inline-flex items-center gap-2 px-4 py-2.5 rounded-full font-body font-semibold text-xs uppercase tracking-wider">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="${a.iconPath}"/></svg>
+            <span>${a.label}</span>
+            <span class="audience-count">${audienceCount(a.id)}</span>
+          </button>
+        `).join('');
+        filterBar.querySelectorAll('[data-audience-pill]').forEach(btn => {
+          btn.addEventListener('click', () => {
+            const id = btn.dataset.audiencePill;
+            if (id === audienceFilter) return;
+            audienceFilter = id;
+            cardsIndex = 0;
+            buildFilterPills();
+            buildCards();
+            updateCards();
+          });
+        });
+      }
+
+      function buildCards() {
+        const items = visibleStories();
+        if (items.length === 0) {
+          cardsTrack.innerHTML = `
+            <div class="empty-state w-full">
+              <p class="font-display font-semibold text-base mb-1">No stories yet for this audience</p>
+              <p class="font-body text-sm text-navy-500">Check back soon.</p>
+            </div>
+          `;
+          return;
+        }
+        cardsTrack.innerHTML = items.map(s => `
+          <a href="/patient-stories#${s.id}" class="story-card group bg-white rounded-2xl shadow-elevated overflow-hidden flex-shrink-0 w-full md:w-[calc((100%-1.5rem)/2)] lg:w-[calc((100%-3rem)/3)]">
+            <div class="relative aspect-[5/4] overflow-hidden">
+              <img src="${s.image}" alt="${s.author}" class="story-card-img absolute inset-0 w-full h-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-navy-900/80 via-navy-900/20 to-transparent"></div>
+              <span class="absolute top-4 left-4 inline-block bg-white/90 text-navy-700 font-body font-semibold text-[0.65rem] uppercase tracking-widest px-3 py-1.5 rounded-full backdrop-blur-sm">${s.category}</span>
+              <div class="absolute bottom-4 left-4 right-4">
+                <h3 class="font-display font-bold text-white text-lg leading-tight">${s.title}</h3>
+              </div>
+            </div>
+            <div class="p-6">
+              <p class="font-body text-gray-600 text-sm body-relaxed mb-5 line-clamp-3">${s.cardSummary || s.subtitle}</p>
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                  <div class="w-9 h-9 rounded-full bg-gradient-to-br from-coral-400 to-coral-600 flex items-center justify-center">
+                    <span class="font-display font-bold text-white text-xs">${initialsOf(s.author)}</span>
+                  </div>
+                  <div>
+                    <p class="font-display font-semibold text-navy-800 text-sm leading-tight">${s.author}</p>
+                    <p class="font-body text-navy-500 text-xs">${s.role}</p>
+                  </div>
+                </div>
+                <span class="font-body font-semibold text-coral-500 text-xs uppercase tracking-wider inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+                  Read
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+                </span>
+              </div>
+            </div>
+          </a>
+        `).join('');
+      }
+
+      const cardsPerView = () => {
+        const w = window.innerWidth;
+        if (w >= 1024) return 3;
+        if (w >= 768) return 2;
+        return 1;
+      };
+      const cardsMaxIndex = () => Math.max(0, visibleStories().length - cardsPerView());
+
+      function updateCards() {
+        cardsIndex = Math.min(cardsIndex, cardsMaxIndex());
+        const slides = cardsTrack.children;
+        if (!slides.length) return;
+        const slideWidth = slides[0].getBoundingClientRect().width;
+        const gap = parseFloat(getComputedStyle(cardsTrack).columnGap || getComputedStyle(cardsTrack).gap || 24) || 24;
+        cardsTrack.style.transform = `translateX(-${cardsIndex * (slideWidth + gap)}px)`;
+
+        const totalDots = cardsMaxIndex() + 1;
+        cardsDots.innerHTML = '';
+        if (totalDots > 1) {
+          for (let i = 0; i < totalDots; i++) {
+            const dot = document.createElement('button');
+            dot.type = 'button';
+            dot.className = 'rounded-full transition-all duration-300 ' + (i === cardsIndex ? 'bg-coral-500 w-6 h-2.5' : 'bg-navy-200 hover:bg-navy-300 w-2.5 h-2.5');
+            dot.setAttribute('aria-label', `Page ${i + 1}`);
+            dot.addEventListener('click', () => { cardsIndex = i; updateCards(); });
+            cardsDots.appendChild(dot);
+          }
+        }
+        const max = cardsMaxIndex();
+        [cardsPrevBtn, cardsNextBtn].forEach((b, k) => {
+          if (!b) return;
+          const disabled = (k === 0 && cardsIndex === 0) || (k === 1 && cardsIndex >= max);
+          b.disabled = disabled;
+          b.style.opacity = disabled ? '0.4' : '1';
+        });
+      }
+      cardsPrevBtn.addEventListener('click', () => { cardsIndex = Math.max(0, cardsIndex - 1); updateCards(); });
+      cardsNextBtn.addEventListener('click', () => { cardsIndex = Math.min(cardsMaxIndex(), cardsIndex + 1); updateCards(); });
+      window.addEventListener('resize', updateCards);
+
+      buildFilterPills();
+      buildCards();
+      updateCards();
+    })();
   </script>
 </body>
 </html>
