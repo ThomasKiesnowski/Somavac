@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Patient Stories | SOMAVAC&reg; Medical Solutions</title>
-  <meta name="description" content="Long-form first-person stories from SOMAVAC&reg; patients, caregivers, and physicians — recovery after mastectomy, reconstruction, hernia repair and abdominoplasty.">
+  <meta name="description" content="Long-form first-person stories from SOMAVAC&reg; patients, caregivers, and physicians: recovery after mastectomy, reconstruction, hernia repair and abdominoplasty.">
   <meta name="keywords" content="SOMAVAC patient stories, caregiver story, mastectomy recovery, JP drain alternative, surgical drain story, breast cancer recovery, post-surgical drainage">
   <link rel="canonical" href="https://somavac.com/patient-stories">
   <meta name="robots" content="index, follow, max-image-preview:large">
@@ -38,7 +38,7 @@
         "@id": "https://somavac.com/patient-stories#page",
         "url": "https://somavac.com/patient-stories",
         "name": "Patient Stories | SOMAVAC Medical Solutions",
-        "description": "Long-form first-person stories from SOMAVAC patients and caregivers — recovery experiences after mastectomy, reconstruction, hernia repair, and abdominoplasty.",
+        "description": "Long-form first-person stories from SOMAVAC patients and caregivers: recovery experiences after mastectomy, reconstruction, hernia repair, and abdominoplasty.",
         "inLanguage": "en-US",
         "publisher": {
           "@type": "Organization",
@@ -360,7 +360,7 @@
             </div>
             <div class="flex-1">
               <p class="font-display font-bold text-navy-800 text-base lg:text-lg" data-story-signoff-author>Michael Ker</p>
-              <p class="font-body text-navy-600 text-sm" data-story-signoff-role>Husband and Caregiver &mdash; shared with permission</p>
+              <p class="font-body text-navy-600 text-sm" data-story-signoff-role>Husband and Caregiver, shared with permission</p>
             </div>
             <a href="#share" class="hidden sm:inline-flex btn-secondary border-2 border-navy-300 text-navy-700 hover:text-coral-500 hover:border-coral-400 font-body font-semibold text-xs tracking-wide uppercase px-5 py-2.5 rounded-full">
               Share Yours
@@ -437,7 +437,7 @@
         Share Your SOMAVAC&reg; Experience
       </h2>
       <p class="reveal font-body text-navy-200 body-relaxed text-base md:text-lg mb-10" style="transition-delay: 0.2s;">
-        Your story could be exactly what someone facing surgery needs to hear right now. Tell us how SOMAVAC&reg; changed your recovery &mdash; we&rsquo;ll feature it here (with your permission) so others can find hope through your experience.
+        Your story could be exactly what someone facing surgery needs to hear right now. Tell us how SOMAVAC&reg; changed your recovery, and we&rsquo;ll feature it here (with your permission) so others can find hope through your experience.
       </p>
       <div class="reveal flex flex-col sm:flex-row gap-4 justify-center" style="transition-delay: 0.3s;">
         <a href="mailto:info@somavac.com?subject=Patient%20Story%20Submission" class="btn-primary inline-flex items-center justify-center gap-2 bg-coral-500 text-white font-body font-bold px-8 py-4 rounded-full text-base">
@@ -570,11 +570,11 @@
         document.querySelector('[data-story-role]').textContent = story.role;
         document.querySelector('[data-story-initial]').textContent = initialsOf(story.author);
         document.querySelector('[data-story-signoff-author]').textContent = story.author;
-        document.querySelector('[data-story-signoff-role]').textContent = `${story.role} — shared with permission`;
+        document.querySelector('[data-story-signoff-role]').textContent = `${story.role}, shared with permission`;
         document.querySelector('[data-story-signoff-initial]').textContent = initialsOf(story.author);
         const img = document.querySelector('[data-story-image]');
         img.src = story.image;
-        img.alt = `${story.author} — ${story.role}`;
+        img.alt = `${story.author}, ${story.role}`;
         document.querySelector('[data-story-caption]').textContent = story.imageCaption || story.author;
 
         const bodyEl = document.querySelector('[data-story-body]');
@@ -592,8 +592,8 @@
         // Prev/next labels
         const prevIdx = (idx - 1 + STORIES.length) % STORIES.length;
         const nextIdx = (idx + 1) % STORIES.length;
-        document.querySelector('[data-story-prev-label]').textContent = STORIES[prevIdx].author + ' — ' + STORIES[prevIdx].category;
-        document.querySelector('[data-story-next-label]').textContent = STORIES[nextIdx].author + ' — ' + STORIES[nextIdx].category;
+        document.querySelector('[data-story-prev-label]').textContent = STORIES[prevIdx].author + ', ' + STORIES[prevIdx].category;
+        document.querySelector('[data-story-next-label]').textContent = STORIES[nextIdx].author + ', ' + STORIES[nextIdx].category;
 
         // Update document title + hash
         document.title = `${story.title.replace(/’/g, "'")} | SOMAVAC® Patient Stories`;
@@ -687,7 +687,7 @@
         cardsTrack.innerHTML = `
           <div class="empty-state w-full">
             <p class="font-display font-semibold text-base mb-1">No stories yet for this audience</p>
-            <p class="font-body text-sm text-navy-500">Check back soon — or submit yours below.</p>
+            <p class="font-body text-sm text-navy-500">Check back soon, or submit yours below.</p>
           </div>
         `;
         return;
