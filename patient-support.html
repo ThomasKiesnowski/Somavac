@@ -136,6 +136,7 @@
         radial-gradient(ellipse at 80% 20%, rgba(234, 83, 41, 0.06) 0%, transparent 50%),
         radial-gradient(ellipse at 50% 80%, rgba(4, 7, 142, 0.04) 0%, transparent 50%);
     }
+      .reg{font-size:.55em;vertical-align:super;line-height:0;}
   </style>
 </head>
 <body class="font-body text-gray-800 bg-white antialiased">
@@ -198,13 +199,20 @@
       <h1 class="animate-fade-up delay-100 font-display font-bold text-white heading-tight text-4xl md:text-5xl lg:text-6xl leading-[1.1] mb-6">
         We're Here For You, <span class="text-coral-400">24/7</span>
       </h1>
-      <p class="animate-fade-up delay-200 font-body text-navy-200 body-relaxed text-lg md:text-xl max-w-2xl mx-auto mb-10">
-        Real people. Real answers. Our U.S.-based support team is available around the clock, no phone trees, no robots. Just call.
+      <p class="animate-fade-up delay-200 font-body text-navy-200 body-relaxed text-lg md:text-xl max-w-2xl mx-auto mb-6">
+        Real people. Real answers. Our U.S.-based support team is available around the clock, no phone trees, no robots. <strong class="text-white font-semibold">Call us any time with any questions, and call to register your SOMAVAC<sup class="reg">&reg;</sup>.</strong>
+      </p>
+      <p class="animate-fade-up delay-200 font-body text-coral-300 font-semibold text-base md:text-lg max-w-2xl mx-auto mb-10">
+        Call with any questions &middot; Call to register your SOMAVAC<sup class="reg">&reg;</sup>
       </p>
       <div class="animate-fade-up delay-300 flex flex-col sm:flex-row gap-4 justify-center">
         <a href="tel:+18337662822" class="btn-primary inline-flex items-center justify-center gap-3 bg-coral-500 text-white font-body font-bold px-10 py-5 rounded-full text-lg">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
           Call Now: (833) 766-2822
+        </a>
+        <a href="tel:+18337662822" class="btn-secondary inline-flex items-center justify-center gap-3 bg-white/10 backdrop-blur-sm text-white font-body font-bold px-10 py-5 rounded-full text-lg border border-white/20 hover:bg-white/20 transition-colors">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          Call to Register Your SOMAVAC<sup class="reg">&reg;</sup>
         </a>
       </div>
     </div>
@@ -222,38 +230,38 @@
 
       <div class="grid md:grid-cols-2 gap-8">
         <!-- DO NOT STRIP DRAINS -->
-        <div class="reveal safety-card bg-coral-50 rounded-2xl p-8" style="transition-delay: 0.1s;">
+        <div class="reveal safety-card bg-coral-50 rounded-2xl p-8 flex flex-col" style="transition-delay: 0.1s;">
           <div class="flex items-center gap-4 mb-6">
             <div class="w-14 h-14 rounded-xl bg-coral-500 flex items-center justify-center flex-shrink-0">
               <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"/></svg>
             </div>
             <h3 class="font-display font-bold text-navy-800 text-xl">Do NOT Strip the Drains</h3>
           </div>
-          <p class="font-body text-gray-700 body-relaxed text-base mb-4">
-            SOMAVAC provides <strong class="text-navy-600">continuous suction</strong>. You do not need to manually strip or squeeze the drain tubing.
+          <p class="font-body text-gray-700 body-relaxed text-base mb-4 min-h-[5.5rem]">
+            SOMAVAC provides <strong class="text-navy-600">continuous suction</strong>. You do not need to manually strip or squeeze the drain tubing. Let the device do the work for you.
           </p>
-          <div class="bg-white rounded-xl p-4 border border-coral-200">
+          <div class="bg-white rounded-xl p-4 border border-coral-200 flex-grow">
             <p class="font-body text-navy-700 text-sm font-semibold mb-1">Remember:</p>
             <ul class="font-body text-gray-600 text-sm space-y-1 list-disc list-inside">
               <li>SOMAVAC maintains suction continuously</li>
               <li>No manual compression or stripping needed</li>
-              <li>Let the device do the work for you</li>
+              <li>A green light means it&rsquo;s working normally</li>
             </ul>
           </div>
         </div>
 
         <!-- DO NOT REUSE BAGS -->
-        <div class="reveal safety-card bg-coral-50 rounded-2xl p-8" style="transition-delay: 0.2s;">
+        <div class="reveal safety-card bg-coral-50 rounded-2xl p-8 flex flex-col" style="transition-delay: 0.2s;">
           <div class="flex items-center gap-4 mb-6">
             <div class="w-14 h-14 rounded-xl bg-coral-500 flex items-center justify-center flex-shrink-0">
               <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z"/></svg>
             </div>
             <h3 class="font-display font-bold text-navy-800 text-xl">Do NOT Reuse Bags</h3>
           </div>
-          <p class="font-body text-gray-700 body-relaxed text-base mb-4">
+          <p class="font-body text-gray-700 body-relaxed text-base mb-4 min-h-[5.5rem]">
             When the <strong class="text-coral-600">blue indicator light</strong> comes on, it's time to change your collection bag. Always use a <strong>new bag</strong>, never reuse a bag that has already been filled.
           </p>
-          <div class="bg-white rounded-xl p-4 border border-coral-200">
+          <div class="bg-white rounded-xl p-4 border border-coral-200 flex-grow">
             <p class="font-body text-navy-700 text-sm font-semibold mb-1">What to do:</p>
             <ol class="font-body text-gray-600 text-sm space-y-1 list-decimal list-inside">
               <li>Blue light comes on &rarr; bag is full</li>
@@ -478,15 +486,16 @@
         <div class="lg:col-span-2">
           <img src="/brand_assets/logo-somavac-long-blue.png" alt="SOMAVAC Medical Solutions" class="h-10 w-auto brightness-0 invert mb-6">
           <p class="font-body text-white/70 body-relaxed text-sm max-w-md mb-6">
-            SOMAVAC&reg; Medical Solutions is pioneering smart surgical drainage technology from Memphis, Tennessee. Our FDA-cleared pump delivers continuous suction for faster, safer post-surgical recovery.
+            SOMAVAC<sup class="reg">&reg;</sup> Medical Solutions is pioneering smart surgical drainage technology from Memphis, Tennessee. Our FDA-cleared pump delivers continuous suction for faster, safer post-surgical recovery.
           </p>
           <a href="tel:+18337662822" class="font-body font-semibold text-coral-400 hover:text-coral-300 transition-colors text-sm">24/7 Patient Support: +1 (833) 766-2822</a>
+          <address class="font-body text-white/60 text-sm not-italic mt-3 leading-relaxed">3144 Stage Post Drive, Suite 101<br>Memphis, TN 38133</address>
         </div>
         <div>
           <h4 class="font-body font-semibold text-white text-sm mb-6">Pages</h4>
           <ul class="space-y-3">
             <li><a href="/physicians" class="font-body text-white/70 text-sm hover:text-coral-400 transition-colors">For Physicians</a></li>
-            <li><a href="/patients" class="font-body text-white/70 text-sm hover:text-coral-400 transition-colors">For Patients</a></li>
+            <li><a href="/patient-support" class="font-body text-white/70 text-sm hover:text-coral-400 transition-colors">For Patients</a></li>
             <li><a href="/patient-support" class="font-body text-white/70 text-sm hover:text-coral-400 transition-colors">Patient Instructions</a></li>
             <li><a href="/patient-community" class="font-body text-white/70 text-sm hover:text-coral-400 transition-colors">Patient Community</a></li>
             <li><a href="/news" class="font-body text-white/70 text-sm hover:text-coral-400 transition-colors">News</a></li>
@@ -504,11 +513,11 @@
       </div>
       <div class="border-t border-white/10 pt-8 mb-6">
         <p class="font-body text-white/40 text-[10px] leading-relaxed max-w-5xl">
-          The SOMAVAC&reg; Sustained Vacuum System (SVS) is intended for the removal of bodily fluids following large flap forming plastic and general surgeries. There are potential risks associated with the use of a SOMAVAC SVS including a temporary lack of suction which could result in minor pain or engorgement because of some fluid retention. Talk to your surgeon about indications, warnings, precautions, adverse events and other important medical information. This information is for educational purposes only. Only your health care professional can determine if a SOMAVAC SVS is right for you. Patient results may vary.
+          The SOMAVAC<sup class="reg">&reg;</sup> Sustained Vacuum System (SVS) is intended for the removal of bodily fluids following large flap forming plastic and general surgeries. There are potential risks associated with the use of a SOMAVAC SVS including a temporary lack of suction which could result in minor pain or engorgement because of some fluid retention. Talk to your surgeon about indications, warnings, precautions, adverse events and other important medical information. This information is for educational purposes only. Only your health care professional can determine if a SOMAVAC SVS is right for you. Patient results may vary.
         </p>
       </div>
       <div class="flex flex-col md:flex-row items-center justify-between gap-4">
-        <p class="font-body text-white/50 text-xs">&copy; 2026 SOMAVAC&reg; Medical Solutions, Inc. All rights reserved.</p>
+        <p class="font-body text-white/50 text-xs">&copy; 2026 SOMAVAC<sup class="reg">&reg;</sup> Medical Solutions, Inc. All rights reserved.</p>
         <p class="font-body text-white/50 text-xs">Smart Suction Technology&trade; | Memphis, TN</p>
       </div>
     </div>

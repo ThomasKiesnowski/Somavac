@@ -103,6 +103,7 @@
     }
     .audience-pill.active .audience-count { background: rgba(255,255,255,0.22); color: white; }
     .empty-state { padding: 3rem 2rem; border: 2px dashed #c5c6e3; border-radius: 1.25rem; text-align: center; color: #4345a7; }
+      .reg{font-size:.55em;vertical-align:super;line-height:0;}
   </style>
 </head>
 <body class="font-body text-gray-800 bg-white antialiased">
@@ -160,7 +161,7 @@
         The SOMAVAC <span class="text-coral-400">Patient Community</span>
       </h1>
       <p class="animate-fade-up delay-200 font-body text-navy-200 body-relaxed text-lg md:text-xl max-w-2xl mx-auto mb-10">
-        Real stories from real patients. Hear how SOMAVAC&reg; changed recovery for people who&rsquo;ve been exactly where you are, and share your own.
+        Real stories from real patients. Hear how SOMAVAC<sup class="reg">&reg;</sup> changed recovery for people who&rsquo;ve been exactly where you are, and share your own.
       </p>
       <div class="animate-fade-up delay-300 flex flex-col sm:flex-row gap-4 justify-center">
         <a href="#stories" class="btn-primary inline-flex items-center justify-center gap-2 bg-coral-500 text-white font-body font-bold px-8 py-4 rounded-full text-base">
@@ -218,18 +219,15 @@
     <div class="relative z-10 max-w-3xl mx-auto px-6 lg:px-8 text-center">
       <span class="reveal font-body font-semibold text-coral-300 text-xs tracking-widest uppercase mb-4 block">Be Part of the Story</span>
       <h2 class="reveal font-display font-bold text-white heading-tight text-3xl md:text-4xl lg:text-5xl leading-tight mb-6" style="transition-delay: 0.1s;">
-        Share Your SOMAVAC&reg; Experience
+        Share Your SOMAVAC<sup class="reg">&reg;</sup> Experience
       </h2>
       <p class="reveal font-body text-navy-200 body-relaxed text-base md:text-lg mb-10" style="transition-delay: 0.2s;">
-        Your story could be exactly what someone facing surgery needs to hear right now. Tell us how SOMAVAC&reg; changed your recovery, and we&rsquo;ll feature it here (with your permission) so others can find hope through your experience.
+        Your story could be exactly what someone facing surgery needs to hear right now. Tell us how SOMAVAC<sup class="reg">&reg;</sup> changed your recovery, and we&rsquo;ll feature it here (with your permission) so others can find hope through your experience.
       </p>
       <div class="reveal flex flex-col sm:flex-row gap-4 justify-center" style="transition-delay: 0.3s;">
         <a href="mailto:info@somavac.com?subject=Patient%20Story%20Submission" class="btn-primary inline-flex items-center justify-center gap-2 bg-coral-500 text-white font-body font-bold px-8 py-4 rounded-full text-base">
           Email Us Your Story
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-        </a>
-        <a href="tel:+18337662822" class="btn-secondary inline-flex items-center justify-center gap-2 border-2 border-white/30 text-white font-body font-semibold px-8 py-4 rounded-full text-base">
-          Call (833) 766-2822
         </a>
       </div>
     </div>
@@ -243,15 +241,16 @@
         <div class="lg:col-span-2">
           <img src="/brand_assets/logo-somavac-long-blue.png" alt="SOMAVAC Medical Solutions" class="h-10 w-auto brightness-0 invert mb-6">
           <p class="font-body text-white/70 body-relaxed text-sm max-w-md mb-6">
-            SOMAVAC&reg; Medical Solutions is pioneering smart surgical drainage technology from Memphis, Tennessee.
+            SOMAVAC<sup class="reg">&reg;</sup> Medical Solutions is pioneering smart surgical drainage technology from Memphis, Tennessee.
           </p>
           <a href="tel:+18337662822" class="font-body font-semibold text-coral-400 hover:text-coral-300 transition-colors text-sm">+1 (833) 766-2822</a>
+          <address class="font-body text-white/60 text-sm not-italic mt-3 leading-relaxed">3144 Stage Post Drive, Suite 101<br>Memphis, TN 38133</address>
         </div>
         <div>
           <h4 class="font-body font-semibold text-white text-sm mb-6">Pages</h4>
           <ul class="space-y-3">
             <li><a href="/physicians" class="font-body text-white/70 text-sm hover:text-coral-400 transition-colors">For Physicians</a></li>
-            <li><a href="/patients" class="font-body text-white/70 text-sm hover:text-coral-400 transition-colors">For Patients</a></li>
+            <li><a href="/patient-support" class="font-body text-white/70 text-sm hover:text-coral-400 transition-colors">For Patients</a></li>
             <li><a href="/patient-support" class="font-body text-white/70 text-sm hover:text-coral-400 transition-colors">Patient Instructions</a></li>
             <li><a href="/patient-community" class="font-body text-white/70 text-sm hover:text-coral-400 transition-colors">Patient Community</a></li>
             <li><a href="/news" class="font-body text-white/70 text-sm hover:text-coral-400 transition-colors">News</a></li>
@@ -268,7 +267,7 @@
         </div>
       </div>
       <div class="flex flex-col md:flex-row items-center justify-between gap-4 border-t border-white/10 pt-8">
-        <p class="font-body text-white/50 text-xs">&copy; 2026 SOMAVAC&reg; Medical Solutions, Inc. All rights reserved.</p>
+        <p class="font-body text-white/50 text-xs">&copy; 2026 SOMAVAC<sup class="reg">&reg;</sup> Medical Solutions, Inc. All rights reserved.</p>
         <p class="font-body text-white/50 text-xs">Smart Suction Technology&trade; | Memphis, TN</p>
       </div>
     </div>
@@ -401,7 +400,7 @@
         cardsTrack.innerHTML = items.map(s => `
           <a href="/patient-stories#${s.id}" class="story-card group bg-white rounded-2xl shadow-elevated overflow-hidden flex-shrink-0 w-full md:w-[calc((100%-1.5rem)/2)] lg:w-[calc((100%-3rem)/3)]">
             <div class="relative aspect-[5/4] overflow-hidden">
-              <img src="${s.image}" alt="${s.author}" class="story-card-img absolute inset-0 w-full h-full object-cover">
+              <img src="${s.image}" alt="${s.author}" class="story-card-img absolute inset-0 w-full h-full object-cover" style="object-position:${s.imgPos || '50% 50%'}">
               <div class="absolute inset-0 bg-gradient-to-t from-navy-900/80 via-navy-900/20 to-transparent"></div>
               <span class="absolute top-4 left-4 inline-block bg-white/90 text-navy-700 font-body font-semibold text-[0.65rem] uppercase tracking-widest px-3 py-1.5 rounded-full backdrop-blur-sm">${s.category}</span>
               <div class="absolute bottom-4 left-4 right-4">
@@ -409,7 +408,7 @@
               </div>
             </div>
             <div class="p-6">
-              <p class="font-body text-gray-600 text-sm body-relaxed mb-5 line-clamp-3">${s.cardSummary || s.subtitle}</p>
+              <p class="font-body text-gray-600 text-sm body-relaxed mb-5 line-clamp-3 min-h-[4.5rem]">${s.cardSummary || s.subtitle}</p>
               <div class="flex items-center justify-between">
                 <div class="flex items-center gap-3">
                   <div class="w-9 h-9 rounded-full bg-gradient-to-br from-coral-400 to-coral-600 flex items-center justify-center">

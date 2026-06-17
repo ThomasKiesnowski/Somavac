@@ -79,6 +79,7 @@
     .shadow-floating { box-shadow: 0 2px 4px rgba(4,7,142,0.04), 0 8px 24px rgba(4,7,142,0.08), 0 24px 60px rgba(4,7,142,0.12); }
     .mobile-menu { transform: translateX(100%); transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
     .mobile-menu.open { transform: translateX(0); }
+      .reg{font-size:.55em;vertical-align:super;line-height:0;}
   </style>
 </head>
 <body class="font-body text-gray-800 bg-white antialiased">
@@ -184,12 +185,30 @@
           </div>
         </div>
 
+        <!-- Joe Adam -->
+        <div class="reveal card-hover bg-white rounded-2xl shadow-elevated border border-gray-100 overflow-hidden cursor-pointer" style="transition-delay: 0.2s;" role="button" tabindex="0" data-bio="joeAdam" aria-haspopup="dialog" aria-label="Read full bio for Joe Adam">
+          <div class="relative h-72 overflow-hidden">
+            <img src="/brand_assets/team/joe-adam.jpg" alt="Joe Adam, Chief Operating Officer at SOMAVAC" class="w-full h-full object-cover object-top">
+            <div class="absolute inset-0 bg-gradient-to-t from-navy-900/70 via-transparent to-transparent"></div>
+            <div class="absolute bottom-4 left-6 right-6">
+              <h3 class="font-display font-bold text-white text-xl">Joe Adam</h3>
+              <p class="font-body font-semibold text-coral-300 text-sm">Chief Operating Officer</p>
+            </div>
+          </div>
+          <div class="p-6">
+            <p class="font-body text-gray-600 text-sm body-relaxed mb-4">
+              Accomplished medical device and semiconductor executive with decades of experience leading operations, strategy, and complex organizational transformations. Has helped raise over $400M in capital and achieve multiple FDA clearances.
+            </p>
+            <span class="font-body font-semibold text-coral-500 text-sm inline-flex items-center gap-1">Read full bio
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+        </div>
+
         <!-- Frankie Mead -->
         <div class="reveal card-hover bg-white rounded-2xl shadow-elevated border border-gray-100 overflow-hidden" style="transition-delay: 0.3s;">
-          <div class="relative h-72 overflow-hidden bg-gradient-to-br from-navy-50 to-navy-100 flex items-center justify-center">
-            <div class="w-32 h-32 rounded-full bg-navy-400 flex items-center justify-center shadow-lg">
-              <span class="font-display font-bold text-white text-4xl">FM</span>
-            </div>
+          <div class="relative h-72 overflow-hidden">
+            <img src="/brand_assets/team/frankie-mead.jpg" alt="Frankie Mead, Vice President of Sales at SOMAVAC" class="w-full h-full object-cover object-top">
             <div class="absolute inset-0 bg-gradient-to-t from-navy-900/70 via-transparent to-transparent"></div>
             <div class="absolute bottom-4 left-6 right-6">
               <h3 class="font-display font-bold text-white text-xl">Frankie Mead</h3>
@@ -208,67 +227,20 @@
       <!-- Board of Directors & Advisors -->
       <div class="max-w-6xl mx-auto">
         <div class="text-center mb-12">
-          <span class="reveal font-body font-semibold text-coral-500 text-xs tracking-widest uppercase mb-4 block">Board of Directors &amp; Advisors</span>
+          <span class="reveal font-body font-semibold text-coral-500 text-xs tracking-widest uppercase mb-4 block">Board of Directors</span>
           <h2 class="reveal font-display font-bold text-navy-800 heading-tight text-2xl md:text-3xl leading-tight" style="transition-delay: 0.1s;">
             Guided by Industry Leaders
           </h2>
+          <p class="reveal font-body text-gray-500 text-sm mt-3" style="transition-delay: 0.15s;">Click any board member to read their full bio.</p>
         </div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-          <!-- Jane Berz -->
-          <div class="reveal bg-white rounded-2xl shadow-elevated border border-gray-100 p-6" style="transition-delay: 0.1s;">
-            <div class="flex items-center gap-4 mb-4">
-              <div class="w-14 h-14 rounded-full bg-coral-500 flex items-center justify-center flex-shrink-0">
-                <span class="font-display font-bold text-white text-lg">JB</span>
-              </div>
-              <div>
-                <h3 class="font-display font-bold text-navy-800 text-base">Jane Berz, MSN, RN</h3>
-                <p class="font-body text-coral-500 text-xs font-semibold">Board Chair</p>
-              </div>
-            </div>
-            <p class="font-body text-gray-600 text-sm body-relaxed">
-              40+ years in oncology nursing and administration. Fellow of the National Consortium of Breast Centers. Joined SOMAVAC in 2020 as clinical advisor. MSN, University of Virginia.
-            </p>
-          </div>
-
-          <!-- Dr. Aldona Spiegel -->
-          <div class="reveal bg-white rounded-2xl shadow-elevated border border-gray-100 p-6" style="transition-delay: 0.15s;">
-            <div class="flex items-center gap-4 mb-4">
-              <div class="w-14 h-14 rounded-full bg-coral-500 flex items-center justify-center flex-shrink-0">
-                <span class="font-display font-bold text-white text-lg">AS</span>
-              </div>
-              <div>
-                <h3 class="font-display font-bold text-navy-800 text-base">Dr. Aldona Spiegel, MD</h3>
-                <p class="font-body text-coral-500 text-xs font-semibold">Strategic Advisor</p>
-              </div>
-            </div>
-            <p class="font-body text-gray-600 text-sm body-relaxed">
-              Director of the Center for Breast Restoration at Houston Methodist. 100+ peer-reviewed publications. Stanford &bull; Johns Hopkins.
-            </p>
-          </div>
-
-          <!-- Jean Holloway -->
-          <div class="reveal bg-white rounded-2xl shadow-elevated border border-gray-100 p-6" style="transition-delay: 0.2s;">
-            <div class="flex items-center gap-4 mb-4">
-              <div class="w-14 h-14 rounded-full bg-navy-500 flex items-center justify-center flex-shrink-0">
-                <span class="font-display font-bold text-white text-lg">JH</span>
-              </div>
-              <div>
-                <h3 class="font-display font-bold text-navy-800 text-base">Jean Holloway</h3>
-                <p class="font-body text-coral-500 text-xs font-semibold">Board Member</p>
-              </div>
-            </div>
-            <p class="font-body text-gray-600 text-sm body-relaxed">
-              30+ years medtech legal &amp; compliance. SVP, General Counsel at Artivion. Former VP at Bard, Deputy GC at Medtronic, VP Litigation at Boston Scientific. JD/MBA UChicago, Yale.
-            </p>
-          </div>
-
           <!-- Bill Martin -->
-          <div class="reveal bg-white rounded-2xl shadow-elevated border border-gray-100 p-6" style="transition-delay: 0.25s;">
+          <div class="reveal bg-white rounded-2xl shadow-elevated border border-gray-100 p-6 cursor-pointer hover:border-coral-200 hover:shadow-floating transition" style="transition-delay: 0.1s;" role="button" tabindex="0" data-bio="billMartin" aria-haspopup="dialog" aria-label="Read full bio for Bill Martin">
             <div class="flex items-center gap-4 mb-4">
-              <div class="w-14 h-14 rounded-full bg-navy-500 flex items-center justify-center flex-shrink-0">
-                <span class="font-display font-bold text-white text-lg">BM</span>
+              <div class="w-14 h-14 rounded-full overflow-hidden flex-shrink-0">
+                <img src="/brand_assets/team/bill-martin.jpg" alt="Bill Martin" class="w-full h-full object-cover object-top">
               </div>
               <div>
                 <h3 class="font-display font-bold text-navy-800 text-base">Bill Martin</h3>
@@ -278,13 +250,54 @@
             <p class="font-body text-gray-600 text-sm body-relaxed">
               Finance and real estate consultant. Former VP First Tennessee Bank, CFO Fogelman Properties. 25 years advising emerging growth companies.
             </p>
+            <span class="font-body font-semibold text-coral-500 text-xs inline-flex items-center gap-1 mt-3">Read full bio
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+
+          <!-- Jane Berz -->
+          <div class="reveal bg-white rounded-2xl shadow-elevated border border-gray-100 p-6 cursor-pointer hover:border-coral-200 hover:shadow-floating transition" style="transition-delay: 0.15s;" role="button" tabindex="0" data-bio="janeBerz" aria-haspopup="dialog" aria-label="Read full bio for Jane Berz">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-14 h-14 rounded-full overflow-hidden flex-shrink-0">
+                <img src="/brand_assets/team/jane-berz.jpg" alt="Jane Berz" class="w-full h-full object-cover object-top">
+              </div>
+              <div>
+                <h3 class="font-display font-bold text-navy-800 text-base">Jane Berz, MSN, RN</h3>
+                <p class="font-body text-coral-500 text-xs font-semibold">Board Chair</p>
+              </div>
+            </div>
+            <p class="font-body text-gray-600 text-sm body-relaxed">
+              40+ years in oncology nursing and administration. Fellow of the National Consortium of Breast Centers. Joined SOMAVAC in 2020 as clinical advisor. MSN, University of Virginia.
+            </p>
+            <span class="font-body font-semibold text-coral-500 text-xs inline-flex items-center gap-1 mt-3">Read full bio
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+
+          <!-- Jean Holloway -->
+          <div class="reveal bg-white rounded-2xl shadow-elevated border border-gray-100 p-6 cursor-pointer hover:border-coral-200 hover:shadow-floating transition" style="transition-delay: 0.2s;" role="button" tabindex="0" data-bio="jeanHolloway" aria-haspopup="dialog" aria-label="Read full bio for Jean Holloway">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-14 h-14 rounded-full overflow-hidden flex-shrink-0">
+                <img src="/brand_assets/team/jean-holloway.jpg" alt="Jean Holloway" class="w-full h-full object-cover object-top">
+              </div>
+              <div>
+                <h3 class="font-display font-bold text-navy-800 text-base">Jean Holloway</h3>
+                <p class="font-body text-coral-500 text-xs font-semibold">Board Member</p>
+              </div>
+            </div>
+            <p class="font-body text-gray-600 text-sm body-relaxed">
+              30+ years medtech legal &amp; compliance. SVP, General Counsel at Artivion. Former VP at Bard, Deputy GC at Medtronic, VP Litigation at Boston Scientific. JD/MBA UChicago, Yale.
+            </p>
+            <span class="font-body font-semibold text-coral-500 text-xs inline-flex items-center gap-1 mt-3">Read full bio
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </span>
           </div>
 
           <!-- Scott Moore -->
-          <div class="reveal bg-white rounded-2xl shadow-elevated border border-gray-100 p-6" style="transition-delay: 0.3s;">
+          <div class="reveal bg-white rounded-2xl shadow-elevated border border-gray-100 p-6 cursor-pointer hover:border-coral-200 hover:shadow-floating transition" style="transition-delay: 0.25s;" role="button" tabindex="0" data-bio="scottMoore" aria-haspopup="dialog" aria-label="Read full bio for Scott Moore">
             <div class="flex items-center gap-4 mb-4">
-              <div class="w-14 h-14 rounded-full bg-navy-500 flex items-center justify-center flex-shrink-0">
-                <span class="font-display font-bold text-white text-lg">SM</span>
+              <div class="w-14 h-14 rounded-full overflow-hidden flex-shrink-0">
+                <img src="/brand_assets/team/scott-moore.jpg" alt="Scott Moore" class="w-full h-full object-cover object-top">
               </div>
               <div>
                 <h3 class="font-display font-bold text-navy-800 text-base">Scott Moore</h3>
@@ -294,6 +307,9 @@
             <p class="font-body text-gray-600 text-sm body-relaxed">
               Global medical devices executive. Grew a diagnostics business from ~$140M to over $600M. Expert in strategic planning and aligning patient needs with market demands.
             </p>
+            <span class="font-body font-semibold text-coral-500 text-xs inline-flex items-center gap-1 mt-3">Read full bio
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </span>
           </div>
 
           <!-- Elizabeth Hoff (Board) -->
@@ -314,6 +330,93 @@
 
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ============ SURGEON ADVISORS ============ -->
+  <section class="relative py-20 lg:py-24 bg-navy-50/40">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="reveal font-body font-semibold text-coral-500 text-xs tracking-widest uppercase mb-4 block">Surgeon Advisors</span>
+        <h2 class="reveal font-display font-bold text-navy-800 heading-tight text-2xl md:text-3xl leading-tight" style="transition-delay: 0.1s;">
+          Guided by Leading Surgeons
+        </h2>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+
+        <!-- Guy Voeller (Founder) -->
+        <div class="reveal bg-white rounded-2xl shadow-elevated border border-gray-100 p-6 text-center flex flex-col" style="transition-delay: 0.1s;">
+          <div class="w-24 h-24 rounded-full bg-gradient-to-br from-navy-100 to-navy-200 flex items-center justify-center mx-auto mb-4 overflow-hidden">
+            <img src="/brand_assets/team/guy-voeller.jpg" alt="Guy Voeller, MD" class="w-full h-full object-cover object-top" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <span class="font-display font-bold text-navy-500 text-2xl" style="display:none">GV</span>
+          </div>
+          <div class="mt-auto">
+            <span class="font-body font-semibold text-coral-500 text-[10px] tracking-widest uppercase">Founder</span>
+            <h3 class="font-display font-bold text-navy-800 text-lg mt-1">Guy Voeller, MD</h3>
+            <p class="font-body text-gray-500 text-sm mt-1">BHSU, Memphis, TN</p>
+          </div>
+        </div>
+
+        <!-- Nathaniel Stoikes (Founder) -->
+        <div class="reveal bg-white rounded-2xl shadow-elevated border border-gray-100 p-6 text-center flex flex-col" style="transition-delay: 0.15s;">
+          <div class="w-24 h-24 rounded-full bg-gradient-to-br from-navy-100 to-navy-200 flex items-center justify-center mx-auto mb-4 overflow-hidden">
+            <img src="/brand_assets/team/nathaniel-stoikes.jpg" alt="Nathaniel Stoikes, MD" class="w-full h-full object-cover object-top">
+          </div>
+          <div class="mt-auto">
+            <span class="font-body font-semibold text-coral-500 text-[10px] tracking-widest uppercase">Founder</span>
+            <h3 class="font-display font-bold text-navy-800 text-lg mt-1">Nathaniel Stoikes, MD</h3>
+            <p class="font-body text-gray-500 text-sm mt-1">BHSU, Memphis, TN</p>
+          </div>
+        </div>
+
+        <!-- Marc E. Walker -->
+        <div class="reveal bg-white rounded-2xl shadow-elevated border border-gray-100 p-6 text-center flex flex-col" style="transition-delay: 0.2s;">
+          <div class="w-24 h-24 rounded-full bg-gradient-to-br from-navy-100 to-navy-200 mx-auto mb-4 overflow-hidden flex items-center justify-center">
+            <img src="/brand_assets/team/marc-walker.png" alt="Marc E. Walker, MD, MBA" class="w-full h-full object-cover object-top">
+          </div>
+          <div class="mt-auto">
+            <h3 class="font-display font-bold text-navy-800 text-lg mt-1">Marc E. Walker, MD, MBA</h3>
+            <p class="font-body text-gray-500 text-sm mt-1">UMMC, Jackson, MS</p>
+          </div>
+        </div>
+
+        <!-- Tamara Kemp -->
+        <div class="reveal bg-white rounded-2xl shadow-elevated border border-gray-100 p-6 text-center flex flex-col" style="transition-delay: 0.25s;">
+          <div class="w-24 h-24 rounded-full bg-gradient-to-br from-navy-100 to-navy-200 mx-auto mb-4 overflow-hidden flex items-center justify-center">
+            <img src="/brand_assets/team/tamara-kemp.png" alt="Tamara Kemp, MD, FACS" class="w-full h-full object-cover object-top">
+          </div>
+          <div class="mt-auto">
+            <h3 class="font-display font-bold text-navy-800 text-lg mt-1">Tamara Kemp, MD, FACS</h3>
+            <p class="font-body text-gray-600 text-xs font-semibold mt-1">Commander, U.S. Navy</p>
+            <p class="font-body text-gray-500 text-sm">Portsmouth Naval Medical Center</p>
+          </div>
+        </div>
+
+        <!-- Aldona Spiegel -->
+        <div class="reveal bg-white rounded-2xl shadow-elevated border border-gray-100 p-6 text-center flex flex-col" style="transition-delay: 0.3s;">
+          <div class="w-24 h-24 rounded-full bg-gradient-to-br from-navy-100 to-navy-200 mx-auto mb-4 overflow-hidden flex items-center justify-center">
+            <img src="/brand_assets/team/aldona-spiegel.jpg" alt="Aldona Spiegel, MD" class="w-full h-full object-cover object-top">
+          </div>
+          <div class="mt-auto">
+            <h3 class="font-display font-bold text-navy-800 text-lg mt-1">Aldona Spiegel, MD</h3>
+            <p class="font-body text-gray-500 text-sm mt-1">Houston Methodist Hospital</p>
+          </div>
+        </div>
+
+        <!-- Nirav Savalia -->
+        <div class="reveal bg-white rounded-2xl shadow-elevated border border-gray-100 p-6 text-center flex flex-col" style="transition-delay: 0.35s;">
+          <div class="w-24 h-24 rounded-full bg-gradient-to-br from-navy-100 to-navy-200 mx-auto mb-4 overflow-hidden flex items-center justify-center">
+            <img src="/brand_assets/team/nirav-savalia.jpg" alt="Nirav Savalia, MD" class="w-full h-full object-cover object-top">
+          </div>
+          <div class="mt-auto">
+            <h3 class="font-display font-bold text-navy-800 text-lg mt-1">Nirav Savalia, MD</h3>
+            <p class="font-body text-gray-500 text-sm mt-1">Hoag Memorial Hospital</p>
+          </div>
+        </div>
+
+      </div>
+      <p class="reveal font-body text-gray-400 text-xs text-center mt-8 max-w-2xl mx-auto" style="transition-delay: 0.4s;">Institution names are listed for identification only and do not imply endorsement.</p>
     </div>
   </section>
 
@@ -367,9 +470,10 @@
         <div class="lg:col-span-2">
           <img src="/brand_assets/logo-somavac-long-blue.png" alt="SOMAVAC Medical Solutions" class="h-10 w-auto brightness-0 invert mb-6">
           <p class="font-body text-white/70 body-relaxed text-sm max-w-md mb-6">
-            SOMAVAC&reg; Medical Solutions is pioneering smart surgical drainage technology from Memphis, Tennessee. Named one of &ldquo;Five Companies to Watch&rdquo; by LSI Market Insights.
+            SOMAVAC<sup class="reg">&reg;</sup> Medical Solutions is pioneering smart surgical drainage technology from Memphis, Tennessee. Named one of &ldquo;Five Companies to Watch&rdquo; by LSI Market Insights.
           </p>
           <a href="tel:+18337662822" class="font-body font-semibold text-coral-400 hover:text-coral-300 transition-colors text-sm">+1 (833) 766-2822</a>
+          <address class="font-body text-white/60 text-sm not-italic mt-3 leading-relaxed">3144 Stage Post Drive, Suite 101<br>Memphis, TN 38133</address>
           <div class="flex items-center gap-4 mt-4">
             <a href="https://www.linkedin.com/company/somavac/" target="_blank" rel="noopener noreferrer" class="text-navy-400 hover:text-coral-400 transition-colors" aria-label="SOMAVAC on LinkedIn">
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
@@ -403,11 +507,11 @@
       </div>
       <div class="border-t border-white/10 pt-8 mb-6">
         <p class="font-body text-white/40 text-[10px] leading-relaxed max-w-5xl">
-          The SOMAVAC&reg; Sustained Vacuum System (SVS) is intended for the removal of bodily fluids following large flap forming plastic and general surgeries. There are potential risks associated with the use of a SOMAVAC SVS including a temporary lack of suction which could result in minor pain or engorgement because of some fluid retention. Talk to your surgeon about indications, warnings, precautions, adverse events and other important medical information. This information is for educational purposes only. Only your health care professional can determine if a SOMAVAC SVS is right for you. Patient results may vary.
+          The SOMAVAC<sup class="reg">&reg;</sup> Sustained Vacuum System (SVS) is intended for the removal of bodily fluids following large flap forming plastic and general surgeries. There are potential risks associated with the use of a SOMAVAC SVS including a temporary lack of suction which could result in minor pain or engorgement because of some fluid retention. Talk to your surgeon about indications, warnings, precautions, adverse events and other important medical information. This information is for educational purposes only. Only your health care professional can determine if a SOMAVAC SVS is right for you. Patient results may vary.
         </p>
       </div>
       <div class="flex flex-col md:flex-row items-center justify-between gap-4">
-        <p class="font-body text-white/50 text-xs">&copy; 2026 SOMAVAC&reg; Medical Solutions, Inc. All rights reserved.</p>
+        <p class="font-body text-white/50 text-xs">&copy; 2026 SOMAVAC<sup class="reg">&reg;</sup> Medical Solutions, Inc. All rights reserved.</p>
         <p class="font-body text-white/50 text-xs">Smart Suction Technology&trade; | Memphis, TN</p>
       </div>
     </div>
@@ -426,6 +530,121 @@
     const revealObserver = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); revealObserver.unobserve(entry.target); } }); }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
     revealElements.forEach(el => revealObserver.observe(el));
     document.querySelectorAll('a[href^="#"]').forEach(anchor => { anchor.addEventListener('click', function (e) { const target = document.querySelector(this.getAttribute('href')); if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); } }); });
+  </script>
+
+  <!-- ============ BIO MODAL ============ -->
+  <div id="bioModal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4">
+    <div id="bioModalOverlay" class="absolute inset-0 bg-navy-900/70 backdrop-blur-sm"></div>
+    <div class="relative z-10 bg-white rounded-2xl shadow-floating max-w-2xl w-full max-h-[85vh] flex flex-col" role="dialog" aria-modal="true" aria-labelledby="bioModalName">
+      <button id="bioModalClose" aria-label="Close bio" class="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-navy-50 hover:bg-coral-100 text-navy-700 flex items-center justify-center transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-coral-300">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+      <div class="overflow-y-auto p-8">
+        <div class="flex items-center gap-4 mb-6 pr-10">
+          <div id="bioModalInitials" class="w-16 h-16 rounded-full bg-coral-500 overflow-hidden flex items-center justify-center flex-shrink-0">
+            <img id="bioModalPhoto" src="" alt="" class="w-full h-full object-cover object-top hidden">
+            <span class="font-display font-bold text-white text-xl"></span>
+          </div>
+          <div>
+            <h3 id="bioModalName" class="font-display font-bold text-navy-800 text-2xl heading-tight"></h3>
+            <p id="bioModalTitle" class="font-body text-coral-500 text-sm font-semibold"></p>
+          </div>
+        </div>
+        <div id="bioModalBody" class="font-body text-gray-600 body-relaxed text-[15px] space-y-4"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const BIOS = {
+      joeAdam: {
+        name: "Joe Adam", title: "Chief Operating Officer", initials: "JA", color: "navy", photo: "/brand_assets/team/joe-adam.jpg",
+        body: [
+          "Joseph M. Adam is an accomplished medical device and semiconductor executive with decades of experience leading operations, strategy, and complex organizational transformations. He has a proven track record driving COGS reduction, new product introductions, quality and regulatory excellence, and supply chain optimization across global organizations.",
+          "Joe has held senior leadership roles including EVP of Operations, CEO/COO, VP/GM, and VP of Operations, managing multibillion-dollar P&Ls, global manufacturing networks, and mission-critical customer relationships. As a member of founding and executive teams, he has helped raise over $400M in capital, secured major strategic contracts, achieved multiple FDA clearances, and positioned companies for successful acquisitions and high-value exits."
+        ]
+      },
+      billMartin: {
+        name: "Bill Martin", title: "Board Member", initials: "BM", color: "navy", photo: "/brand_assets/team/bill-martin.jpg",
+        body: [
+          "Bill Martin is a seasoned finance and real estate consultant with extensive experience in leadership roles. In his early career he served as Vice President of First Tennessee Bank N.A. Memphis and later as CFO of Fogelman Properties. Mr. Martin subsequently formed his own Financial Consulting Firm where he has been working with emerging growth companies for the past 25 years. His financial acumen and industry expertise provide key strategic insights to SOMAVAC's board."
+        ]
+      },
+      janeBerz: {
+        name: "Jane Berz, MSN, RN, FNCBC", title: "Board Chair", initials: "JB", color: "coral", photo: "/brand_assets/team/jane-berz.jpg",
+        body: [
+          "Jane Berz brings over 40 years of progressive health care experience in advanced practice oncology nursing, executive oncology administration, and oncology consulting.",
+          "Her consulting focus on the patient/breast cancer experience from imaging through treatment into survivorship has defined her work in creating a pathway through all aspects of breast cancer care. She is a Fellow and former board member of the National Consortium of Breast Centers (NCoBC) and has contributed to her community in Chattanooga, TN, through service on non-profit boards in the arts, culture, and health care arena. Jane has been a faculty member of two schools of nursing and continues her love for nursing and teaching through presentations at national conferences and navigating the breast cancer journey for patients.",
+          "Jane joined SOMAVAC Medical Solutions, Inc. in 2020 as a clinical advisor and currently serves as Chairperson of the Board. Her expertise and dedication to improving patient outcomes make her an invaluable leader in advancing SOMAVAC's mission.",
+          "She holds a Master of Science in Nursing from the University of Virginia, and a Bachelor of Science in Nursing from the University of Texas at Arlington."
+        ]
+      },
+      jeanHolloway: {
+        name: "Jean Holloway", title: "Board Member", initials: "JH", color: "navy", photo: "/brand_assets/team/jean-holloway.jpg",
+        body: [
+          "Jean Holloway brings over 30 years of legal and compliance leadership in the medtech and life sciences industries to her role as a board member for SOMAVAC. She currently serves as Senior Vice President, General Counsel, Chief Compliance Officer, and Secretary at Artivion, Inc., where she leads strategic legal and regulatory initiatives.",
+          "Her extensive background includes previous roles as Vice President, General Counsel, and Secretary at Bard; Deputy General Counsel at Medtronic, Inc.; Vice President of Litigation at Boston Scientific, Inc.; and Deputy General Counsel at Guidant Corporation. In addition to her corporate experience, Ms. Holloway practiced as a trial lawyer for nearly 15 years with Dorsey & Whitney, Faegre & Benson, and Sidley & Austin.",
+          "She began her career clerking on the U.S. Court of Appeals for the Seventh Circuit for the Honorable Luther M. Swygert. Ms. Holloway holds a JD/MBA from the University of Chicago and undergraduate degrees in engineering and political science from Yale University."
+        ]
+      },
+      scottMoore: {
+        name: "Scott Moore", title: "Board Member", initials: "SM", color: "navy", photo: "/brand_assets/team/scott-moore.jpg",
+        body: [
+          "Scott is a global business executive with deep expertise in medical devices and technology, recognized for driving revenue and EBIT growth through strategic planning, business modeling, and financial analysis. He excels in aligning patient needs with market demands to develop innovative solutions overcoming clinical and economic barriers.",
+          "Scott has led global teams, achieving milestones such as growing a diagnostics business from ~$140M to over $600M and transforming patient management strategies for cost savings. Committed to improving patient outcomes and fostering future leaders, he combines strategic vision with operational excellence."
+        ]
+      }
+    };
+
+    const bioModal = document.getElementById('bioModal');
+    const bioModalInitials = document.getElementById('bioModalInitials');
+    const bioModalInitialsText = bioModalInitials.querySelector('span');
+    const bioModalPhoto = document.getElementById('bioModalPhoto');
+    const bioModalName = document.getElementById('bioModalName');
+    const bioModalTitle = document.getElementById('bioModalTitle');
+    const bioModalBody = document.getElementById('bioModalBody');
+    const bioModalClose = document.getElementById('bioModalClose');
+    let bioLastFocused = null;
+
+    function openBio(key) {
+      const b = BIOS[key];
+      if (!b) return;
+      bioLastFocused = document.activeElement;
+      bioModalName.textContent = b.name;
+      bioModalTitle.textContent = b.title;
+      if (b.photo) {
+        bioModalPhoto.src = b.photo;
+        bioModalPhoto.alt = b.name;
+        bioModalPhoto.classList.remove('hidden');
+        bioModalInitialsText.classList.add('hidden');
+      } else {
+        bioModalPhoto.classList.add('hidden');
+        bioModalPhoto.removeAttribute('src');
+        bioModalInitialsText.classList.remove('hidden');
+        bioModalInitialsText.textContent = b.initials;
+        bioModalInitials.classList.toggle('bg-coral-500', b.color === 'coral');
+        bioModalInitials.classList.toggle('bg-navy-500', b.color !== 'coral');
+      }
+      bioModalBody.innerHTML = '';
+      b.body.forEach(text => { const p = document.createElement('p'); p.textContent = text; bioModalBody.appendChild(p); });
+      bioModal.classList.remove('hidden');
+      bioModal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+      bioModalClose.focus();
+    }
+    function closeBio() {
+      bioModal.classList.add('hidden');
+      bioModal.classList.remove('flex');
+      document.body.style.overflow = '';
+      if (bioLastFocused) bioLastFocused.focus();
+    }
+    bioModalClose.addEventListener('click', closeBio);
+    document.getElementById('bioModalOverlay').addEventListener('click', closeBio);
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !bioModal.classList.contains('hidden')) closeBio(); });
+    document.querySelectorAll('[data-bio]').forEach(el => {
+      el.addEventListener('click', () => openBio(el.getAttribute('data-bio')));
+      el.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openBio(el.getAttribute('data-bio')); } });
+    });
   </script>
 </body>
 </html>
