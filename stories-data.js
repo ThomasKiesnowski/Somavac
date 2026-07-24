@@ -93,7 +93,7 @@ window.PATIENT_STORIES = [
       "The call center was great. She was really wonderful, and Keith was amazing. It really all worked out. There are several of us in our group now, I shared with them what I had, and they were like, “wow, I really want that.” I loved the way the bags were marked, with big numbers for those who are a little challenged visually.",
       "I slept well. I can’t complain about anything, I’m just grateful I was the one. I loved not having to worry about those “grenades.” I’m really glad it was all automated. It was easy. It was just easy. The sooner you can make SOMAVAC the standard of care, the better."
     ],
-    pullQuote: "Everyone I’ve spoken to has said, “They. Want. That.”"
+    pullQuote: "Everyone I’ve spoken to has said they want that."
   },
 
   {
