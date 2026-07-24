@@ -342,6 +342,12 @@
       <!-- Body -->
       <section class="relative py-12 lg:py-20 bg-white">
         <div class="max-w-3xl mx-auto px-6 lg:px-8">
+          <div data-story-video-wrap style="display:none" class="mb-10">
+            <div class="relative rounded-2xl overflow-hidden shadow-elevated" style="padding-top:56.25%;">
+              <iframe data-story-video class="absolute inset-0 w-full h-full" src="" title="Patient story video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+
           <div class="story-body" data-story-body>
             <!-- Body paragraphs injected here -->
           </div>
@@ -575,6 +581,16 @@
         img.src = story.image;
         img.alt = `${story.author}, ${story.role}`;
         document.querySelector('[data-story-caption]').textContent = story.imageCaption || story.author;
+
+        const vidWrap = document.querySelector('[data-story-video-wrap]');
+        const vidFrame = document.querySelector('[data-story-video]');
+        if (vidWrap && vidFrame) {
+          if (story.video) {
+            const vm = String(story.video).match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|shorts\/))([\w-]{6,})/);
+            vidFrame.src = vm ? 'https://www.youtube.com/embed/' + vm[1] : story.video;
+            vidWrap.style.display = '';
+          } else { vidFrame.src = ''; vidWrap.style.display = 'none'; }
+        }
 
         const bodyEl = document.querySelector('[data-story-body]');
         bodyEl.innerHTML = story.paragraphs.map(p => `<p>${p}</p>`).join('');
