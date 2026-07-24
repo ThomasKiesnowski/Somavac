@@ -52,7 +52,7 @@ window.PATIENT_STORIES = [
       "I even got all the shirts with the special pockets, and I didn’t have to wear any of it, thank goodness, because it was all ugly anyway! I also think I pulled my drains faster. I had them out at 9 days, when they thought it would be 2 weeks with bulbs.",
       "SOMAVAC made my recovery so fast that I didn’t want to go back to work, I wanted some more time! We were out eating pizza as a family after two days. I would absolutely ask for SOMAVAC again. I love that thing! I just didn’t know until I used it."
     ],
-    pullQuote: "She said, “you don’t need my help??” and I said, “nope! I just wait for the light!”"
+    pullQuote: "She said, ‘you don’t need my help??’ and I said, ‘nope! I just wait for the light!’"
   },
 
   {
