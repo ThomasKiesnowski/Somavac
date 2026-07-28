@@ -306,6 +306,23 @@
     /* Comparison table */
     .comparison-row { transition: background-color 0.3s ease; }
     .comparison-row:hover { background-color: rgba(4,7,142,0.02); }
+    .audience-pill {
+      background: white; color: #02055e; border: 2px solid #c5c6e3;
+      transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+    }
+    .audience-pill:hover { border-color: #f58d72; color: #ea5329; }
+    .audience-pill.active {
+      background: #ea5329; color: white; border-color: #ea5329;
+      box-shadow: 0 8px 22px -10px rgba(234, 83, 41, 0.55);
+    }
+    .audience-pill.active:hover { color: white; }
+    .audience-pill .audience-count {
+      display: inline-block; min-width: 1.25rem; padding: 0 0.4rem; margin-left: 0.5rem;
+      font-size: 0.65rem; font-weight: 700; line-height: 1.05rem; text-align: center;
+      border-radius: 999px; background: rgba(4, 7, 142, 0.08); color: #02055e;
+    }
+    .audience-pill.active .audience-count { background: rgba(255,255,255,0.22); color: white; }
+    .empty-state { padding: 3rem 2rem; border: 2px dashed #c5c6e3; border-radius: 1.25rem; text-align: center; color: #4345a7; }
       .reg{font-size:.55em;vertical-align:super;line-height:0;}
   
     sup.refnum { font-size: .62em; font-weight: 700; line-height: 0; vertical-align: super; color: #f26743; margin-left: 1px; white-space: nowrap; }
@@ -859,24 +876,28 @@
           Real People. Real Recovery.
         </h2>
         <p class="reveal font-body text-gray-600 body-relaxed text-base md:text-lg mt-4" style="transition-delay: 0.2s;">
-          First-person accounts from patients and caregivers. Tap any story to read it in full.
+          Browse stories from patients, caregivers, and physicians. Tap any card to read the full story.
         </p>
       </div>
 
-      <div class="reveal relative" data-carousel>
+      <div class="reveal flex flex-wrap items-center justify-center gap-2 mb-10" role="tablist" aria-label="Filter stories by audience" data-audience-filters>
+        <!-- Audience filter pills injected from /stories-data.js -->
+      </div>
+
+      <div class="reveal relative" data-cards-root>
         <div class="overflow-hidden -mx-4 px-4">
-          <div class="flex gap-6 transition-transform duration-500 ease-out" data-carousel-track data-home-stories>
+          <div class="flex gap-6 transition-transform duration-500 ease-out" data-cards-track>
             <!-- Story cards rendered dynamically from /stories-data.js so the homepage stays in sync with the testimonials -->
           </div>
         </div>
 
         <!-- Carousel controls -->
         <div class="flex items-center justify-between mt-8">
-          <button type="button" class="w-12 h-12 rounded-full bg-white border-2 border-navy-200 text-navy-600 hover:border-coral-400 hover:text-coral-500 transition-colors duration-300 flex items-center justify-center shadow-elevated focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-300" aria-label="Previous story" data-carousel-prev>
+          <button type="button" class="w-12 h-12 rounded-full bg-white border-2 border-navy-200 text-navy-600 hover:border-coral-400 hover:text-coral-500 transition-colors duration-300 flex items-center justify-center shadow-elevated focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-300" aria-label="Previous story" data-cards-prev>
             <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
           </button>
-          <div class="flex items-center gap-2" data-carousel-dots aria-label="Slide indicators"></div>
-          <button type="button" class="w-12 h-12 rounded-full bg-white border-2 border-navy-200 text-navy-600 hover:border-coral-400 hover:text-coral-500 transition-colors duration-300 flex items-center justify-center shadow-elevated focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-300" aria-label="Next story" data-carousel-next>
+          <div class="flex items-center gap-2" data-cards-dots aria-label="Slide indicators"></div>
+          <button type="button" class="w-12 h-12 rounded-full bg-white border-2 border-navy-200 text-navy-600 hover:border-coral-400 hover:text-coral-500 transition-colors duration-300 flex items-center justify-center shadow-elevated focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-300" aria-label="Next story" data-cards-next>
             <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
           </button>
         </div>
@@ -1318,40 +1339,151 @@
       tryPlay();
     })();
 
-    // Render homepage patient-story cards from the shared /stories-data.js
-    // so anything added to the testimonials data shows up here automatically.
-    (function renderHomeStories() {
-      const track = document.querySelector('[data-home-stories]');
-      if (!track || !window.PATIENT_STORIES) return;
-      const initialOf = (n) => (n || '?').trim().charAt(0).toUpperCase();
-      track.innerHTML = window.PATIENT_STORIES.map((s) => `
-        <a href="/patient-stories#${s.id}" class="story-card group bg-white rounded-2xl shadow-elevated overflow-hidden flex flex-col flex-shrink-0 w-full md:w-[calc((100%-1.5rem)/2)] lg:w-[calc((100%-3rem)/3)]">
-          <div class="relative aspect-[5/4] overflow-hidden">
-            <img src="${s.image}" alt="${s.author}" class="story-card-img absolute inset-0 w-full h-full object-cover" style="object-position:${s.imgPos || '50% 50%'}">
-            <div class="absolute inset-0 bg-gradient-to-t from-navy-900/80 via-navy-900/20 to-transparent"></div>
-            <span class="absolute top-4 left-4 inline-block bg-white/90 text-navy-700 font-body font-semibold text-[0.65rem] uppercase tracking-widest px-3 py-1.5 rounded-full backdrop-blur-sm">${s.category}</span>
-            <div class="absolute bottom-4 left-4 right-4">
-              <h3 class="font-display font-bold text-white text-lg leading-tight">${s.title}</h3>
-            </div>
-          </div>
-          <div class="p-6 flex flex-col flex-grow">
-            <p class="font-body text-gray-600 text-sm body-relaxed mb-5 line-clamp-3">${s.cardSummary || s.subtitle || ''}</p>
-            <div class="flex items-center justify-between mt-auto">
-              <div class="flex items-center gap-3">
-                <div class="w-9 h-9 rounded-full bg-gradient-to-br from-coral-400 to-coral-600 flex items-center justify-center">
-                  <span class="font-display font-bold text-white text-xs">${initialOf(s.author)}</span>
+    // ===========================================================
+    // Homepage patient-story cards + audience filter.
+    // Same component as /patient-community and /patients, driven by
+    // the shared /stories-data.js so all pages stay in sync.
+    // ===========================================================
+    (function () {
+      const STORIES = window.PATIENT_STORIES || [];
+      const AUDIENCES = window.PATIENT_STORY_AUDIENCES || [];
+      const cardsTrack = document.querySelector('[data-cards-track]');
+      const cardsDots = document.querySelector('[data-cards-dots]');
+      const cardsPrevBtn = document.querySelector('[data-cards-prev]');
+      const cardsNextBtn = document.querySelector('[data-cards-next]');
+      const filterBar = document.querySelector('[data-audience-filters]');
+      if (!cardsTrack || !filterBar) return;
+
+      let audienceFilter = 'all';
+      let cardsIndex = 0;
+
+      const initialsOf = (name) => (name || '?').trim().charAt(0).toUpperCase();
+      const audienceCount = (id) => id === 'all' ? STORIES.length : STORIES.filter(s => s.audience === id).length;
+      const visibleStories = () => audienceFilter === 'all' ? STORIES : STORIES.filter(s => s.audience === audienceFilter);
+      const avatarFor = (s) => s.avatar
+        ? `<img src="${s.avatar}" alt="${s.author}" class="w-9 h-9 rounded-full object-cover ring-2 ring-coral-400 flex-shrink-0" style="object-position:${s.avatarPos || '50% 20%'}">`
+        : `<div class="w-9 h-9 rounded-full bg-gradient-to-br from-coral-400 to-coral-600 flex items-center justify-center flex-shrink-0">
+             <span class="font-display font-bold text-white text-xs">${initialsOf(s.author)}</span>
+           </div>`;
+
+      const mediaFor = (s) => s.imgFit === 'contain'
+        ? `<div class="relative aspect-[5/4] overflow-hidden bg-gradient-to-br from-pink-100 via-pink-50 to-white flex items-center justify-center p-8">
+             <img src="${s.image}" alt="${s.author}" class="max-h-full max-w-full object-contain">
+             <span class="absolute top-4 left-4 inline-block bg-white/90 text-navy-700 font-body font-semibold text-[0.65rem] uppercase tracking-widest px-3 py-1.5 rounded-full backdrop-blur-sm">${s.category}</span>
+           </div>
+           <div class="px-6 pt-5">
+             <h3 class="font-display font-bold text-navy-800 text-lg leading-tight">${s.title}</h3>
+           </div>`
+        : `<div class="relative aspect-[5/4] overflow-hidden">
+             <img src="${s.image}" alt="${s.author}" class="story-card-img absolute inset-0 w-full h-full object-cover" style="object-position:${s.imgPos || '50% 50%'}">
+             <div class="absolute inset-0 bg-gradient-to-t from-navy-900/80 via-navy-900/20 to-transparent"></div>
+             <span class="absolute top-4 left-4 inline-block bg-white/90 text-navy-700 font-body font-semibold text-[0.65rem] uppercase tracking-widest px-3 py-1.5 rounded-full backdrop-blur-sm">${s.category}</span>
+             <div class="absolute bottom-4 left-4 right-4">
+               <h3 class="font-display font-bold text-white text-lg leading-tight">${s.title}</h3>
+             </div>
+           </div>`;
+
+      const hrefFor = (s) => s.href || ('/patient-stories#' + s.id);
+
+      function buildFilterPills() {
+        filterBar.innerHTML = AUDIENCES.map(a => `
+          <button type="button" role="tab" aria-selected="${a.id === audienceFilter}" data-audience-pill="${a.id}"
+            class="audience-pill ${a.id === audienceFilter ? 'active' : ''} inline-flex items-center gap-2 px-4 py-2.5 rounded-full font-body font-semibold text-xs uppercase tracking-wider">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="${a.iconPath}"/></svg>
+            <span>${a.label}</span>
+            <span class="audience-count">${audienceCount(a.id)}</span>
+          </button>
+        `).join('');
+        filterBar.querySelectorAll('[data-audience-pill]').forEach(btn => {
+          btn.addEventListener('click', () => {
+            const id = btn.dataset.audiencePill;
+            if (id === audienceFilter) return;
+            audienceFilter = id;
+            cardsIndex = 0;
+            buildFilterPills();
+            buildCards();
+            updateCards();
+          });
+        });
+      }
+
+      function buildCards() {
+        const items = visibleStories();
+        if (items.length === 0) {
+          cardsTrack.innerHTML = `
+            <div class="empty-state w-full">
+              <p class="font-display font-semibold text-base mb-1">No stories yet for this audience</p>
+              <p class="font-body text-sm text-navy-500">Check back soon.</p>
+            </div>`;
+          return;
+        }
+        cardsTrack.innerHTML = items.map((s) => `
+          <a href="${hrefFor(s)}" class="story-card group bg-white rounded-2xl shadow-elevated overflow-hidden flex flex-col flex-shrink-0 w-full md:w-[calc((100%-1.5rem)/2)] lg:w-[calc((100%-3rem)/3)]">
+            ${mediaFor(s)}
+            <div class="p-6 flex flex-col flex-grow">
+              <p class="font-body text-gray-600 text-sm body-relaxed mb-5 line-clamp-3">${s.cardSummary || s.subtitle || ''}</p>
+              <div class="flex items-center justify-between mt-auto gap-3">
+                <div class="flex items-center gap-3 min-w-0">
+                  ${avatarFor(s)}
+                  <div class="min-w-0">
+                    <p class="font-display font-semibold text-navy-800 text-sm leading-tight">${s.author}</p>
+                    <p class="font-body text-navy-500 text-xs">${s.role}</p>
+                  </div>
                 </div>
-                <div>
-                  <p class="font-display font-semibold text-navy-800 text-sm leading-tight">${s.author}</p>
-                  <p class="font-body text-navy-500 text-xs">${s.role}</p>
-                </div>
+                <span class="font-body font-semibold text-coral-500 text-xs uppercase tracking-wider inline-flex items-center gap-1 group-hover:gap-2 transition-all flex-shrink-0">Read
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+                </span>
               </div>
-              <span class="font-body font-semibold text-coral-500 text-xs uppercase tracking-wider inline-flex items-center gap-1 group-hover:gap-2 transition-all">Read
-                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
-              </span>
             </div>
-          </div>
-        </a>`).join('');
+          </a>`).join('');
+      }
+
+      const cardsPerView = () => {
+        const w = window.innerWidth;
+        if (w >= 1024) return 3;
+        if (w >= 768) return 2;
+        return 1;
+      };
+      const cardsMaxIndex = () => Math.max(0, visibleStories().length - cardsPerView());
+
+      function updateCards() {
+        cardsIndex = Math.min(cardsIndex, cardsMaxIndex());
+        const slides = cardsTrack.children;
+        if (!slides.length) return;
+        const slideWidth = slides[0].getBoundingClientRect().width;
+        const gap = parseFloat(getComputedStyle(cardsTrack).columnGap || getComputedStyle(cardsTrack).gap || 24) || 24;
+        cardsTrack.style.transform = `translateX(-${cardsIndex * (slideWidth + gap)}px)`;
+
+        const totalDots = cardsMaxIndex() + 1;
+        if (cardsDots) {
+          cardsDots.innerHTML = '';
+          if (totalDots > 1) {
+            for (let i = 0; i < totalDots; i++) {
+              const dot = document.createElement('button');
+              dot.type = 'button';
+              dot.className = 'rounded-full transition-all duration-300 ' + (i === cardsIndex ? 'bg-coral-500 w-6 h-2.5' : 'bg-navy-200 hover:bg-navy-300 w-2.5 h-2.5');
+              dot.setAttribute('aria-label', `Page ${i + 1}`);
+              dot.addEventListener('click', () => { cardsIndex = i; updateCards(); });
+              cardsDots.appendChild(dot);
+            }
+          }
+        }
+        const max = cardsMaxIndex();
+        [cardsPrevBtn, cardsNextBtn].forEach((b, k) => {
+          if (!b) return;
+          const disabled = (k === 0 && cardsIndex === 0) || (k === 1 && cardsIndex >= max);
+          b.disabled = disabled;
+          b.style.opacity = disabled ? '0.4' : '1';
+        });
+      }
+
+      if (cardsPrevBtn) cardsPrevBtn.addEventListener('click', () => { cardsIndex = Math.max(0, cardsIndex - 1); updateCards(); });
+      if (cardsNextBtn) cardsNextBtn.addEventListener('click', () => { cardsIndex = Math.min(cardsMaxIndex(), cardsIndex + 1); updateCards(); });
+      window.addEventListener('resize', updateCards);
+
+      buildFilterPills();
+      buildCards();
+      updateCards();
     })();
 
     // Testimonial carousels
