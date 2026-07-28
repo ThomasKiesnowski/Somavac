@@ -13,6 +13,30 @@
 // =============================================================
 window.PATIENT_STORIES = [
   {
+    id: 'komen-post-surgical-recovery',
+    audience: 'patients',
+    category: "In Partnership with Komen",
+    title: "Recovery Is a Critical Part of the Patient Journey",
+    subtitle: "What to expect after breast surgery, from Susan G. Komen’s Know More Educational Series.",
+    author: "Susan G. Komen®",
+    role: "Know More Educational Series",
+    image: "/brand_assets/komen-logo.png",
+    imgFit: "contain",
+    href: "/news/somavac-partners-with-susan-g-komen",
+    imageCaption: "Susan G. Komen",
+    readTime: "6 min read",
+    cardSummary: "Preparing your home, what happens in the body as you heal, and how drain management is changing. Guidance from Susan G. Komen on the weeks after breast surgery.",
+    paragraphs: [
+      "Post-surgical recovery expectations, challenges, and advances in care are important to consider whether you are having a lumpectomy, mastectomy, reconstruction, or other breast surgery. By learning what to expect, you can feel more confident in the process.",
+      "“The best way to get a good outcome after surgery is to be prepared before the surgery,” said Nirav Savalia, M.D., director of oncoplastic and aesthetic breast surgery at Hoag. Set up a recovery space ahead of time, arrange help with rides, meals, children and pets, and ask your care team what supplies you will need and what activities to avoid. It’s okay to ask for help.",
+      "Tissue removed during surgery leaves open space under the skin, and the body tends to fill that space with fluid. “The body just doesn’t like empty spaces, so it tries to fill it up with fluid,” Dr. Savalia explained. That collection is called a seroma, and it’s why drains are used: “A drainage tube is like a sump pump… it gives your body time to heal that area.”",
+      "Drain management is also evolving. “Drain management technology has improved,” Dr. Savalia said, describing options becoming “available that help evacuate the fluid much more effectively from the body, and it allows the freedom for the patient to be very independent with it.” Newer systems can reduce manual steps like milking tubing or squeezing bulbs. Ask your care team what options may be available for your surgery.",
+      "Above all, healing isn’t linear. “There are going to be days where you feel great, and there can be days where things maybe take a little step back,” Dr. Savalia said. “But on the whole, things are going upwards.” Read the full article on komen.org for the complete guidance."
+    ],
+    pullQuote: "Don’t be afraid to ask your care team, your doctor, “what can we do to make my recovery smoother, easier, better?”"
+  },
+
+  {
     id: "lynne-b",
     audience: "patients",
     category: "A Patient's Story",
@@ -158,37 +182,13 @@ window.PATIENT_STORIES = [
   },
 
   {
-    id: 'komen-post-surgical-recovery',
-    audience: 'patients',
-    category: "In Partnership with Komen",
-    title: "Recovery Is a Critical Part of the Patient Journey",
-    subtitle: "What to expect after breast surgery, from Susan G. Komen’s Know More Educational Series.",
-    author: "Susan G. Komen®",
-    role: "Know More Educational Series",
-    image: "/brand_assets/komen-logo.png",
-    imgFit: "contain",
-    href: "/news/somavac-partners-with-susan-g-komen",
-    imageCaption: "Susan G. Komen",
-    readTime: "6 min read",
-    cardSummary: "Preparing your home, what happens in the body as you heal, and how drain management is changing. Guidance from Susan G. Komen on the weeks after breast surgery.",
-    paragraphs: [
-      "Post-surgical recovery expectations, challenges, and advances in care are important to consider whether you are having a lumpectomy, mastectomy, reconstruction, or other breast surgery. By learning what to expect, you can feel more confident in the process.",
-      "“The best way to get a good outcome after surgery is to be prepared before the surgery,” said Nirav Savalia, M.D., director of oncoplastic and aesthetic breast surgery at Hoag. Set up a recovery space ahead of time, arrange help with rides, meals, children and pets, and ask your care team what supplies you will need and what activities to avoid. It’s okay to ask for help.",
-      "Tissue removed during surgery leaves open space under the skin, and the body tends to fill that space with fluid. “The body just doesn’t like empty spaces, so it tries to fill it up with fluid,” Dr. Savalia explained. That collection is called a seroma, and it’s why drains are used: “A drainage tube is like a sump pump… it gives your body time to heal that area.”",
-      "Drain management is also evolving. “Drain management technology has improved,” Dr. Savalia said, describing options becoming “available that help evacuate the fluid much more effectively from the body, and it allows the freedom for the patient to be very independent with it.” Newer systems can reduce manual steps like milking tubing or squeezing bulbs. Ask your care team what options may be available for your surgery.",
-      "Above all, healing isn’t linear. “There are going to be days where you feel great, and there can be days where things maybe take a little step back,” Dr. Savalia said. “But on the whole, things are going upwards.” Read the full article on komen.org for the complete guidance."
-    ],
-    pullQuote: "Don’t be afraid to ask your care team, your doctor, “what can we do to make my recovery smoother, easier, better?”"
-  },
-
-  {
     id: 'tamara-kemp',
     audience: 'physicians',
     category: "A Physician's Story",
     title: "It’s No Longer Acceptable to Put Drain Bulbs on My Patients",
     subtitle: "A Navy chief of plastic surgery on why she adopted SOMAVAC to protect reconstructive outcomes, not just patient comfort.",
     author: "Tamara Kemp, MD, FACS",
-    role: "Commander, U.S. Navy · Portsmouth Naval Medical Center",
+    role: "Commander, U.S. Navy",
     image: "/brand_assets/team/tamara-kemp.png",
     imgPos: "50% 15%",
     avatar: "/brand_assets/team/tamara-kemp.png",
