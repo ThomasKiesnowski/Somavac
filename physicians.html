@@ -104,10 +104,6 @@
       50% { transform: scale(1.05); opacity: 0.2; }
       100% { transform: scale(0.95); opacity: 0.6; }
     }
-    @keyframes shimmer {
-      0% { background-position: -200% 0; }
-      100% { background-position: 200% 0; }
-    }
     @keyframes dot-pulse {
       0%, 100% { transform: scale(1); opacity: 0.8; }
       50% { transform: scale(1.4); opacity: 1; }
@@ -159,16 +155,22 @@
       pointer-events: none;
       z-index: 0;
     }
-    .product-showcase .shimmer-bar {
+    /* Hero cutout: the photo is cropped on every side, so fade the top and
+       bottom edges into the gradient instead of ending on a hard cut. */
+    .product-showcase .hero-cutout {
+      -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 6%, #000 88%, transparent 100%);
+      mask-image: linear-gradient(to bottom, transparent 0%, #000 6%, #000 88%, transparent 100%);
+    }
+    .product-showcase .cutout-ground {
       position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, transparent, rgba(234,83,41,0.6), transparent);
-      background-size: 200% 100%;
-      animation: shimmer 3s ease-in-out infinite;
-      border-radius: 2px;
+      left: 10%;
+      right: 10%;
+      bottom: 4%;
+      height: 40px;
+      background: radial-gradient(ellipse at center, rgba(234,83,41,0.30) 0%, rgba(234,83,41,0.10) 45%, transparent 72%);
+      filter: blur(10px);
+      pointer-events: none;
+      z-index: 1;
     }
     .product-showcase .feature-dot {
       position: absolute;
@@ -284,13 +286,11 @@
             <div class="glow-base"></div>
             <div class="orbit-ring orbit-ring-1"></div>
             <div class="orbit-ring orbit-ring-2"></div>
-            <div class="relative z-10 bg-white rounded-3xl p-6 border border-white/20 shadow-2xl">
-              <img src="/brand_assets/somavac-model.png" alt="Patient wearing the SOMAVAC&reg; pump on the support belt, with both drains connected" class="w-full h-auto relative z-10 drop-shadow-2xl">
-              <div class="shimmer-bar"></div>
-            </div>
+            <div class="cutout-ground"></div>
+            <img src="/brand_assets/somavac-model.png" alt="Patient wearing the SOMAVAC&reg; pump on the support belt, with both drains connected" class="hero-cutout w-full h-auto relative z-10">
             <div class="feature-dot" style="top: 30%; left: -5px; animation-delay: 0s;"></div>
             <div class="feature-dot" style="top: 50%; right: -5px; animation-delay: 0.8s;"></div>
-            <div class="feature-dot" style="bottom: 25%; left: 20%; animation-delay: 1.6s;"></div>
+            <div class="feature-dot" style="bottom: 8%; left: 6%; animation-delay: 1.6s;"></div>
           </div>
         </div>
       </div>
