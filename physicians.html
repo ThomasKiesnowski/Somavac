@@ -155,8 +155,19 @@
       pointer-events: none;
       z-index: 0;
     }
+    /* White panel behind the photo so the cutout sits on its own surface
+       instead of directly on the navy gradient. Padding (not absolute insets)
+       so the panel keeps an even margin around the photo at every breakpoint. */
+    .product-showcase .cutout-panel {
+      position: relative;
+      z-index: 1;
+      padding: 22px 30px 30px;
+      border-radius: 2rem;
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(4,7,142,0.14), 0 18px 44px rgba(4,7,142,0.30);
+    }
     /* Hero cutout: the photo is cropped on every side, so fade the top and
-       bottom edges into the gradient instead of ending on a hard cut. */
+       bottom edges into the panel instead of ending on a hard cut. */
     .product-showcase .hero-cutout {
       -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 6%, #000 88%, transparent 100%);
       mask-image: linear-gradient(to bottom, transparent 0%, #000 6%, #000 88%, transparent 100%);
@@ -167,10 +178,10 @@
       right: 10%;
       bottom: 4%;
       height: 40px;
-      background: radial-gradient(ellipse at center, rgba(234,83,41,0.30) 0%, rgba(234,83,41,0.10) 45%, transparent 72%);
+      background: radial-gradient(ellipse at center, rgba(4,7,142,0.22) 0%, rgba(4,7,142,0.08) 45%, transparent 72%);
       filter: blur(10px);
       pointer-events: none;
-      z-index: 1;
+      z-index: 2;
     }
     .product-showcase .feature-dot {
       position: absolute;
@@ -286,11 +297,13 @@
             <div class="glow-base"></div>
             <div class="orbit-ring orbit-ring-1"></div>
             <div class="orbit-ring orbit-ring-2"></div>
-            <div class="cutout-ground"></div>
-            <img src="/brand_assets/somavac-model.png" alt="Patient wearing the SOMAVAC&reg; pump on the support belt, with both drains connected" class="hero-cutout w-full h-auto relative z-10">
-            <div class="feature-dot" style="top: 30%; left: -5px; animation-delay: 0s;"></div>
-            <div class="feature-dot" style="top: 50%; right: -5px; animation-delay: 0.8s;"></div>
-            <div class="feature-dot" style="bottom: 8%; left: 6%; animation-delay: 1.6s;"></div>
+            <div class="cutout-panel">
+              <div class="cutout-ground"></div>
+              <img src="/brand_assets/somavac-model.png" alt="Patient wearing the SOMAVAC&reg; pump on the support belt, with both drains connected" class="hero-cutout w-full h-auto relative z-10">
+            </div>
+            <div class="feature-dot" style="top: 28%; left: -20px; animation-delay: 0s;"></div>
+            <div class="feature-dot" style="top: 58%; right: -20px; animation-delay: 0.8s;"></div>
+            <div class="feature-dot" style="top: -20px; left: 22%; animation-delay: 1.6s;"></div>
           </div>
         </div>
       </div>
@@ -1467,13 +1480,6 @@
             <li><a href="/#evidence" class="font-body text-white/70 text-sm hover:text-coral-400 transition-colors">Clinical Evidence</a></li>
             <li><a href="/team" class="font-body text-white/70 text-sm hover:text-coral-400 transition-colors">Team</a></li>
             <li><a href="/#contact" class="font-body text-white/70 text-sm hover:text-coral-400 transition-colors">Contact</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="font-body font-semibold text-white text-sm mb-6">Legal</h4>
-          <ul class="space-y-3">
-            <li><a href="/privacy" class="font-body text-white/70 text-sm hover:text-coral-400 transition-colors">Privacy Statement</a></li>
-            <li><a href="/terms" class="font-body text-white/70 text-sm hover:text-coral-400 transition-colors">Terms &amp; Conditions</a></li>
           </ul>
         </div>
       </div>
